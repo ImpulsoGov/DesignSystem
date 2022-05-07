@@ -1,0 +1,13 @@
+{
+  "name": "design-system",
+  "description": "",
+  "dependencies": {
+    "catalog": "^3.6.2",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0"
+  },
+  "scripts": {
+    "catalog-start": "catalog start",
+    "catalog-build": "catalog build"
+  }
+}
