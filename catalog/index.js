@@ -27,9 +27,14 @@ const pages = [
     title: "Componentes",
     pages: [
       {
-        path: "Componentes/footer",
+        path: "componentes/footer",
         title: "Footer",
-        content: pageLoader(() => import("./documentacoes/footer.md"))
+        content: pageLoader(() => import("../componentes/Footer/README.md"))
+      },
+      {
+        path: "componentes/dropdown",
+        title: "Dropdown",
+        content: pageLoader(() => import("../componentes/Dropdown/README.md"))
       }
     ]
   },

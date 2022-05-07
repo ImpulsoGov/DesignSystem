@@ -1,6 +1,7 @@
 {
   "name": "design-system",
-  "description": "",
+  "description": "Design System da Impulso Gov",
+  "author": "Gabrielle Arruda <gabriellearrudac@gmail.org>",
   "dependencies": {
     "catalog": "^3.6.2",
     "react": "^18.1.0",

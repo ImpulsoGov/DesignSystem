@@ -1,9 +1,5 @@
-
-import Footer from "././componentes/Footer";
-
 ```react
-responsive: true
-state: {clicked: 0}
+showSource: true
 ---
 <Footer
     address={{
