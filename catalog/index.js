@@ -34,14 +34,9 @@ const pages = [
     ]
   },
   {
+    path: "/templates",
     title: "Templates",
-    pages: [
-      {
-        path: "templates/template_base",
-        title: "Template Base",
-        content: pageLoader(() => import("./documentacoes/template_base.md"))
-      }
-    ]
+    content: pageLoader(() => import("./documentacoes/template_base.md"))
   }
 ];
 

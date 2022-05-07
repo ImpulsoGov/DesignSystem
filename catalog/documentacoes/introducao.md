@@ -5,26 +5,13 @@ O Design System da Impulso Gov apresenta os padrões de interface que devem ser 
 
 A iniciativa potencializa a eficiência e a eficácia dos usuários na utilização de interfaces para acesso aos serviços e aos sistemas da Impulso, possibilitando uma única curva de aprendizado e garantindo a previsibilidade na utilização dos diferentes sistemas.
 
-<details>
-  <summary markdown="span">This is the summary text, click me to expand</summary>
+### Fundamentos visuais
+  São usados na padronização, aparência dos componentes e interfaces.
 
-  This is the detailed text.
 
-  We can still use markdown, but we need to take the additional step of using the `parse_block_html` option as described in the [Mix HTML + Markdown Markup section](#mix-html--markdown-markup).
-</details>
+### Componentes
+   Componentes são partes de código reutilizáveis dentro do seu sistema e eles servem como blocos de construção de uma interface.
 
-<details>
-  <summary markdown="span">This is the summary text, click me to expand</summary>
 
-  This is the detailed text.
-
-  We can still use markdown, but we need to take the additional step of using the `parse_block_html` option as described in the [Mix HTML + Markdown Markup section](#mix-html--markdown-markup).
-</details>
-
-<details>
-  <summary markdown="span">This is the summary text, click me to expand</summary>
-
-  This is the detailed text.
-
-  We can still use markdown, but we need to take the additional step of using the `parse_block_html` option as described in the [Mix HTML + Markdown Markup section](#mix-html--markdown-markup).
-</details>
+### Templates
+  São estruturas pré definidas para serem usadas como modelo na criação de novas interfaces ou projetos.
