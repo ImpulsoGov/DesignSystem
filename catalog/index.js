@@ -20,6 +20,11 @@ const pages = [
         path: "fundamentos/cores",
         title: "Cores",
         content: pageLoader(() => import("./documentacoes/cores.md"))
+      },
+      {
+        path: "fundamentos/tipografia",
+        title: "Tipografia",
+        content: pageLoader(() => import("./documentacoes/tipografia.md"))
       }
     ]
   },
@@ -27,14 +32,14 @@ const pages = [
     title: "Componentes",
     pages: [
       {
-        path: "componentes/footer",
-        title: "Footer",
-        content: pageLoader(() => import("../componentes/Footer/README.md"))
-      },
-      {
         path: "componentes/dropdown",
         title: "Dropdown",
         content: pageLoader(() => import("../componentes/Dropdown/README.md"))
+      },
+      {
+        path: "componentes/footer",
+        title: "Footer",
+        content: pageLoader(() => import("../componentes/Footer/README.md"))
       }
     ]
   },
