@@ -41,6 +41,30 @@ colors:
 ```
 ```color-palette|horizontal
 colors:
+  - {name: "Blue 1", value: "#104978"}
+  - {name: "Blue 2", value: "#3679B1"}
+  - {name: "Blue 3", value: "#4294D8"}
+  - {name: "Blue 4", value: "#58B3FE"}
+  - {name: "Blue 5", value: "#ADE3F4"}
+```
+```color-palette|horizontal
+colors:
+  - {name: "Purple 1", value: "#1B2D82"}
+  - {name: "Purple 2", value: "#5367C9"}
+  - {name: "Purple 3", value: "#7579EA"}
+  - {name: "Purple 4", value: "#8F92FF"}
+  - {name: "Purple 5", value: "#CACCFE"}
+```
+```color-palette|horizontal
+colors:
+  - {name: "Red 1", value: "#88181D"}
+  - {name: "Red 2", value: "#CF4047"}
+  - {name: "Red 3", value: "#EF565D"}
+  - {name: "Red 4", value: "#FF7C81"}
+  - {name: "Red 5", value: "#F8BBAE"}
+```
+```color-palette|horizontal
+colors:
   - {name: "Orange 1", value: "#6A2914"}
   - {name: "Orange 2", value: "#B25927"}
   - {name: "Orange 3", value: "#E98633"}
