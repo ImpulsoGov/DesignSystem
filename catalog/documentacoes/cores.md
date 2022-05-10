@@ -31,7 +31,7 @@ colors:
 ```
 
 ## Cores secundárias
-```color-palette|span-3
+```color-palette|horizontal
 colors:
   - {name: "Green 1", value: "#145C56"}
   - {name: "Green 2", value: "#1D856C"}
@@ -39,7 +39,7 @@ colors:
   - {name: "Green 4", value: "#55D499"}
   - {name: "Green 5", value: "#9DEECD"}
 ```
-```color-palette|span-3
+```color-palette|horizontal
 colors:
   - {name: "Orange 1", value: "#6A2914"}
   - {name: "Orange 2", value: "#B25927"}
@@ -47,7 +47,7 @@ colors:
   - {name: "Orange 4", value: "#FFA75E"}
   - {name: "Orange 5", value: "#F4CCAB"}
 ```
-```color-palette|span-3
+```color-palette|horizontal
 colors:
   - {name: "Yellow 1", value: "#4F3D0C"}
   - {name: "Yellow 2", value: "#916A20"}
