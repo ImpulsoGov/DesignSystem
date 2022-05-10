@@ -120,9 +120,9 @@ const theme = {
   msRatio: 1.2
 }
 
-
+const logoSrc = "https://raw.githubusercontent.com/ImpulsoGov/design-system/main/estatico/Color%3DBlack%2C%20Size%3DMedium.png"
 
 ReactDOM.render(
-  <Catalog title="Design System da Impulso" pages={pages} theme={theme} />,
+  <Catalog title="Design System da Impulso" pages={pages} theme={theme} logoSrc={logoSrc} />,
   document.getElementById("catalog")
 );
