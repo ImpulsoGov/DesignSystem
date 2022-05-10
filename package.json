@@ -15,12 +15,7 @@
     "build:catalog": "catalog build --public-url=/components/",
     "deploy": "gh-pages -d catalog/build",
     "precommit": "pretty-quick --staged",
-    "lint": "eslint .",
-    "release": "release",
-    "postrelease": "yarn run build && yarn run styleguide:deploy",
-    "test": "react-scripts test --env=jsdom",
-    "test:coverage": "react-scripts test --env=jsdom --coverage",
-    "test:debug": "react-scripts --inspect-brk test --runInBand --env=jsdom"
+    "lint": "eslint ."
   },
   "dependencies": {
     "package.json": "^2.0.1",
