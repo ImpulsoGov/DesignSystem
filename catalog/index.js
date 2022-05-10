@@ -25,6 +25,11 @@ const pages = [
         path: "fundamentos/tipografia",
         title: "Tipografia",
         content: pageLoader(() => import("./documentacoes/tipografia.md"))
+      },
+      {
+        path: "fundamentos/logos",
+        title: "Logos",
+        content: pageLoader(() => import("./documentacoes/logos.md"))
       }
     ]
   },
@@ -114,6 +119,8 @@ const theme = {
   // Modular scale ratio that is used to figure out all the different font sizes
   msRatio: 1.2
 }
+
+
 
 ReactDOM.render(
   <Catalog title="Design System da Impulso" pages={pages} theme={theme} />,
