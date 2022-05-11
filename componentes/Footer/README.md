@@ -1,5 +1,6 @@
 ```react
-showSource: true
+responsive: true
+
 ---
 <Footer
     address={{
@@ -16,7 +17,7 @@ showSource: true
         { label: "Notícias", url: "/noticias" },
         { label: "Trabalhe conosco", url: "/trabalhe-conosco" },
         { label: "Quero doar", url: "/quero-doar" },
-        { label: "Contato", url: "/contato" },
+        { label: "Contato", url: "/contato" }
     ]}
     socialMediaURLs={{
         facebook: "/facebook",

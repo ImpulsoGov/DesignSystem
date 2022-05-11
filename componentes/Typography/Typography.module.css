@@ -96,19 +96,19 @@
   }
   
   .bodyM {
-    font-size: var(--body-m-font-size);
+    font-size: medium;
     font-style: normal;
     font-weight: normal;
     letter-spacing: var(--body-m-letter-spacing);
-    line-height: var(--body-m-line-height);
+    line-height: 150%;
   }
   
   .bodyS {
-    font-size: var(--body-s-font-size);
+    font-size: medium;
     font-style: normal;
     font-weight: normal;
     letter-spacing: var(--body-s-letter-spacing);
-    line-height: var(--body-s-line-height);
+    line-height: 150%;
   }
   
   @media screen and (max-width: 1280px) {

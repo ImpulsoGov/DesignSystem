@@ -1,6 +1,8 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import { createRoot } from 'react-dom/client'
 import { Catalog, pageLoader } from "catalog";
+import {Footer} from "../componentes/Footer/Footer.jsx"
+//import reportWebVitals from 'reportWebVitals';
 
 const pages = [
   {
@@ -39,6 +41,7 @@ const pages = [
       {
         path: "componentes/footer",
         title: "Footer",
+        imports : {Footer},
         content: pageLoader(() => import("../componentes/Footer/README.md"))
       }
     ]
@@ -50,7 +53,8 @@ const pages = [
   }
 ];
 
-ReactDOM.render(
-  <Catalog title="Design System da Impulso" pages={pages} />,
-  document.getElementById("catalog")
+const root = createRoot(document.getElementById('catalog'));
+root.render(
+    <Catalog title="Design System da Impulso" pages={pages} />
 );
+//reportWebVitals();
