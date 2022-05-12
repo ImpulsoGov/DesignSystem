@@ -2,6 +2,7 @@ import React from "react";
 import { createRoot } from "react-dom/client";
 import { Catalog, pageLoader } from "catalog";
 import { Footer } from "../componentes/Footer/Footer.jsx";
+import { NavBar } from "../componentes/NavBar/NavBar.jsx";
 import ReactDOM from "react-dom";
 //import reportWebVitals from 'reportWebVitals';
 
@@ -122,6 +123,12 @@ const config = {
           title: "Footer",
           imports: { Footer },
           content: pageLoader(() => import("../componentes/Footer/README.md"))
+        },
+        {
+          path: "componentes/navbar",
+          title: "NavBar",
+          imports: { NavBar },
+          content: pageLoader(() => import("../componentes/NavBar/README.md"))
         }
       ]
     },

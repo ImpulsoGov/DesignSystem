@@ -5,6 +5,7 @@
   font-family: 'Inter';
   font-style: normal;
   font-weight: 400;
+  margin: 0;
 }
 
 a, u {
@@ -15,32 +16,35 @@ a, u {
 .realizacaoLabel {
   color:#FFFFFF;
   margin-right: 15px;
-  position: relative;
-  left: 45%;
 }
 
 .logoWrapper {
   height: 24px;
   min-width: 140px;
   max-width: 140px;
-  position: relative;
 }
 
-.logoWrapper2 {
+.logo-impulso {
   height: 24px;
   min-width: 140px;
   max-width: 140px;
-  position: relative;
-  left: 45%;
 }
 
+
+.conteiner-logo-impulso-gov{
+  margin-left: auto;
+  display: flex;
+  justify-content: center;
+}
 
 .logoFrame {
   width: 20%;
+  display: flex;
+  justify-content: center;
 }
 
 .infoLinksWrapper {
-  width: 80%;
+  width: 100%;
 }
 
 .list {
@@ -61,6 +65,7 @@ a, u {
   display: flex;
   justify-content: space-between;
   margin-top: 32px;
+  width: 100%;
 }
 
 .contactAddress {
@@ -100,11 +105,26 @@ a, u {
     margin-top: 15px;
     margin-bottom: 15px;
     margin-left: 0px;
+    margin-right: 0;
     left: 0;
   }
-  .logoWrapper2 {
-    left: 0;
+  .conteiner-logo-impulso-gov{
+    flex-direction: column;
+    margin-left: 0;
+    justify-content: center;
   }
+  .logo-impulso {
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    margin: 0;
+    margin-left: 0;
+  }
+  
+  .logoFrame {
+    width: 100%;
+  }
+  
     .infoLinksWrapper {
     margin-left: 0;
   }
@@ -112,6 +132,7 @@ a, u {
   .list {
     display: block;
     margin-top: 26px;
+    text-align: center;
   }
 
   .item {
@@ -119,7 +140,8 @@ a, u {
   }
 
   .contactAddressSocialMedias {
-    display: block;
+    flex-direction: column;
+    text-align: center;
   }
 
   .contactAddress {
@@ -136,15 +158,4 @@ a, u {
   .socialMedias {
     margin-top: 20px;
   }
-}
-
-@media screen and (min-width: 1440px) and (max-width: 1919px) {
-  .realizacaoLabel {
-    left: 25%;
-  }
-  
-  .logoWrapper2 {
-    left: 25%;
-  }
-
 }
