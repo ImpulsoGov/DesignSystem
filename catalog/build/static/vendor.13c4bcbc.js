@@ -6,13 +6,15 @@ webpackJsonp([10], {
       true
         ? (module.exports = e())
         : "function" == typeof define && define.amd
-          ? define([], e)
-          : (("undefined" != typeof window
-              ? window
-              : "undefined" != typeof global
-                ? global
-                : "undefined" != typeof self ? self : this
-            ).jsyaml = e());
+        ? define([], e)
+        : (("undefined" != typeof window
+            ? window
+            : "undefined" != typeof global
+            ? global
+            : "undefined" != typeof self
+            ? self
+            : this
+          ).jsyaml = e());
     })(function() {
       return (function i(r, o, a) {
         function s(t, e) {
@@ -292,11 +294,11 @@ webpackJsonp([10], {
                   e !== k &&
                   (e !== y ||
                     (t &&
-                      (R((t = t)) &&
-                        !Y(t) &&
-                        65279 !== t &&
-                        t !== a &&
-                        t !== h)))
+                      R((t = t)) &&
+                      !Y(t) &&
+                      65279 !== t &&
+                      t !== a &&
+                      t !== h))
                 );
               }
               function W(e) {
@@ -361,8 +363,14 @@ webpackJsonp([10], {
                   l = l || (p && i < o - f - 1 && " " !== e[f + 1]);
                 }
                 return u || l
-                  ? 9 < n && W(e) ? G : l ? H : $
-                  : d && !r(e) ? K : P;
+                  ? 9 < n && W(e)
+                    ? G
+                    : l
+                    ? H
+                    : $
+                  : d && !r(e)
+                  ? K
+                  : P;
               }
               function Z(i, r, o, a) {
                 i.dump = (function() {
@@ -375,13 +383,19 @@ webpackJsonp([10], {
                         ? -1
                         : Math.max(Math.min(i.lineWidth, 40), i.lineWidth - e),
                     n = a || (-1 < i.flowLevel && o >= i.flowLevel);
-                  switch (V(r, n, i.indent, t, function(e) {
-                    return (function(e, t) {
-                      for (var n = 0, i = e.implicitTypes.length; n < i; n += 1)
-                        if (e.implicitTypes[n].resolve(t)) return !0;
-                      return !1;
-                    })(i, e);
-                  })) {
+                  switch (
+                    V(r, n, i.indent, t, function(e) {
+                      return (function(e, t) {
+                        for (
+                          var n = 0, i = e.implicitTypes.length;
+                          n < i;
+                          n += 1
+                        )
+                          if (e.implicitTypes[n].resolve(t)) return !0;
+                        return !1;
+                      })(i, e);
+                    })
+                  ) {
                     case K:
                       return r;
                     case P:
@@ -450,7 +464,9 @@ webpackJsonp([10], {
                   n +
                   (t && ("\n" === e[e.length - 2] || "\n" === e)
                     ? "+"
-                    : t ? "" : "-") +
+                    : t
+                    ? ""
+                    : "-") +
                   "\n"
                 );
               }
@@ -770,36 +786,38 @@ webpackJsonp([10], {
                 return 48 === e
                   ? "\0"
                   : 97 === e
-                    ? ""
-                    : 98 === e
-                      ? "\b"
-                      : 116 === e || 9 === e
-                        ? "\t"
-                        : 110 === e
-                          ? "\n"
-                          : 118 === e
-                            ? "\v"
-                            : 102 === e
-                              ? "\f"
-                              : 114 === e
-                                ? "\r"
-                                : 101 === e
-                                  ? ""
-                                  : 32 === e
-                                    ? " "
-                                    : 34 === e
-                                      ? '"'
-                                      : 47 === e
-                                        ? "/"
-                                        : 92 === e
-                                          ? "\\"
-                                          : 78 === e
-                                            ? ""
-                                            : 95 === e
-                                              ? " "
-                                              : 76 === e
-                                                ? "\u2028"
-                                                : 80 === e ? "\u2029" : "";
+                  ? ""
+                  : 98 === e
+                  ? "\b"
+                  : 116 === e || 9 === e
+                  ? "\t"
+                  : 110 === e
+                  ? "\n"
+                  : 118 === e
+                  ? "\v"
+                  : 102 === e
+                  ? "\f"
+                  : 114 === e
+                  ? "\r"
+                  : 101 === e
+                  ? ""
+                  : 32 === e
+                  ? " "
+                  : 34 === e
+                  ? '"'
+                  : 47 === e
+                  ? "/"
+                  : 92 === e
+                  ? "\\"
+                  : 78 === e
+                  ? ""
+                  : 95 === e
+                  ? " "
+                  : 76 === e
+                  ? "\u2028"
+                  : 80 === e
+                  ? "\u2029"
+                  : "";
               }
               for (
                 var p = new Array(256), f = new Array(256), d = 0;
@@ -955,9 +973,9 @@ webpackJsonp([10], {
                 10 === t
                   ? e.position++
                   : 13 === t
-                    ? (e.position++,
-                      10 === e.input.charCodeAt(e.position) && e.position++)
-                    : N(e, "a line break is expected"),
+                  ? (e.position++,
+                    10 === e.input.charCodeAt(e.position) && e.position++)
+                  : N(e, "a line break is expected"),
                   (e.line += 1),
                   (e.lineStart = e.position);
               }
@@ -1038,7 +1056,11 @@ webpackJsonp([10], {
                         (a =
                           120 === (c = u)
                             ? 2
-                            : 117 === c ? 4 : 85 === c ? 8 : 0)
+                            : 117 === c
+                            ? 4
+                            : 85 === c
+                            ? 8
+                            : 0)
                       ) {
                         for (r = a, o = 0; 0 < r; r--)
                           (u = e.input.charCodeAt(++e.position)),
@@ -1047,8 +1069,8 @@ webpackJsonp([10], {
                               48 <= (s = u) && s <= 57
                                 ? s - 48
                                 : 97 <= (s = 32 | s) && s <= 102
-                                  ? s - 97 + 10
-                                  : -1)
+                                ? s - 97 + 10
+                                : -1)
                               ? (o = (o << 4) + a)
                               : N(e, "expected hexadecimal character");
                         (e.result +=
@@ -1067,11 +1089,11 @@ webpackJsonp([10], {
                           B(e, Y(e, !1, t)),
                           (n = i = e.position))
                         : e.position === e.lineStart && R(e)
-                          ? N(
-                              e,
-                              "unexpected end of the document within a double quoted scalar"
-                            )
-                          : (e.position++, (i = e.position));
+                        ? N(
+                            e,
+                            "unexpected end of the document within a double quoted scalar"
+                          )
+                        : (e.position++, (i = e.position));
                   }
                   N(
                     e,
@@ -1138,8 +1160,8 @@ webpackJsonp([10], {
                     e.lineIndent > t
                       ? (p = 1)
                       : e.lineIndent === t
-                        ? (p = 0)
-                        : e.lineIndent < t && (p = -1)),
+                      ? (p = 0)
+                      : e.lineIndent < t && (p = -1)),
                   1 === p)
                 )
                   for (
@@ -1158,10 +1180,10 @@ webpackJsonp([10], {
                           60 === (a = e.input.charCodeAt(++e.position))
                             ? ((r = !0), (a = e.input.charCodeAt(++e.position)))
                             : 33 === a
-                              ? ((o = !0),
-                                (n = "!!"),
-                                (a = e.input.charCodeAt(++e.position)))
-                              : (n = "!"),
+                            ? ((o = !0),
+                              (n = "!!"),
+                              (a = e.input.charCodeAt(++e.position)))
+                            : (n = "!"),
                           (t = e.position),
                           r)
                         ) {
@@ -1212,12 +1234,12 @@ webpackJsonp([10], {
                           r
                             ? (e.tag = i)
                             : m.call(e.tagMap, n)
-                              ? (e.tag = e.tagMap[n] + i)
-                              : "!" === n
-                                ? (e.tag = "!" + i)
-                                : "!!" === n
-                                  ? (e.tag = "tag:yaml.org,2002:" + i)
-                                  : N(e, 'undeclared tag handle "' + n + '"'),
+                            ? (e.tag = e.tagMap[n] + i)
+                            : "!" === n
+                            ? (e.tag = "!" + i)
+                            : "!!" === n
+                            ? (e.tag = "tag:yaml.org,2002:" + i)
+                            : N(e, 'undeclared tag handle "' + n + '"'),
                           1
                         );
                       }
@@ -1254,8 +1276,8 @@ webpackJsonp([10], {
                         e.lineIndent > t
                           ? (p = 1)
                           : e.lineIndent === t
-                            ? (p = 0)
-                            : e.lineIndent < t && (p = -1))
+                          ? (p = 0)
+                          : e.lineIndent < t && (p = -1))
                       : (s = !1);
                 if (
                   ((s = s && (f || r)),
@@ -1338,11 +1360,11 @@ webpackJsonp([10], {
                                         (f = d = h = null)),
                                       (r = m = g = !0))
                                     : m
-                                      ? (r = !(m = !1))
-                                      : N(
-                                          e,
-                                          "incomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line"
-                                        ),
+                                    ? (r = !(m = !1))
+                                    : N(
+                                        e,
+                                        "incomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line"
+                                      ),
                                     (e.position += 1),
                                     (s = i);
                                 if (
@@ -1433,8 +1455,8 @@ webpackJsonp([10], {
                               s
                                 ? U(e, i, h, u, c, l)
                                 : o
-                                  ? i.push(U(e, null, h, u, c, l))
-                                  : i.push(c),
+                                ? i.push(U(e, null, h, u, c, l))
+                                : i.push(c),
                               Y(e, !0, t),
                               44 === (m = e.input.charCodeAt(e.position))
                                 ? ((p = !0),
@@ -1491,11 +1513,11 @@ webpackJsonp([10], {
                                         "bad explicit indentation width of a block scalar; it cannot be less than one"
                                       )
                                     : s
-                                      ? N(
-                                          e,
-                                          "repeat of an indentation width identifier"
-                                        )
-                                      : ((c = t + r - 1), (s = !0));
+                                    ? N(
+                                        e,
+                                        "repeat of an indentation width identifier"
+                                      )
+                                    : ((c = t + r - 1), (s = !0));
                                 }
                               if (I(p)) {
                                 for (
@@ -1545,11 +1567,11 @@ webpackJsonp([10], {
                                             a ? 1 + u : u
                                           )))
                                         : l
-                                          ? ((l = !1),
-                                            (e.result += h.repeat("\n", u + 1)))
-                                          : 0 === u
-                                            ? a && (e.result += " ")
-                                            : (e.result += h.repeat("\n", u))
+                                        ? ((l = !1),
+                                          (e.result += h.repeat("\n", u + 1)))
+                                        : 0 === u
+                                        ? a && (e.result += " ")
+                                        : (e.result += h.repeat("\n", u))
                                       : (e.result += h.repeat(
                                           "\n",
                                           a ? 1 + u : u
@@ -1595,11 +1617,11 @@ webpackJsonp([10], {
                                       B(e, Y(e, !1, t)),
                                       (n = i = e.position))
                                     : e.position === e.lineStart && R(e)
-                                      ? N(
-                                          e,
-                                          "unexpected end of the document within a single quoted scalar"
-                                        )
-                                      : (e.position++, (i = e.position));
+                                    ? N(
+                                        e,
+                                        "unexpected end of the document within a single quoted scalar"
+                                      )
+                                    : (e.position++, (i = e.position));
                               N(
                                 e,
                                 "unexpected end of the stream within a single quoted scalar"
@@ -1634,111 +1656,106 @@ webpackJsonp([10], {
                                   );
                                 }
                               })(e)
-                              ? (function(e, t, n) {
-                                  var i,
-                                    r,
-                                    o,
-                                    a,
-                                    s,
-                                    c,
-                                    u,
-                                    l = e.kind,
-                                    p = e.result,
-                                    f = e.input.charCodeAt(e.position);
-                                  if (
-                                    !O(f) &&
-                                    !E(f) &&
-                                    35 !== f &&
-                                    38 !== f &&
-                                    42 !== f &&
-                                    33 !== f &&
-                                    124 !== f &&
-                                    62 !== f &&
-                                    39 !== f &&
-                                    34 !== f &&
-                                    37 !== f &&
-                                    64 !== f &&
-                                    96 !== f &&
-                                    ((63 !== f && 45 !== f) ||
-                                      !(
+                            ? (function(e, t, n) {
+                                var i,
+                                  r,
+                                  o,
+                                  a,
+                                  s,
+                                  c,
+                                  u,
+                                  l = e.kind,
+                                  p = e.result,
+                                  f = e.input.charCodeAt(e.position);
+                                if (
+                                  !O(f) &&
+                                  !E(f) &&
+                                  35 !== f &&
+                                  38 !== f &&
+                                  42 !== f &&
+                                  33 !== f &&
+                                  124 !== f &&
+                                  62 !== f &&
+                                  39 !== f &&
+                                  34 !== f &&
+                                  37 !== f &&
+                                  64 !== f &&
+                                  96 !== f &&
+                                  ((63 !== f && 45 !== f) ||
+                                    !(
+                                      O(
+                                        (i = e.input.charCodeAt(e.position + 1))
+                                      ) ||
+                                      (n && E(i))
+                                    ))
+                                ) {
+                                  for (
+                                    e.kind = "scalar",
+                                      e.result = "",
+                                      r = o = e.position,
+                                      a = !1;
+                                    0 !== f;
+
+                                  ) {
+                                    if (58 === f) {
+                                      if (
                                         O(
                                           (i = e.input.charCodeAt(
                                             e.position + 1
                                           ))
                                         ) ||
                                         (n && E(i))
-                                      ))
-                                  ) {
-                                    for (
-                                      e.kind = "scalar",
-                                        e.result = "",
-                                        r = o = e.position,
-                                        a = !1;
-                                      0 !== f;
-
-                                    ) {
-                                      if (58 === f) {
+                                      )
+                                        break;
+                                    } else if (35 === f) {
+                                      if (O(e.input.charCodeAt(e.position - 1)))
+                                        break;
+                                    } else {
+                                      if (
+                                        (e.position === e.lineStart && R(e)) ||
+                                        (n && E(f))
+                                      )
+                                        break;
+                                      if (S(f)) {
                                         if (
-                                          O(
-                                            (i = e.input.charCodeAt(
-                                              e.position + 1
-                                            ))
-                                          ) ||
-                                          (n && E(i))
-                                        )
-                                          break;
-                                      } else if (35 === f) {
-                                        if (
-                                          O(e.input.charCodeAt(e.position - 1))
-                                        )
-                                          break;
-                                      } else {
-                                        if (
-                                          (e.position === e.lineStart &&
-                                            R(e)) ||
-                                          (n && E(f))
-                                        )
-                                          break;
-                                        if (S(f)) {
-                                          if (
-                                            ((s = e.line),
-                                            (c = e.lineStart),
-                                            (u = e.lineIndent),
-                                            Y(e, !1, -1),
-                                            e.lineIndent >= t)
-                                          ) {
-                                            (a = !0),
-                                              (f = e.input.charCodeAt(
-                                                e.position
-                                              ));
-                                            continue;
-                                          }
-                                          (e.position = o),
-                                            (e.line = s),
-                                            (e.lineStart = c),
-                                            (e.lineIndent = u);
-                                          break;
+                                          ((s = e.line),
+                                          (c = e.lineStart),
+                                          (u = e.lineIndent),
+                                          Y(e, !1, -1),
+                                          e.lineIndent >= t)
+                                        ) {
+                                          (a = !0),
+                                            (f = e.input.charCodeAt(
+                                              e.position
+                                            ));
+                                          continue;
                                         }
+                                        (e.position = o),
+                                          (e.line = s),
+                                          (e.lineStart = c),
+                                          (e.lineIndent = u);
+                                        break;
                                       }
-                                      a &&
-                                        (L(e, r, o, !1),
-                                        B(e, e.line - s),
-                                        (r = o = e.position),
-                                        (a = !1)),
-                                        I(f) || (o = e.position + 1),
-                                        (f = e.input.charCodeAt(++e.position));
                                     }
-                                    if ((L(e, r, o, !1), e.result)) return 1;
-                                    (e.kind = l), (e.result = p);
+                                    a &&
+                                      (L(e, r, o, !1),
+                                      B(e, e.line - s),
+                                      (r = o = e.position),
+                                      (a = !1)),
+                                      I(f) || (o = e.position + 1),
+                                      (f = e.input.charCodeAt(++e.position));
                                   }
-                                })(e, i, g === n) &&
-                                ((d = !0), null === e.tag && (e.tag = "?"))
-                              : ((d = !0),
-                                (null === e.tag && null === e.anchor) ||
-                                  N(
-                                    e,
-                                    "alias node should not have any properties"
-                                  )),
+                                  if ((L(e, r, o, !1), e.result)) return 1;
+                                  (e.kind = l), (e.result = p);
+                                }
+                              })(e, i, g === n) &&
+                              ((d = !0), null === e.tag && (e.tag = "?"))
+                            : ((d = !0),
+                              (null === e.tag && null === e.anchor) ||
+                                N(
+                                  e,
+                                  "alias node should not have any properties"
+                                )),
                           null !== e.anchor &&
                             (e.anchorMap[e.anchor] = e.result))
                       : 0 === p && (d = s && K(e, r))),
@@ -2232,15 +2249,16 @@ webpackJsonp([10], {
                   (this.predicate = e.predicate || null),
                   (this.represent = e.represent || null),
                   (this.defaultStyle = e.defaultStyle || null),
-                  (this.styleAliases = ((n = e.styleAliases || null),
-                  (i = {}),
-                  null !== n &&
-                    Object.keys(n).forEach(function(t) {
-                      n[t].forEach(function(e) {
-                        i[String(e)] = t;
-                      });
-                    }),
-                  i)),
+                  (this.styleAliases =
+                    ((n = e.styleAliases || null),
+                    (i = {}),
+                    null !== n &&
+                      Object.keys(n).forEach(function(t) {
+                        n[t].forEach(function(e) {
+                          i[String(e)] = t;
+                        });
+                      }),
+                    i)),
                   -1 === a.indexOf(this.kind))
                 )
                   throw new r(
@@ -2297,8 +2315,8 @@ webpackJsonp([10], {
                         o.push((r >> 8) & 255),
                         o.push(255 & r))
                       : 18 == e
-                        ? (o.push((r >> 10) & 255), o.push((r >> 2) & 255))
-                        : 12 == e && o.push((r >> 4) & 255),
+                      ? (o.push((r >> 10) & 255), o.push((r >> 2) & 255))
+                      : 12 == e && o.push((r >> 4) & 255),
                     s ? (s.from ? s.from(o) : new s(o)) : o
                   );
                 },
@@ -2325,15 +2343,15 @@ webpackJsonp([10], {
                         (n += o[(i >> 6) & 63]),
                         (n += o[63 & i]))
                       : 2 == t
-                        ? ((n += o[(i >> 10) & 63]),
-                          (n += o[(i >> 4) & 63]),
-                          (n += o[(i << 2) & 63]),
-                          (n += o[64]))
-                        : 1 == t &&
-                          ((n += o[(i >> 2) & 63]),
-                          (n += o[(i << 4) & 63]),
-                          (n += o[64]),
-                          (n += o[64])),
+                      ? ((n += o[(i >> 10) & 63]),
+                        (n += o[(i >> 4) & 63]),
+                        (n += o[(i << 2) & 63]),
+                        (n += o[64]))
+                      : 1 == t &&
+                        ((n += o[(i >> 2) & 63]),
+                        (n += o[(i << 4) & 63]),
+                        (n += o[64]),
+                        (n += o[64])),
                     n
                   );
                 }
@@ -2407,18 +2425,18 @@ webpackJsonp([10], {
                         ? Number.POSITIVE_INFINITY
                         : Number.NEGATIVE_INFINITY
                       : ".nan" === n
-                        ? NaN
-                        : 0 <= n.indexOf(":")
-                          ? (n.split(":").forEach(function(e) {
-                              i.unshift(parseFloat(e, 10));
-                            }),
-                            (n = 0),
-                            (t = 1),
-                            i.forEach(function(e) {
-                              (n += e * t), (t *= 60);
-                            }),
-                            e * n)
-                          : e * parseFloat(n, 10)
+                      ? NaN
+                      : 0 <= n.indexOf(":")
+                      ? (n.split(":").forEach(function(e) {
+                          i.unshift(parseFloat(e, 10));
+                        }),
+                        (n = 0),
+                        (t = 1),
+                        i.forEach(function(e) {
+                          (n += e * t), (t *= 60);
+                        }),
+                        e * n)
+                      : e * parseFloat(n, 10)
                   );
                 },
                 predicate: function(e) {
@@ -2542,22 +2560,22 @@ webpackJsonp([10], {
                     "0" === n
                       ? 0
                       : "0" === e
-                        ? "b" === n[1]
-                          ? i * parseInt(n.slice(2), 2)
-                          : "x" === n[1]
-                            ? i * parseInt(n, 16)
-                            : i * parseInt(n, 8)
-                        : -1 !== n.indexOf(":")
-                          ? (n.split(":").forEach(function(e) {
-                              r.unshift(parseInt(e, 10));
-                            }),
-                            (n = 0),
-                            (t = 1),
-                            r.forEach(function(e) {
-                              (n += e * t), (t *= 60);
-                            }),
-                            i * n)
-                          : i * parseInt(n, 10)
+                      ? "b" === n[1]
+                        ? i * parseInt(n.slice(2), 2)
+                        : "x" === n[1]
+                        ? i * parseInt(n, 16)
+                        : i * parseInt(n, 8)
+                      : -1 !== n.indexOf(":")
+                      ? (n.split(":").forEach(function(e) {
+                          r.unshift(parseInt(e, 10));
+                        }),
+                        (n = 0),
+                        (t = 1),
+                        r.forEach(function(e) {
+                          (n += e * t), (t *= 60);
+                        }),
+                        i * n)
+                      : i * parseInt(n, 10)
                   );
                 },
                 predicate: function(e) {
@@ -2996,10 +3014,10 @@ webpackJsonp([10], {
       true
         ? (module.exports = t())
         : "function" == typeof define && define.amd
-          ? define([], t)
-          : "object" == typeof exports
-            ? (exports.Babel = t())
-            : (e.Babel = t());
+        ? define([], t)
+        : "object" == typeof exports
+        ? (exports.Babel = t())
+        : (e.Babel = t());
     })(this, function() {
       return (function(e) {
         function t(n) {
@@ -3036,8 +3054,12 @@ webpackJsonp([10], {
             "use strict";
             function n(e, t) {
               return g(t) && "string" == typeof t[0]
-                ? e.hasOwnProperty(t[0]) ? [e[t[0]]].concat(t.slice(1)) : void 0
-                : "string" == typeof t ? e[t] : t;
+                ? e.hasOwnProperty(t[0])
+                  ? [e[t[0]]].concat(t.slice(1))
+                  : void 0
+                : "string" == typeof t
+                ? e[t]
+                : t;
             }
             function i(e) {
               var t = (e.presets || []).map(function(e) {
@@ -3326,8 +3348,7 @@ webpackJsonp([10], {
             }
             function s(e, t, r) {
               return (
-                !!t &&
-                (!!a(t.type, e) && (void 0 === r || z.shallowEqual(t, r)))
+                !!t && !!a(t.type, e) && (void 0 === r || z.shallowEqual(t, r))
               );
             }
             function a(e, t) {
@@ -4448,7 +4469,9 @@ webpackJsonp([10], {
                         e.constructor === u.default &&
                         e !== u.default.prototype
                         ? "symbol"
-                        : void 0 === e ? "undefined" : i(e);
+                        : void 0 === e
+                        ? "undefined"
+                        : i(e);
                     };
             t.default =
               "function" == typeof u.default && "symbol" === l(a.default)
@@ -4461,7 +4484,9 @@ webpackJsonp([10], {
                       e.constructor === u.default &&
                       e !== u.default.prototype
                       ? "symbol"
-                      : void 0 === e ? "undefined" : l(e);
+                      : void 0 === e
+                      ? "undefined"
+                      : l(e);
                   };
           },
           function(e, t, r) {
@@ -4491,28 +4516,28 @@ webpackJsonp([10], {
                       p && "function" != typeof b[u]
                         ? o[u]
                         : m && l
-                          ? s(c, n)
-                          : y && b[u] == c
-                            ? (function(e) {
-                                var t = function(t, r, n) {
-                                  if (this instanceof e) {
-                                    switch (arguments.length) {
-                                      case 0:
-                                        return new e();
-                                      case 1:
-                                        return new e(t);
-                                      case 2:
-                                        return new e(t, r);
-                                    }
-                                    return new e(t, r, n);
-                                  }
-                                  return e.apply(this, arguments);
-                                };
-                                return (t.prototype = e.prototype), t;
-                              })(c)
-                            : h && "function" == typeof c
-                              ? s(Function.call, c)
-                              : c),
+                        ? s(c, n)
+                        : y && b[u] == c
+                        ? (function(e) {
+                            var t = function(t, r, n) {
+                              if (this instanceof e) {
+                                switch (arguments.length) {
+                                  case 0:
+                                    return new e();
+                                  case 1:
+                                    return new e(t);
+                                  case 2:
+                                    return new e(t, r);
+                                }
+                                return new e(t, r, n);
+                              }
+                              return e.apply(this, arguments);
+                            };
+                            return (t.prototype = e.prototype), t;
+                          })(c)
+                        : h && "function" == typeof c
+                        ? s(Function.call, c)
+                        : c),
                     h &&
                       (((v.virtual || (v.virtual = {}))[u] = c),
                       t & e.R && g && !g[u] && a(g, u, c)));
@@ -4547,8 +4572,8 @@ webpackJsonp([10], {
               "undefined" != typeof window && window.Math == Math
                 ? window
                 : "undefined" != typeof self && self.Math == Math
-                  ? self
-                  : Function("return this")());
+                ? self
+                : Function("return this")());
             "number" == typeof __g && (__g = r);
           },
           function(e, t) {
@@ -4628,8 +4653,8 @@ webpackJsonp([10], {
                   "." === i
                     ? e.splice(n, 1)
                     : ".." === i
-                      ? (e.splice(n, 1), r++)
-                      : r && (e.splice(n, 1), r--);
+                    ? (e.splice(n, 1), r++)
+                    : r && (e.splice(n, 1), r--);
                 }
                 if (t) for (; r--; r) e.unshift("..");
                 return e;
@@ -4928,10 +4953,12 @@ webpackJsonp([10], {
               return Array.isArray(e)
                 ? "array"
                 : null === e
-                  ? "null"
-                  : void 0 === e
-                    ? "undefined"
-                    : void 0 === e ? "undefined" : (0, v.default)(e);
+                ? "null"
+                : void 0 === e
+                ? "undefined"
+                : void 0 === e
+                ? "undefined"
+                : (0, v.default)(e);
             }
             function s(e) {
               function t(t, r, n) {
@@ -5185,8 +5212,12 @@ webpackJsonp([10], {
             "use strict";
             function n(e) {
               return null == e
-                ? void 0 === e ? u : o
-                : l && l in Object(e) ? s(e) : a(e);
+                ? void 0 === e
+                  ? u
+                  : o
+                : l && l in Object(e)
+                ? s(e)
+                : a(e);
             }
             var i = r(45),
               s = r(534),
@@ -5633,8 +5664,9 @@ webpackJsonp([10], {
                             if (e.default) e = e.default;
                             else {
                               var u = e,
-                                c = (u.__esModule,
-                                (0, o.default)(u, ["__esModule"]));
+                                c =
+                                  (u.__esModule,
+                                  (0, o.default)(u, ["__esModule"]));
                               e = c;
                             }
                           if (
@@ -6422,8 +6454,8 @@ webpackJsonp([10], {
                         "*" === t
                           ? s.push(H.importNamespaceSpecifier(i))
                           : "default" === t
-                            ? s.push(H.importDefaultSpecifier(i))
-                            : s.push(H.importSpecifier(i, H.identifier(t)));
+                          ? s.push(H.importDefaultSpecifier(i))
+                          : s.push(H.importSpecifier(i, H.identifier(t)));
                         var a = H.importDeclaration(s, H.stringLiteral(e));
                         (a._blockHoist = 3),
                           this.path.unshiftContainer("body", a);
@@ -7187,10 +7219,12 @@ webpackJsonp([10], {
               return "function" == typeof e
                 ? e
                 : null == e
-                  ? o
-                  : "object" == (void 0 === e ? "undefined" : i(e))
-                    ? u(e) ? a(e[0], e[1]) : s(e)
-                    : l(e);
+                ? o
+                : "object" == (void 0 === e ? "undefined" : i(e))
+                ? u(e)
+                  ? a(e[0], e[1])
+                  : s(e)
+                : l(e);
             }
             var i =
                 "function" == typeof Symbol &&
@@ -7291,11 +7325,11 @@ webpackJsonp([10], {
                   "." === a
                     ? u.splice(c, 1)
                     : ".." === a
-                      ? l++
-                      : l > 0 &&
-                        ("" === a
-                          ? (u.splice(c + 1, l), (l = 0))
-                          : (u.splice(c, 2), l--));
+                    ? l++
+                    : l > 0 &&
+                      ("" === a
+                        ? (u.splice(c + 1, l), (l = 0))
+                        : (u.splice(c, 2), l--));
               return (
                 (r = u.join("/")),
                 "" === r && (r = o ? "/" : "."),
@@ -7359,26 +7393,26 @@ webpackJsonp([10], {
               return 0 !== n
                 ? n
                 : 0 !== (n = e.originalLine - t.originalLine)
-                  ? n
-                  : 0 !== (n = e.originalColumn - t.originalColumn) || r
-                    ? n
-                    : 0 !== (n = e.generatedColumn - t.generatedColumn)
-                      ? n
-                      : ((n = e.generatedLine - t.generatedLine),
-                        0 !== n ? n : e.name - t.name);
+                ? n
+                : 0 !== (n = e.originalColumn - t.originalColumn) || r
+                ? n
+                : 0 !== (n = e.generatedColumn - t.generatedColumn)
+                ? n
+                : ((n = e.generatedLine - t.generatedLine),
+                  0 !== n ? n : e.name - t.name);
             }
             function d(e, t, r) {
               var n = e.generatedLine - t.generatedLine;
               return 0 !== n
                 ? n
                 : 0 !== (n = e.generatedColumn - t.generatedColumn) || r
-                  ? n
-                  : 0 !== (n = e.source - t.source)
-                    ? n
-                    : 0 !== (n = e.originalLine - t.originalLine)
-                      ? n
-                      : ((n = e.originalColumn - t.originalColumn),
-                        0 !== n ? n : e.name - t.name);
+                ? n
+                : 0 !== (n = e.source - t.source)
+                ? n
+                : 0 !== (n = e.originalLine - t.originalLine)
+                ? n
+                : ((n = e.originalColumn - t.originalColumn),
+                  0 !== n ? n : e.name - t.name);
             }
             function h(e, t) {
               return e === t ? 0 : e > t ? 1 : -1;
@@ -7388,13 +7422,13 @@ webpackJsonp([10], {
               return 0 !== r
                 ? r
                 : 0 !== (r = e.generatedColumn - t.generatedColumn)
-                  ? r
-                  : 0 !== (r = h(e.source, t.source))
-                    ? r
-                    : 0 !== (r = e.originalLine - t.originalLine)
-                      ? r
-                      : ((r = e.originalColumn - t.originalColumn),
-                        0 !== r ? r : h(e.name, t.name));
+                ? r
+                : 0 !== (r = h(e.source, t.source))
+                ? r
+                : 0 !== (r = e.originalLine - t.originalLine)
+                ? r
+                : ((r = e.originalColumn - t.originalColumn),
+                  0 !== r ? r : h(e.name, t.name));
             }
             t.getArg = r;
             var y = /^(?:([\w+\-.]+):)?\/\/(?:(\w+:\w+)@)?([\w.]*)(?::(\d+))?(\S*)$/,
@@ -7443,12 +7477,12 @@ webpackJsonp([10], {
               function a(e) {
                 return (
                   !i(e) &&
-                  ("function" == typeof t.ArrayBuffer &&
-                    ("function" == typeof ArrayBuffer.isView
-                      ? ArrayBuffer.isView(e)
-                      : !!e &&
-                        (e instanceof DataView ||
-                          !!(e.buffer && e.buffer instanceof ArrayBuffer))))
+                  "function" == typeof t.ArrayBuffer &&
+                  ("function" == typeof ArrayBuffer.isView
+                    ? ArrayBuffer.isView(e)
+                    : !!e &&
+                      (e instanceof DataView ||
+                        !!(e.buffer && e.buffer instanceof ArrayBuffer)))
                 );
               }
               function o(e) {
@@ -7461,7 +7495,9 @@ webpackJsonp([10], {
               }
               function u(e, t) {
                 return "string" == typeof e
-                  ? e.length < t ? e : e.slice(0, t)
+                  ? e.length < t
+                    ? e
+                    : e.slice(0, t)
                   : e;
               }
               function l(e) {
@@ -8000,7 +8036,8 @@ webpackJsonp([10], {
               return (
                 !!b.isVariableDeclaration(e) &&
                 (!!e[b.BLOCK_SCOPED_SYMBOL] ||
-                  ("let" === e.kind || "const" === e.kind))
+                  "let" === e.kind ||
+                  "const" === e.kind)
               );
             }
             function a(e, t, r, n) {
@@ -8026,7 +8063,9 @@ webpackJsonp([10], {
             function u(e) {
               return b.isBreakStatement(e)
                 ? "break"
-                : b.isContinueStatement(e) ? "continue" : void 0;
+                : b.isContinueStatement(e)
+                ? "continue"
+                : void 0;
             }
             t.__esModule = !0;
             var l = r(10),
@@ -8579,14 +8618,14 @@ webpackJsonp([10], {
                 return o.isObjectProperty(e)
                   ? e.value
                   : o.isObjectMethod(e)
-                    ? o.functionExpression(
-                        null,
-                        e.params,
-                        e.body,
-                        e.generator,
-                        e.async
-                      )
-                    : void 0;
+                  ? o.functionExpression(
+                      null,
+                      e.params,
+                      e.body,
+                      e.generator,
+                      e.async
+                    )
+                  : void 0;
               }
               function r(e, r, i) {
                 "get" === r.kind && "set" === r.kind
@@ -8906,12 +8945,10 @@ webpackJsonp([10], {
                       n.isObjectPattern(e)
                         ? this.pushObjectPattern(e, t)
                         : n.isArrayPattern(e)
-                          ? this.pushArrayPattern(e, t)
-                          : n.isAssignmentPattern(e)
-                            ? this.pushAssignmentPattern(e, t)
-                            : this.nodes.push(
-                                this.buildVariableAssignment(e, t)
-                              );
+                        ? this.pushArrayPattern(e, t)
+                        : n.isAssignmentPattern(e)
+                        ? this.pushAssignmentPattern(e, t)
+                        : this.nodes.push(this.buildVariableAssignment(e, t));
                     }),
                     (e.prototype.toArray = function(e, t) {
                       return this.file.opts.loose ||
@@ -10843,10 +10880,10 @@ webpackJsonp([10], {
               return "JSXIdentifier" === e.type
                 ? e.name
                 : "JSXNamespacedName" === e.type
-                  ? e.namespace.name + ":" + e.name.name
-                  : "JSXMemberExpression" === e.type
-                    ? d(e.object) + "." + d(e.property)
-                    : void 0;
+                ? e.namespace.name + ":" + e.name.name
+                : "JSXMemberExpression" === e.type
+                ? d(e.object) + "." + d(e.property)
+                : void 0;
             }
             function h(e, t) {
               return new J(t, e).parse();
@@ -11467,7 +11504,9 @@ webpackJsonp([10], {
                         e.constructor === Symbol &&
                         e !== Symbol.prototype
                         ? "symbol"
-                        : void 0 === e ? "undefined" : y(e);
+                        : void 0 === e
+                        ? "undefined"
+                        : y(e);
                     },
               w = function(e, t) {
                 if (!(e instanceof t))
@@ -11687,8 +11726,8 @@ webpackJsonp([10], {
               this.curContext() === U.functionExpression
                 ? (this.state.context.pop(), (this.state.exprAllowed = !1))
                 : e === U.templateQuasi
-                  ? (this.state.exprAllowed = !0)
-                  : (this.state.exprAllowed = !e.isExpr);
+                ? (this.state.exprAllowed = !0)
+                : (this.state.exprAllowed = !e.isExpr);
             }),
               (R.name.updateContext = function(e) {
                 (this.state.exprAllowed = !1),
@@ -11861,8 +11900,8 @@ webpackJsonp([10], {
                       this.state.pos >= this.input.length
                         ? this.finishToken(R.eof)
                         : e.override
-                          ? e.override(this)
-                          : this.readToken(this.fullCharCodeAtPos())
+                        ? e.override(this)
+                        : this.readToken(this.fullCharCodeAtPos())
                     );
                   }),
                   (e.prototype.readToken = function(e) {
@@ -12000,8 +12039,8 @@ webpackJsonp([10], {
                     return this.state.exprAllowed
                       ? (++this.state.pos, this.readRegexp())
                       : 61 === this.input.charCodeAt(this.state.pos + 1)
-                        ? this.finishOp(R.assign, 2)
-                        : this.finishOp(R.slash, 1);
+                      ? this.finishOp(R.assign, 2)
+                      : this.finishOp(R.slash, 1);
                   }),
                   (e.prototype.readToken_mult_modulo = function(e) {
                     var t = 42 === e ? R.star : R.modulo,
@@ -12021,13 +12060,13 @@ webpackJsonp([10], {
                     return t === e
                       ? this.finishOp(124 === e ? R.logicalOR : R.logicalAND, 2)
                       : 61 === t
-                        ? this.finishOp(R.assign, 2)
-                        : 124 === e && 125 === t && this.hasPlugin("flow")
-                          ? this.finishOp(R.braceBarR, 2)
-                          : this.finishOp(
-                              124 === e ? R.bitwiseOR : R.bitwiseAND,
-                              1
-                            );
+                      ? this.finishOp(R.assign, 2)
+                      : 124 === e && 125 === t && this.hasPlugin("flow")
+                      ? this.finishOp(R.braceBarR, 2)
+                      : this.finishOp(
+                          124 === e ? R.bitwiseOR : R.bitwiseAND,
+                          1
+                        );
                   }),
                   (e.prototype.readToken_caret = function() {
                     return 61 === this.input.charCodeAt(this.state.pos + 1)
@@ -12050,8 +12089,8 @@ webpackJsonp([10], {
                           this.nextToken())
                         : this.finishOp(R.incDec, 2)
                       : 61 === t
-                        ? this.finishOp(R.assign, 2)
-                        : this.finishOp(R.plusMin, 1);
+                      ? this.finishOp(R.assign, 2)
+                      : this.finishOp(R.plusMin, 1);
                   }),
                   (e.prototype.readToken_lt_gt = function(e) {
                     var t = this.input.charCodeAt(this.state.pos + 1),
@@ -12069,11 +12108,11 @@ webpackJsonp([10], {
                         60 === e &&
                         45 === this.input.charCodeAt(this.state.pos + 2) &&
                         45 === this.input.charCodeAt(this.state.pos + 3)
-                        ? (this.inModule && this.unexpected(),
-                          this.skipLineComment(4),
-                          this.skipSpace(),
-                          this.nextToken())
-                        : (61 === t && (r = 2), this.finishOp(R.relational, r));
+                      ? (this.inModule && this.unexpected(),
+                        this.skipLineComment(4),
+                        this.skipSpace(),
+                        this.nextToken())
+                      : (61 === t && (r = 2), this.finishOp(R.relational, r));
                   }),
                   (e.prototype.readToken_eq_excl = function(e) {
                     var t = this.input.charCodeAt(this.state.pos + 1);
@@ -12085,8 +12124,8 @@ webpackJsonp([10], {
                             : 2
                         )
                       : 61 === e && 62 === t
-                        ? ((this.state.pos += 2), this.finishToken(R.arrow))
-                        : this.finishOp(61 === e ? R.eq : R.prefix, 1);
+                      ? ((this.state.pos += 2), this.finishToken(R.arrow))
+                      : this.finishOp(61 === e ? R.eq : R.prefix, 1);
                   }),
                   (e.prototype.getTokenFromCode = function(e) {
                     switch (e) {
@@ -12221,8 +12260,10 @@ webpackJsonp([10], {
                           a >= 97
                             ? a - 97 + 10
                             : a >= 65
-                              ? a - 65 + 10
-                              : a >= 48 && a <= 57 ? a - 48 : 1 / 0) >= e
+                            ? a - 65 + 10
+                            : a >= 48 && a <= 57
+                            ? a - 48
+                            : 1 / 0) >= e
                       )
                         break;
                       ++this.state.pos, (n = n * e + o);
@@ -12282,12 +12323,12 @@ webpackJsonp([10], {
                       n
                         ? (o = parseFloat(a))
                         : r && 1 !== a.length
-                          ? this.state.strict
-                            ? this.raise(t, "Invalid number")
-                            : (o = /[89]/.test(a)
-                                ? parseInt(a, 10)
-                                : parseInt(a, 8))
-                          : (o = parseInt(a, 10)),
+                        ? this.state.strict
+                          ? this.raise(t, "Invalid number")
+                          : (o = /[89]/.test(a)
+                              ? parseInt(a, 10)
+                              : parseInt(a, 8))
+                        : (o = parseInt(a, 10)),
                       this.finishToken(R.num, o)
                     );
                   }),
@@ -12365,9 +12406,11 @@ webpackJsonp([10], {
                         var i = this.readEscapedChar(!0);
                         null === i ? (r = !0) : (e += i), (t = this.state.pos);
                       } else if (o(n)) {
-                        switch (((e += this.input.slice(t, this.state.pos)),
-                        ++this.state.pos,
-                        n)) {
+                        switch (
+                          ((e += this.input.slice(t, this.state.pos)),
+                          ++this.state.pos,
+                          n)
+                        ) {
                           case 13:
                             10 === this.input.charCodeAt(this.state.pos) &&
                               ++this.state.pos;
@@ -12525,8 +12568,8 @@ webpackJsonp([10], {
                     t.keyword && e === R.dot
                       ? (this.state.exprAllowed = !1)
                       : (r = t.updateContext)
-                        ? r.call(this, e)
-                        : (this.state.exprAllowed = t.beforeExpr);
+                      ? r.call(this, e)
+                      : (this.state.exprAllowed = t.beforeExpr);
                   }),
                   e
                 );
@@ -12837,8 +12880,8 @@ webpackJsonp([10], {
                   this.isLineTerminator()
                     ? (e.label = null)
                     : this.match(R.name)
-                      ? ((e.label = this.parseIdentifier()), this.semicolon())
-                      : this.unexpected();
+                    ? ((e.label = this.parseIdentifier()), this.semicolon())
+                    : this.unexpected();
                 var n = void 0;
                 for (n = 0; n < this.state.labels.length; ++n) {
                   var i = this.state.labels[n];
@@ -13086,7 +13129,9 @@ webpackJsonp([10], {
                 for (
                   var o = this.state.type.isLoop
                       ? "loop"
-                      : this.match(R._switch) ? "switch" : null,
+                      : this.match(R._switch)
+                      ? "switch"
+                      : null,
                     u = this.state.labels.length - 1;
                   u >= 0;
                   u--
@@ -13191,14 +13236,14 @@ webpackJsonp([10], {
                       : r !== R._const ||
                         this.match(R._in) ||
                         this.isContextual("of")
-                        ? "Identifier" === n.id.type ||
-                          (t && (this.match(R._in) || this.isContextual("of")))
-                          ? (n.init = null)
-                          : this.raise(
-                              this.state.lastTokEnd,
-                              "Complex binding patterns require an initialization value"
-                            )
-                        : this.unexpected(),
+                      ? "Identifier" === n.id.type ||
+                        (t && (this.match(R._in) || this.isContextual("of")))
+                        ? (n.init = null)
+                        : this.raise(
+                            this.state.lastTokEnd,
+                            "Complex binding patterns require an initialization value"
+                          )
+                      : this.unexpected(),
                     e.declarations.push(
                       this.finishNode(n, "VariableDeclarator")
                     ),
@@ -13397,13 +13442,13 @@ webpackJsonp([10], {
                               this.parsePropertyName(a),
                               this.parseClassMethod(s, a, !1, !1))
                             : this.isLineTerminator()
-                              ? (this.isNonstaticConstructor(a) &&
-                                  this.raise(
-                                    a.key.start,
-                                    "Classes may not have a non-static field named 'constructor'"
-                                  ),
-                                s.body.push(this.parseClassProperty(a)))
-                              : this.unexpected()
+                            ? (this.isNonstaticConstructor(a) &&
+                                this.raise(
+                                  a.key.start,
+                                  "Classes may not have a non-static field named 'constructor'"
+                                ),
+                              s.body.push(this.parseClassProperty(a)))
+                            : this.unexpected()
                           : ((a.kind = l.name),
                             this.parsePropertyName(a),
                             this.isNonstaticConstructor(a) &&
@@ -13443,7 +13488,9 @@ webpackJsonp([10], {
               (z.parseClassId = function(e, t, r) {
                 this.match(R.name)
                   ? (e.id = this.parseIdentifier())
-                  : r || !t ? (e.id = null) : this.unexpected();
+                  : r || !t
+                  ? (e.id = null)
+                  : this.unexpected();
               }),
               (z.parseClassSuper = function(e) {
                 e.superClass = this.eat(R._extends)
@@ -13498,8 +13545,8 @@ webpackJsonp([10], {
                       this.eat(R._function)
                         ? (i = this.parseFunction(i, !0, !1, !1, !0))
                         : this.match(R._class)
-                          ? (i = this.parseClass(i, !0, !0))
-                          : ((s = !0), (i = this.parseMaybeAssign())),
+                        ? (i = this.parseClass(i, !0, !0))
+                        : ((s = !0), (i = this.parseMaybeAssign())),
                       (e.declaration = i),
                       s && this.semicolon(),
                       this.checkExport(e, !0, !0),
@@ -13543,7 +13590,9 @@ webpackJsonp([10], {
                       ? this.parseExprAtom()
                       : this.unexpected()),
                     this.checkExport(e))
-                  : t ? this.unexpected() : (e.source = null),
+                  : t
+                  ? this.unexpected()
+                  : (e.source = null),
                   this.semicolon();
               }),
               (z.shouldParseExportDeclaration = function() {
@@ -13663,9 +13712,9 @@ webpackJsonp([10], {
                   "ObjectProperty" === e.type
                     ? this.checkDeclaration(e.value)
                     : "RestElement" === e.type || "RestProperty" === e.type
-                      ? this.checkDeclaration(e.argument)
-                      : "Identifier" === e.type &&
-                        this.checkDuplicateExports(e, e.name);
+                    ? this.checkDeclaration(e.argument)
+                    : "Identifier" === e.type &&
+                      this.checkDuplicateExports(e, e.name);
               }),
               (z.checkDuplicateExports = function(e, t) {
                 this.state.exportedIdentifiers.indexOf(t) > -1 &&
@@ -13678,8 +13727,8 @@ webpackJsonp([10], {
                   "default" === t
                     ? "Only one default export allowed per module."
                     : "`" +
-                      t +
-                      "` has already been exported. Exported identifiers must be unique."
+                        t +
+                        "` has already been exported. Exported identifiers must be unique."
                 );
               }),
               (z.parseExportSpecifiers = function() {
@@ -14259,7 +14308,9 @@ webpackJsonp([10], {
                   i = this.parseExprAtom(e);
                 return "ArrowFunctionExpression" === i.type && i.start === n
                   ? i
-                  : e && e.start ? i : this.parseSubscripts(i, t, r);
+                  : e && e.start
+                  ? i
+                  : this.parseSubscripts(i, t, r);
               }),
               (te.parseSubscripts = function(e, t, r, n) {
                 for (;;) {
@@ -14810,13 +14861,13 @@ webpackJsonp([10], {
                     this.parseMethod(e, t, r),
                     this.finishNode(e, "ObjectMethod"))
                   : this.isGetterOrSetterMethod(e, n)
-                    ? ((t || r) && this.unexpected(),
-                      (e.kind = e.key.name),
-                      this.parsePropertyName(e),
-                      this.parseMethod(e),
-                      this.checkGetterSetterParamCount(e),
-                      this.finishNode(e, "ObjectMethod"))
-                    : void 0;
+                  ? ((t || r) && this.unexpected(),
+                    (e.kind = e.key.name),
+                    this.parsePropertyName(e),
+                    this.parseMethod(e),
+                    this.checkGetterSetterParamCount(e),
+                    this.finishNode(e, "ObjectMethod"))
+                  : void 0;
               }),
               (te.parseObjectProperty = function(e, t, r, n, i) {
                 return this.eat(R.colon)
@@ -14828,24 +14879,24 @@ webpackJsonp([10], {
                       : this.parseMaybeAssign(!1, i)),
                     this.finishNode(e, "ObjectProperty"))
                   : e.computed || "Identifier" !== e.key.type
-                    ? void 0
-                    : (this.checkReservedWord(e.key.name, e.key.start, !0, !0),
-                      n
-                        ? (e.value = this.parseMaybeDefault(
-                            t,
-                            r,
-                            e.key.__clone()
-                          ))
-                        : this.match(R.eq) && i
-                          ? (i.start || (i.start = this.state.start),
-                            (e.value = this.parseMaybeDefault(
-                              t,
-                              r,
-                              e.key.__clone()
-                            )))
-                          : (e.value = e.key.__clone()),
-                      (e.shorthand = !0),
-                      this.finishNode(e, "ObjectProperty"));
+                  ? void 0
+                  : (this.checkReservedWord(e.key.name, e.key.start, !0, !0),
+                    n
+                      ? (e.value = this.parseMaybeDefault(
+                          t,
+                          r,
+                          e.key.__clone()
+                        ))
+                      : this.match(R.eq) && i
+                      ? (i.start || (i.start = this.state.start),
+                        (e.value = this.parseMaybeDefault(
+                          t,
+                          r,
+                          e.key.__clone()
+                        )))
+                      : (e.value = e.key.__clone()),
+                    (e.shorthand = !0),
+                    this.finishNode(e, "ObjectProperty"));
               }),
               (te.parseObjPropValue = function(e, t, r, n, i, s, a) {
                 var o =
@@ -14997,8 +15048,8 @@ webpackJsonp([10], {
                 return e && this.match(R.comma)
                   ? null
                   : this.match(R.ellipsis)
-                    ? this.parseSpread(t)
-                    : this.parseMaybeAssign(!1, t, this.parseParenItem, r);
+                  ? this.parseSpread(t)
+                  : this.parseMaybeAssign(!1, t, this.parseParenItem, r);
               }),
               (te.parseIdentifier = function(e) {
                 var t = this.startNode();
@@ -15013,8 +15064,8 @@ webpackJsonp([10], {
                   this.match(R.name)
                     ? (t.name = this.state.value)
                     : this.state.type.keyword
-                      ? (t.name = this.state.type.keyword)
-                      : this.unexpected(),
+                    ? (t.name = this.state.type.keyword)
+                    : this.unexpected(),
                   !e &&
                     "await" === t.name &&
                     this.state.inAsync &&
@@ -15517,15 +15568,15 @@ webpackJsonp([10], {
                                 "Object pattern can't contain getter or setter"
                               )
                             : c.method
-                              ? this.raise(
-                                  c.key.start,
-                                  "Object pattern can't contain methods"
-                                )
-                              : this.toAssignable(
-                                  c,
-                                  r,
-                                  "object destructuring pattern"
-                                );
+                            ? this.raise(
+                                c.key.start,
+                                "Object pattern can't contain methods"
+                              )
+                            : this.toAssignable(
+                                c,
+                                r,
+                                "object destructuring pattern"
+                              );
                         }
                         return t;
                       }
@@ -15623,22 +15674,22 @@ webpackJsonp([10], {
                 return this.match(R._class)
                   ? this.flowParseDeclareClass(e)
                   : this.match(R._function)
-                    ? this.flowParseDeclareFunction(e)
-                    : this.match(R._var)
-                      ? this.flowParseDeclareVariable(e)
-                      : this.isContextual("module")
-                        ? this.lookahead().type === R.dot
-                          ? this.flowParseDeclareModuleExports(e)
-                          : this.flowParseDeclareModule(e)
-                        : this.isContextual("type")
-                          ? this.flowParseDeclareTypeAlias(e)
-                          : this.isContextual("opaque")
-                            ? this.flowParseDeclareOpaqueType(e)
-                            : this.isContextual("interface")
-                              ? this.flowParseDeclareInterface(e)
-                              : this.match(R._export)
-                                ? this.flowParseDeclareExportDeclaration(e)
-                                : void this.unexpected();
+                  ? this.flowParseDeclareFunction(e)
+                  : this.match(R._var)
+                  ? this.flowParseDeclareVariable(e)
+                  : this.isContextual("module")
+                  ? this.lookahead().type === R.dot
+                    ? this.flowParseDeclareModuleExports(e)
+                    : this.flowParseDeclareModule(e)
+                  : this.isContextual("type")
+                  ? this.flowParseDeclareTypeAlias(e)
+                  : this.isContextual("opaque")
+                  ? this.flowParseDeclareOpaqueType(e)
+                  : this.isContextual("interface")
+                  ? this.flowParseDeclareInterface(e)
+                  : this.match(R._export)
+                  ? this.flowParseDeclareExportDeclaration(e)
+                  : void this.unexpected();
               }),
               (le.flowParseDeclareExportDeclaration = function(e) {
                 if ((this.expect(R._export), this.isContextual("opaque")))
@@ -15937,43 +15988,43 @@ webpackJsonp([10], {
                   this.match(R.bracketL)
                     ? i.indexers.push(this.flowParseObjectTypeIndexer(s, o, h))
                     : this.match(R.parenL) || this.isRelational("<")
-                      ? (h && this.unexpected(d),
-                        i.callProperties.push(
-                          this.flowParseObjectTypeCallProperty(s, o)
-                        ))
-                      : this.match(R.ellipsis)
-                        ? (r ||
-                            this.unexpected(
-                              null,
-                              "Spread operator cannot appear in class or interface definitions"
-                            ),
-                          h &&
-                            this.unexpected(
-                              h.start,
-                              "Spread properties cannot have variance"
-                            ),
-                          this.expect(R.ellipsis),
-                          (s.argument = this.flowParseType()),
+                    ? (h && this.unexpected(d),
+                      i.callProperties.push(
+                        this.flowParseObjectTypeCallProperty(s, o)
+                      ))
+                    : this.match(R.ellipsis)
+                    ? (r ||
+                        this.unexpected(
+                          null,
+                          "Spread operator cannot appear in class or interface definitions"
+                        ),
+                      h &&
+                        this.unexpected(
+                          h.start,
+                          "Spread properties cannot have variance"
+                        ),
+                      this.expect(R.ellipsis),
+                      (s.argument = this.flowParseType()),
+                      this.flowObjectTypeSemicolon(),
+                      i.properties.push(
+                        this.finishNode(s, "ObjectTypeSpreadProperty")
+                      ))
+                    : ((a = this.flowParseObjectPropertyKey()),
+                      this.isRelational("<") || this.match(R.parenL)
+                        ? (h && this.unexpected(h.start),
+                          i.properties.push(
+                            this.flowParseObjectTypeMethod(f, p, o, a)
+                          ))
+                        : (this.eat(R.question) && (c = !0),
+                          (s.key = a),
+                          (s.value = this.flowParseTypeInitialiser()),
+                          (s.optional = c),
+                          (s.static = o),
+                          (s.variance = h),
                           this.flowObjectTypeSemicolon(),
                           i.properties.push(
-                            this.finishNode(s, "ObjectTypeSpreadProperty")
-                          ))
-                        : ((a = this.flowParseObjectPropertyKey()),
-                          this.isRelational("<") || this.match(R.parenL)
-                            ? (h && this.unexpected(h.start),
-                              i.properties.push(
-                                this.flowParseObjectTypeMethod(f, p, o, a)
-                              ))
-                            : (this.eat(R.question) && (c = !0),
-                              (s.key = a),
-                              (s.value = this.flowParseTypeInitialiser()),
-                              (s.optional = c),
-                              (s.static = o),
-                              (s.variance = h),
-                              this.flowObjectTypeSemicolon(),
-                              i.properties.push(
-                                this.finishNode(s, "ObjectTypeProperty")
-                              ))),
+                            this.finishNode(s, "ObjectTypeProperty")
+                          ))),
                     (o = !1);
                 }
                 this.expect(u);
@@ -16850,7 +16901,7 @@ webpackJsonp([10], {
                     ? e.push(a)
                     : ((a -= 65536),
                       (t = 55296 + (a >> 10)),
-                      (r = a % 1024 + 56320),
+                      (r = (a % 1024) + 56320),
                       e.push(t, r)),
                     (n + 1 == i || e.length > 16384) &&
                       ((s += pe.apply(null, e)), (e.length = 0));
@@ -17191,10 +17242,10 @@ webpackJsonp([10], {
                       (t += this.jsxReadEntity()),
                       (r = this.state.pos))
                     : o(n)
-                      ? ((t += this.input.slice(r, this.state.pos)),
-                        (t += this.jsxReadNewLine(!1)),
-                        (r = this.state.pos))
-                      : ++this.state.pos;
+                    ? ((t += this.input.slice(r, this.state.pos)),
+                      (t += this.jsxReadNewLine(!1)),
+                      (r = this.state.pos))
+                    : ++this.state.pos;
                 }
                 return (
                   (t += this.input.slice(r, this.state.pos++)),
@@ -17242,8 +17293,8 @@ webpackJsonp([10], {
                   this.match(R.jsxName)
                     ? (e.name = this.state.value)
                     : this.state.type.keyword
-                      ? (e.name = this.state.type.keyword)
-                      : this.unexpected(),
+                    ? (e.name = this.state.type.keyword)
+                    : this.unexpected(),
                   this.next(),
                   this.finishNode(e, "JSXIdentifier")
                 );
@@ -17459,8 +17510,8 @@ webpackJsonp([10], {
                       r === U.j_oTag
                         ? this.state.context.push(U.braceExpression)
                         : r === U.j_expr
-                          ? this.state.context.push(U.templateQuasi)
-                          : e.call(this, t),
+                        ? this.state.context.push(U.templateQuasi)
+                        : e.call(this, t),
                         (this.state.exprAllowed = !0);
                     } else {
                       if (!this.match(R.slash) || t !== R.jsxTagStart)
@@ -17956,8 +18007,10 @@ webpackJsonp([10], {
                 return g(t)
                   ? e.stylize("" + t, "number")
                   : m(t)
-                    ? e.stylize("" + t, "boolean")
-                    : y(t) ? e.stylize("null", "null") : void 0;
+                  ? e.stylize("" + t, "boolean")
+                  : y(t)
+                  ? e.stylize("null", "null")
+                  : void 0;
               }
               function c(e) {
                 return "[" + Error.prototype.toString.call(e) + "]";
@@ -18558,7 +18611,9 @@ webpackJsonp([10], {
               return e
                 ? Array.isArray(e)
                   ? e
-                  : "string" == typeof e ? e.split(",") : [e]
+                  : "string" == typeof e
+                  ? e.split(",")
+                  : [e]
                 : [];
             }
             function a(e) {
@@ -18583,8 +18638,10 @@ webpackJsonp([10], {
                 ? "boolean" == typeof e
                   ? o([e], t)
                   : "string" == typeof e
-                    ? o(s(e), t)
-                    : Array.isArray(e) ? (t && (e = e.map(t)), e) : [e]
+                  ? o(s(e), t)
+                  : Array.isArray(e)
+                  ? (t && (e = e.map(t)), e)
+                  : [e]
                 : [];
             }
             function u(e) {
@@ -18759,8 +18816,8 @@ webpackJsonp([10], {
               null == t
                 ? this.number(r)
                 : this.format.minified
-                  ? this.number(t.length < r.length ? t : r)
-                  : this.number(t);
+                ? this.number(t.length < r.length ? t : r)
+                : this.number(t);
             }
             function d(e, t) {
               var r = this.getPossibleRaw(e);
@@ -19523,9 +19580,9 @@ webpackJsonp([10], {
                     R.isAssignmentExpression(e)
                       ? (r = e.left)
                       : R.isVariableDeclarator(e)
-                        ? (r = e.id)
-                        : (R.isObjectProperty(r) || R.isObjectMethod(r)) &&
-                          (r = r.key);
+                      ? (r = e.id)
+                      : (R.isObjectProperty(r) || R.isObjectMethod(r)) &&
+                        (r = r.key);
                     var n = [];
                     a(r, n);
                     var i = n.join("$");
@@ -19878,13 +19935,14 @@ webpackJsonp([10], {
                     }
                     return R.isClassMethod(e)
                       ? !(e.computed && !this.isPure(e.key, t)) &&
-                          ("get" !== e.kind && "set" !== e.kind)
+                          "get" !== e.kind &&
+                          "set" !== e.kind
                       : R.isClassProperty(e) || R.isObjectProperty(e)
-                        ? !(e.computed && !this.isPure(e.key, t)) &&
-                          this.isPure(e.value, t)
-                        : R.isUnaryExpression(e)
-                          ? this.isPure(e.argument, t)
-                          : R.isPureish(e);
+                      ? !(e.computed && !this.isPure(e.key, t)) &&
+                        this.isPure(e.value, t)
+                      : R.isUnaryExpression(e)
+                      ? this.isPure(e.argument, t)
+                      : R.isPureish(e);
                   }),
                   (e.prototype.setData = function(e, t) {
                     return (this.data[e] = t);
@@ -20178,10 +20236,10 @@ webpackJsonp([10], {
                     return (
                       !!t &&
                       (!!this.hasOwnBinding(t) ||
-                        (!!this.parentHasBinding(t, r) ||
-                          (!!this.hasUid(t) ||
-                            (!(r || !(0, g.default)(e.globals, t)) ||
-                              !(r || !(0, g.default)(e.contextVariables, t))))))
+                        !!this.parentHasBinding(t, r) ||
+                        !!this.hasUid(t) ||
+                        !(r || !(0, g.default)(e.globals, t)) ||
+                        !(r || !(0, g.default)(e.contextVariables, t)))
                     );
                   }),
                   (e.prototype.parentHasBinding = function(e, t) {
@@ -20226,21 +20284,22 @@ webpackJsonp([10], {
               i = (function(e) {
                 return e && e.__esModule ? e : { default: e };
               })(n),
-              s = ((t.STATEMENT_OR_BLOCK_KEYS = [
-                "consequent",
-                "body",
-                "alternate"
-              ]),
-              (t.FLATTENABLE_KEYS = ["body", "expressions"]),
-              (t.FOR_INIT_KEYS = ["left", "init"]),
-              (t.COMMENT_KEYS = [
-                "leadingComments",
-                "trailingComments",
-                "innerComments"
-              ]),
-              (t.LOGICAL_OPERATORS = ["||", "&&"]),
-              (t.UPDATE_OPERATORS = ["++", "--"]),
-              (t.BOOLEAN_NUMBER_BINARY_OPERATORS = [">", "<", ">=", "<="])),
+              s =
+                ((t.STATEMENT_OR_BLOCK_KEYS = [
+                  "consequent",
+                  "body",
+                  "alternate"
+                ]),
+                (t.FLATTENABLE_KEYS = ["body", "expressions"]),
+                (t.FOR_INIT_KEYS = ["left", "init"]),
+                (t.COMMENT_KEYS = [
+                  "leadingComments",
+                  "trailingComments",
+                  "innerComments"
+                ]),
+                (t.LOGICAL_OPERATORS = ["||", "&&"]),
+                (t.UPDATE_OPERATORS = ["++", "--"]),
+                (t.BOOLEAN_NUMBER_BINARY_OPERATORS = [">", "<", ">=", "<="])),
               a = (t.EQUALITY_BINARY_OPERATORS = ["==", "===", "!=", "!=="]),
               o = (t.COMPARISON_BINARY_OPERATORS = [].concat(a, [
                 "in",
@@ -20260,8 +20319,9 @@ webpackJsonp([10], {
                 "<<",
                 "^"
               ]),
-              c = ((t.BINARY_OPERATORS = ["+"].concat(l, u)),
-              (t.BOOLEAN_UNARY_OPERATORS = ["delete", "!"])),
+              c =
+                ((t.BINARY_OPERATORS = ["+"].concat(l, u)),
+                (t.BOOLEAN_UNARY_OPERATORS = ["delete", "!"])),
               f = (t.NUMBER_UNARY_OPERATORS = ["+", "-", "++", "--", "~"]),
               p = (t.STRING_UNARY_OPERATORS = ["typeof"]);
             (t.UNARY_OPERATORS = ["void"].concat(c, f, p)),
@@ -21175,7 +21235,9 @@ webpackJsonp([10], {
                   null != e &&
                   !a(e)
                 ) ||
-                (u.test(e) || !o.test(e) || (null != t && e in Object(t)))
+                u.test(e) ||
+                !o.test(e) ||
+                (null != t && e in Object(t))
               );
             }
             var i =
@@ -21556,8 +21618,9 @@ webpackJsonp([10], {
               (t.OptionManager = C.default),
               (t.Pipeline = P.default);
             var k = new P.default(),
-              F = ((t.analyse = k.analyse.bind(k)),
-              (t.transform = k.transform.bind(k)));
+              F =
+                ((t.analyse = k.analyse.bind(k)),
+                (t.transform = k.transform.bind(k)));
             t.transformFromAst = k.transformFromAst.bind(k);
           },
           function(e, t, r) {
@@ -22174,8 +22237,8 @@ webpackJsonp([10], {
             function s(e, t) {
               return (
                 !!v.isSuper(e) &&
-                (!v.isMemberExpression(t, { computed: !1 }) &&
-                  !v.isCallExpression(t, { callee: e }))
+                !v.isMemberExpression(t, { computed: !1 }) &&
+                !v.isCallExpression(t, { callee: e })
               );
             }
             function a(e) {
@@ -22282,10 +22345,10 @@ webpackJsonp([10], {
                     return t.property === e
                       ? void 0
                       : v.isCallExpression(t, { callee: e })
-                        ? void 0
-                        : v.isMemberExpression(t) && !r.static
-                          ? v.memberExpression(n, v.identifier("prototype"))
-                          : n;
+                      ? void 0
+                      : v.isMemberExpression(t) && !r.static
+                      ? v.memberExpression(n, v.identifier("prototype"))
+                      : n;
                   }),
                   (e.prototype.looseHandle = function(e) {
                     var t = e.node;
@@ -23593,12 +23656,12 @@ webpackJsonp([10], {
                                     t.numericLiteral(1)
                                   ))
                                 : "--" === a.operator
-                                  ? (a = t.binaryExpression(
-                                      "-",
-                                      a.argument,
-                                      t.numericLiteral(1)
-                                    ))
-                                  : (u = !1));
+                                ? (a = t.binaryExpression(
+                                    "-",
+                                    a.argument,
+                                    t.numericLiteral(1)
+                                  ))
+                                : (u = !1));
                             for (
                               var l = s,
                                 c = Array.isArray(l),
@@ -23982,9 +24045,9 @@ webpackJsonp([10], {
                     var r = t.get("arguments");
                     return (
                       !(3 === r.length && !r.shift().isStringLiteral()) &&
-                      (2 === r.length &&
-                        (!!r.shift().isArrayExpression() &&
-                          !!r.shift().isFunctionExpression()))
+                      2 === r.length &&
+                      !!r.shift().isArrayExpression() &&
+                      !!r.shift().isFunctionExpression()
                     );
                   }
                 }
@@ -25102,10 +25165,9 @@ webpackJsonp([10], {
                     (i.isImportDeclaration(t)
                       ? "type" === t.importKind || "typeof" === t.importKind
                       : i.isExportDeclaration(t)
-                        ? "type" === t.exportKind
-                        : !!i.isImportSpecifier(t) &&
-                          ("type" === t.importKind ||
-                            "typeof" === t.importKind))
+                      ? "type" === t.exportKind
+                      : !!i.isImportSpecifier(t) &&
+                        ("type" === t.importKind || "typeof" === t.importKind))
                   );
                 }
               });
@@ -25287,14 +25349,14 @@ webpackJsonp([10], {
               return void 0 === e
                 ? "Undefined"
                 : null === e
-                  ? "Null"
-                  : "string" == typeof (r = a((t = Object(e)), i))
-                    ? r
-                    : s
-                      ? n(t)
-                      : "Object" == (o = n(t)) && "function" == typeof t.callee
-                        ? "Arguments"
-                        : o;
+                ? "Null"
+                : "string" == typeof (r = a((t = Object(e)), i))
+                ? r
+                : s
+                ? n(t)
+                : "Object" == (o = n(t)) && "function" == typeof t.callee
+                ? "Arguments"
+                : o;
             };
           },
           function(e, t, r) {
@@ -25528,25 +25590,23 @@ webpackJsonp([10], {
                     !window.process ||
                     "renderer" !== window.process.type
                   ) ||
-                  (("undefined" != typeof document &&
+                  ("undefined" != typeof document &&
                     document.documentElement &&
                     document.documentElement.style &&
                     document.documentElement.style.WebkitAppearance) ||
-                    ("undefined" != typeof window &&
-                      window.console &&
-                      (window.console.firebug ||
-                        (window.console.exception && window.console.table))) ||
-                    ("undefined" != typeof navigator &&
-                      navigator.userAgent &&
-                      navigator.userAgent
-                        .toLowerCase()
-                        .match(/firefox\/(\d+)/) &&
-                      parseInt(RegExp.$1, 10) >= 31) ||
-                    ("undefined" != typeof navigator &&
-                      navigator.userAgent &&
-                      navigator.userAgent
-                        .toLowerCase()
-                        .match(/applewebkit\/(\d+)/)))
+                  ("undefined" != typeof window &&
+                    window.console &&
+                    (window.console.firebug ||
+                      (window.console.exception && window.console.table))) ||
+                  ("undefined" != typeof navigator &&
+                    navigator.userAgent &&
+                    navigator.userAgent.toLowerCase().match(/firefox\/(\d+)/) &&
+                    parseInt(RegExp.$1, 10) >= 31) ||
+                  ("undefined" != typeof navigator &&
+                    navigator.userAgent &&
+                    navigator.userAgent
+                      .toLowerCase()
+                      .match(/applewebkit\/(\d+)/))
                 );
               }
               function s(e) {
@@ -25676,7 +25736,7 @@ webpackJsonp([10], {
                   ? String.fromCharCode(e)
                   : String.fromCharCode(
                       Math.floor((e - 65536) / 1024) + 55296
-                    ) + String.fromCharCode((e - 65536) % 1024 + 56320);
+                    ) + String.fromCharCode(((e - 65536) % 1024) + 56320);
               }
               function o(e) {
                 return e < 128 ? h[e] : p.NonAsciiIdentifierStart.test(a(e));
@@ -26215,7 +26275,7 @@ webpackJsonp([10], {
             function r(e, t) {
               return function(r) {
                 return (
-                  null != r && (r[e] === t && (void 0 !== t || e in Object(r)))
+                  null != r && r[e] === t && (void 0 !== t || e in Object(r))
                 );
               };
             }
@@ -26516,8 +26576,8 @@ webpackJsonp([10], {
                             ? (e.splice(i, 2), e)
                             : ((e[i] = t + 1), e)
                           : t == n - 1
-                            ? ((e[i + 1] = t), e)
-                            : (e.splice(i, 2, r, t, t + 1, n), e);
+                          ? ((e[i + 1] = t), e)
+                          : (e.splice(i, 2, r, t, t + 1, n), e);
                       i += 2;
                     }
                     return e;
@@ -26640,33 +26700,33 @@ webpackJsonp([10], {
                     return parseInt(B((e - 65536) / 1024) + 55296, 10);
                   },
                   I = function(e) {
-                    return parseInt((e - 65536) % 1024 + 56320, 10);
+                    return parseInt(((e - 65536) % 1024) + 56320, 10);
                   },
                   M = String.fromCharCode,
                   N = function(e) {
                     return 9 == e
                       ? "\\t"
                       : 10 == e
-                        ? "\\n"
-                        : 12 == e
-                          ? "\\f"
-                          : 13 == e
-                            ? "\\r"
-                            : 92 == e
-                              ? "\\\\"
-                              : 36 == e ||
-                                (e >= 40 && e <= 43) ||
-                                45 == e ||
-                                46 == e ||
-                                63 == e ||
-                                (e >= 91 && e <= 94) ||
-                                (e >= 123 && e <= 125)
-                                ? "\\" + M(e)
-                                : e >= 32 && e <= 126
-                                  ? M(e)
-                                  : e <= 255
-                                    ? "\\x" + g(b(e), 2)
-                                    : "\\u" + g(b(e), 4);
+                      ? "\\n"
+                      : 12 == e
+                      ? "\\f"
+                      : 13 == e
+                      ? "\\r"
+                      : 92 == e
+                      ? "\\\\"
+                      : 36 == e ||
+                        (e >= 40 && e <= 43) ||
+                        45 == e ||
+                        46 == e ||
+                        63 == e ||
+                        (e >= 91 && e <= 94) ||
+                        (e >= 123 && e <= 125)
+                      ? "\\" + M(e)
+                      : e >= 32 && e <= 126
+                      ? M(e)
+                      : e <= 255
+                      ? "\\x" + g(b(e), 2)
+                      : "\\u" + g(b(e), 4);
                   },
                   L = function(e) {
                     return e <= 65535
@@ -26695,7 +26755,9 @@ webpackJsonp([10], {
                         (n +=
                           t == r
                             ? N(t)
-                            : t + 1 == r ? N(t) + N(r) : N(t) + "-" + N(r)),
+                            : t + 1 == r
+                            ? N(t) + N(r)
+                            : N(t) + "-" + N(r)),
                         (i += 2);
                     return "[" + n + "]";
                   },
@@ -26712,7 +26774,9 @@ webpackJsonp([10], {
                         (n +=
                           t == r
                             ? L(t)
-                            : t + 1 == r ? L(t) + L(r) : L(t) + "-" + L(r)),
+                            : t + 1 == r
+                            ? L(t) + L(r)
+                            : L(t) + "-" + L(r)),
                         (i += 2);
                     return "[" + n + "]";
                   },
@@ -26749,30 +26813,28 @@ webpackJsonp([10], {
                                 ? s.push(57344, r + 1)
                                 : (s.push(57344, 65536), a.push(65536, r + 1))))
                           : t >= 55296 && t <= 56319
-                            ? (r >= 55296 && r <= 56319 && n.push(t, r + 1),
-                              r >= 56320 &&
-                                r <= 57343 &&
-                                (n.push(t, 56320), i.push(56320, r + 1)),
-                              r > 57343 &&
-                                (n.push(t, 56320),
-                                i.push(56320, 57344),
-                                r <= 65535
-                                  ? s.push(57344, r + 1)
-                                  : (s.push(57344, 65536),
-                                    a.push(65536, r + 1))))
-                            : t >= 56320 && t <= 57343
-                              ? (r >= 56320 && r <= 57343 && i.push(t, r + 1),
-                                r > 57343 &&
-                                  (i.push(t, 57344),
-                                  r <= 65535
-                                    ? s.push(57344, r + 1)
-                                    : (s.push(57344, 65536),
-                                      a.push(65536, r + 1))))
-                              : t > 57343 && t <= 65535
-                                ? r <= 65535
-                                  ? s.push(t, r + 1)
-                                  : (s.push(t, 65536), a.push(65536, r + 1))
-                                : a.push(t, r + 1),
+                          ? (r >= 55296 && r <= 56319 && n.push(t, r + 1),
+                            r >= 56320 &&
+                              r <= 57343 &&
+                              (n.push(t, 56320), i.push(56320, r + 1)),
+                            r > 57343 &&
+                              (n.push(t, 56320),
+                              i.push(56320, 57344),
+                              r <= 65535
+                                ? s.push(57344, r + 1)
+                                : (s.push(57344, 65536), a.push(65536, r + 1))))
+                          : t >= 56320 && t <= 57343
+                          ? (r >= 56320 && r <= 57343 && i.push(t, r + 1),
+                            r > 57343 &&
+                              (i.push(t, 57344),
+                              r <= 65535
+                                ? s.push(57344, r + 1)
+                                : (s.push(57344, 65536), a.push(65536, r + 1))))
+                          : t > 57343 && t <= 65535
+                          ? r <= 65535
+                            ? s.push(t, r + 1)
+                            : (s.push(t, 65536), a.push(65536, r + 1))
+                          : a.push(t, r + 1),
                         (o += 2);
                     return {
                       loneHighSurrogates: n,
@@ -26856,15 +26918,32 @@ webpackJsonp([10], {
                         f = 57343 == a,
                         p = !1;
                       n == s || (c && f)
-                        ? (u.push([[n, s + 1], [i, a + 1]]), (p = !0))
-                        : u.push([[n, n + 1], [i, 57344]]),
+                        ? (u.push([
+                            [n, s + 1],
+                            [i, a + 1]
+                          ]),
+                          (p = !0))
+                        : u.push([
+                            [n, n + 1],
+                            [i, 57344]
+                          ]),
                         !p &&
                           n + 1 < s &&
                           (f
-                            ? (u.push([[n + 1, s + 1], [56320, a + 1]]),
+                            ? (u.push([
+                                [n + 1, s + 1],
+                                [56320, a + 1]
+                              ]),
                               (p = !0))
-                            : u.push([[n + 1, s], [56320, 57344]])),
-                        p || u.push([[s, s + 1], [56320, a + 1]]),
+                            : u.push([
+                                [n + 1, s],
+                                [56320, 57344]
+                              ])),
+                        p ||
+                          u.push([
+                            [s, s + 1],
+                            [56320, a + 1]
+                          ]),
                         (o += 2);
                     }
                     return W(u);
@@ -26919,28 +26998,28 @@ webpackJsonp([10], {
                     return null == e
                       ? t
                       : e instanceof J
-                        ? ((t.data = D(t.data, e.data)), t)
-                        : (arguments.length > 1 && (e = E.call(arguments)),
-                          y(e)
-                            ? (h(e, function(e) {
-                                t.add(e);
-                              }),
-                              t)
-                            : ((t.data = _(t.data, v(e) ? e : j(e))), t));
+                      ? ((t.data = D(t.data, e.data)), t)
+                      : (arguments.length > 1 && (e = E.call(arguments)),
+                        y(e)
+                          ? (h(e, function(e) {
+                              t.add(e);
+                            }),
+                            t)
+                          : ((t.data = _(t.data, v(e) ? e : j(e))), t));
                   },
                   remove: function(e) {
                     var t = this;
                     return null == e
                       ? t
                       : e instanceof J
-                        ? ((t.data = C(t.data, e.data)), t)
-                        : (arguments.length > 1 && (e = E.call(arguments)),
-                          y(e)
-                            ? (h(e, function(e) {
-                                t.remove(e);
-                              }),
-                              t)
-                            : ((t.data = A(t.data, v(e) ? e : j(e))), t));
+                      ? ((t.data = C(t.data, e.data)), t)
+                      : (arguments.length > 1 && (e = E.call(arguments)),
+                        y(e)
+                          ? (h(e, function(e) {
+                              t.remove(e);
+                            }),
+                            t)
+                          : ((t.data = A(t.data, v(e) ? e : j(e))), t));
                   },
                   addRange: function(e, t) {
                     var r = this;
@@ -26991,8 +27070,10 @@ webpackJsonp([10], {
                           return J;
                         }.call(t, r, t, e)) && (e.exports = n)
                     : o && !o.nodeType
-                      ? u ? (u.exports = J) : (o.regenerate = J)
-                      : (a.regenerate = J);
+                    ? u
+                      ? (u.exports = J)
+                      : (o.regenerate = J)
+                    : (a.regenerate = J);
               })(void 0);
             }.call(
               t,
@@ -27040,9 +27121,10 @@ webpackJsonp([10], {
               return "normal" === t
                 ? !x.call(e, "target")
                 : "break" === t || "continue" === t
-                  ? !x.call(e, "value") && h.isLiteral(e.target)
-                  : ("return" === t || "throw" === t) &&
-                    (x.call(e, "value") && !x.call(e, "target"));
+                ? !x.call(e, "value") && h.isLiteral(e.target)
+                : ("return" === t || "throw" === t) &&
+                  x.call(e, "value") &&
+                  !x.call(e, "target");
             }
             var l = r(35),
               c = i(l),
@@ -28526,47 +28608,48 @@ webpackJsonp([10], {
               c = r(119),
               f = n(c),
               p = r(50),
-              d = (n(p),
-              (function(e) {
-                function t(r, n) {
-                  var i =
-                    arguments.length > 2 && void 0 !== arguments[2]
-                      ? arguments[2]
-                      : {};
-                  (0, s.default)(this, t);
-                  var a = (0, o.default)(this, e.call(this));
-                  return (
-                    (a.plugin = n),
-                    (a.key = n.key),
-                    (a.file = r),
-                    (a.opts = i),
-                    a
-                  );
-                }
-                return (
-                  (0, l.default)(t, e),
-                  (t.prototype.addHelper = function() {
-                    var e;
-                    return (e = this.file).addHelper.apply(e, arguments);
-                  }),
-                  (t.prototype.addImport = function() {
-                    var e;
-                    return (e = this.file).addImport.apply(e, arguments);
-                  }),
-                  (t.prototype.getModuleName = function() {
-                    var e;
-                    return (e = this.file).getModuleName.apply(e, arguments);
-                  }),
-                  (t.prototype.buildCodeFrameError = function() {
-                    var e;
-                    return (e = this.file).buildCodeFrameError.apply(
-                      e,
-                      arguments
+              d =
+                (n(p),
+                (function(e) {
+                  function t(r, n) {
+                    var i =
+                      arguments.length > 2 && void 0 !== arguments[2]
+                        ? arguments[2]
+                        : {};
+                    (0, s.default)(this, t);
+                    var a = (0, o.default)(this, e.call(this));
+                    return (
+                      (a.plugin = n),
+                      (a.key = n.key),
+                      (a.file = r),
+                      (a.opts = i),
+                      a
                     );
-                  }),
-                  t
-                );
-              })(f.default));
+                  }
+                  return (
+                    (0, l.default)(t, e),
+                    (t.prototype.addHelper = function() {
+                      var e;
+                      return (e = this.file).addHelper.apply(e, arguments);
+                    }),
+                    (t.prototype.addImport = function() {
+                      var e;
+                      return (e = this.file).addImport.apply(e, arguments);
+                    }),
+                    (t.prototype.getModuleName = function() {
+                      var e;
+                      return (e = this.file).getModuleName.apply(e, arguments);
+                    }),
+                    (t.prototype.buildCodeFrameError = function() {
+                      var e;
+                      return (e = this.file).buildCodeFrameError.apply(
+                        e,
+                        arguments
+                      );
+                    }),
+                    t
+                  );
+                })(f.default));
             (t.default = d), (e.exports = t.default);
           },
           function(e, t, r) {
@@ -30168,13 +30251,13 @@ webpackJsonp([10], {
                 l.isMemberExpression(e)
                   ? (n(e.object, t), e.computed && n(e.property, t))
                   : l.isBinary(e) || l.isAssignmentExpression(e)
-                    ? (n(e.left, t), n(e.right, t))
-                    : l.isCallExpression(e)
-                      ? ((t.hasCall = !0), n(e.callee, t))
-                      : l.isFunction(e)
-                        ? (t.hasFunction = !0)
-                        : l.isIdentifier(e) &&
-                          (t.hasHelper = t.hasHelper || i(e.callee)),
+                  ? (n(e.left, t), n(e.right, t))
+                  : l.isCallExpression(e)
+                  ? ((t.hasCall = !0), n(e.callee, t))
+                  : l.isFunction(e)
+                  ? (t.hasFunction = !0)
+                  : l.isIdentifier(e) &&
+                    (t.hasHelper = t.hasHelper || i(e.callee)),
                 t
               );
             }
@@ -30182,11 +30265,11 @@ webpackJsonp([10], {
               return l.isMemberExpression(e)
                 ? i(e.object) || i(e.property)
                 : l.isIdentifier(e)
-                  ? "require" === e.name || "_" === e.name[0]
-                  : l.isCallExpression(e)
-                    ? i(e.callee)
-                    : !(!l.isBinary(e) && !l.isAssignmentExpression(e)) &&
-                      ((l.isIdentifier(e.left) && i(e.left)) || i(e.right));
+                ? "require" === e.name || "_" === e.name[0]
+                : l.isCallExpression(e)
+                ? i(e.callee)
+                : !(!l.isBinary(e) && !l.isAssignmentExpression(e)) &&
+                  ((l.isIdentifier(e.left) && i(e.left)) || i(e.right));
             }
             function s(e) {
               return (
@@ -30912,7 +30995,11 @@ webpackJsonp([10], {
                       i = e(this.tokens[n]);
                     return i < 0
                       ? this._findToken(e, n + 1, r)
-                      : i > 0 ? this._findToken(e, t, n) : 0 === i ? n : -1;
+                      : i > 0
+                      ? this._findToken(e, t, n)
+                      : 0 === i
+                      ? n
+                      : -1;
                   }),
                   e
                 );
@@ -31476,13 +31563,13 @@ webpackJsonp([10], {
                       "string" === o || "boolean" === o
                         ? (a = { type: o, replacement: a })
                         : t.isNode(a)
-                          ? (a = { type: "node", replacement: a })
-                          : "object" === o &&
-                            "node" === a.type &&
-                            "string" == typeof a.replacement &&
-                            (a.replacement = r[a.replacement]
-                              ? r[a.replacement]
-                              : i.parseExpression(a.replacement));
+                        ? (a = { type: "node", replacement: a })
+                        : "object" === o &&
+                          "node" === a.type &&
+                          "string" == typeof a.replacement &&
+                          (a.replacement = r[a.replacement]
+                            ? r[a.replacement]
+                            : i.parseExpression(a.replacement));
                       var u = a.replacement;
                       switch (a.type) {
                         case "boolean":
@@ -31700,11 +31787,12 @@ webpackJsonp([10], {
                     return y(e, t, e.node.properties);
                 }
                 function y(e, r, n) {
-                  var s = (e.scope.generateDeclaredUidIdentifier("desc"),
-                    e.scope.generateDeclaredUidIdentifier("value"),
-                    e.scope.generateDeclaredUidIdentifier(
-                      e.isClass() ? "class" : "obj"
-                    )),
+                  var s =
+                      (e.scope.generateDeclaredUidIdentifier("desc"),
+                      e.scope.generateDeclaredUidIdentifier("value"),
+                      e.scope.generateDeclaredUidIdentifier(
+                        e.isClass() ? "class" : "obj"
+                      )),
                     l = n.reduce(function(n, l) {
                       var c = l.decorators || [];
                       if (((l.decorators = null), 0 === c.length)) return n;
@@ -31831,11 +31919,9 @@ webpackJsonp([10], {
                         e.get("left").isMemberExpression() &&
                         e.get("left.property").isIdentifier() &&
                         e.get("right").isCallExpression() &&
-                        e
-                          .get("right.callee")
-                          .isIdentifier({
-                            name: t.initializerWarningHelper.name
-                          }) &&
+                        e.get("right.callee").isIdentifier({
+                          name: t.initializerWarningHelper.name
+                        }) &&
                         e.replaceWith(
                           v.callExpression(n(e, t), [
                             e.get("left.object").node,
@@ -31878,7 +31964,9 @@ webpackJsonp([10], {
               var r = t._guessExecutionStatusRelativeTo(e);
               return "before" === r
                 ? "inside"
-                : "after" === r ? "outside" : "maybe";
+                : "after" === r
+                ? "outside"
+                : "maybe";
             }
             function i(e, t) {
               return o.callExpression(t.addHelper("temporalRef"), [
@@ -32221,12 +32309,12 @@ webpackJsonp([10], {
               n = p.isNumericLiteral(e.parent.property)
                 ? p.numericLiteral(e.parent.property.value + r)
                 : 0 === r
-                  ? e.parent.property
-                  : p.binaryExpression(
-                      "+",
-                      e.parent.property,
-                      p.numericLiteral(r)
-                    );
+                ? e.parent.property
+                : p.binaryExpression(
+                    "+",
+                    e.parent.property,
+                    p.numericLiteral(r)
+                  );
               var i = e.scope;
               if (i.isPure(n))
                 e.parentPath.replaceWith(h({ ARGUMENTS: t, INDEX: n }));
@@ -33540,7 +33628,7 @@ webpackJsonp([10], {
                           u = -1;
                         for (var l in a) {
                           var c = (0, i.default)(r.name, l);
-                          c <= 0 || c > 3 || (c <= u || ((o = l), (u = c)));
+                          c <= 0 || c > 3 || c <= u || ((o = l), (u = c));
                         }
                         var f = void 0;
                         throw ((f = o
@@ -34114,26 +34202,26 @@ webpackJsonp([10], {
             function o() {
               return (
                 !!this.node &&
-                (!this.isBlacklisted() &&
-                  ((!this.opts.shouldSkip || !this.opts.shouldSkip(this)) &&
-                    (this.call("enter") || this.shouldSkip
-                      ? (this.debug(function() {
-                          return "Skip...";
-                        }),
-                        this.shouldStop)
-                      : (this.debug(function() {
-                          return "Recursing into...";
-                        }),
-                        w.default.node(
-                          this.node,
-                          this.opts,
-                          this.scope,
-                          this.state,
-                          this,
-                          this.skipKeys
-                        ),
-                        this.call("exit"),
-                        this.shouldStop))))
+                !this.isBlacklisted() &&
+                (!this.opts.shouldSkip || !this.opts.shouldSkip(this)) &&
+                (this.call("enter") || this.shouldSkip
+                  ? (this.debug(function() {
+                      return "Skip...";
+                    }),
+                    this.shouldStop)
+                  : (this.debug(function() {
+                      return "Recursing into...";
+                    }),
+                    w.default.node(
+                      this.node,
+                      this.opts,
+                      this.scope,
+                      this.state,
+                      this,
+                      this.skipKeys
+                    ),
+                    this.call("exit"),
+                    this.shouldStop))
               );
             }
             function u() {
@@ -34653,7 +34741,9 @@ webpackJsonp([10], {
             function s() {
               return "left" === this.key
                 ? this.getSibling("right")
-                : "right" === this.key ? this.getSibling("left") : void 0;
+                : "right" === this.key
+                ? this.getSibling("left")
+                : void 0;
             }
             function a() {
               var e = [],
@@ -34751,7 +34841,9 @@ webpackJsonp([10], {
                 r =
                   "." === o
                     ? r.parentPath
-                    : Array.isArray(r) ? r[o] : r.get(o, t);
+                    : Array.isArray(r)
+                    ? r[o]
+                    : r.get(o, t);
               }
               return r;
             }
@@ -34882,8 +34974,8 @@ webpackJsonp([10], {
                   return "left" === r.key && n.isForInStatement()
                     ? y.stringTypeAnnotation()
                     : "left" === r.key && n.isForOfStatement()
-                      ? y.anyTypeAnnotation()
-                      : y.voidTypeAnnotation();
+                    ? y.anyTypeAnnotation()
+                    : y.voidTypeAnnotation();
                 }
               }
             }
@@ -35024,8 +35116,8 @@ webpackJsonp([10], {
                 return "===" === r
                   ? s.getTypeAnnotation()
                   : f.BOOLEAN_NUMBER_BINARY_OPERATORS.indexOf(r) >= 0
-                    ? f.numberTypeAnnotation()
-                    : void 0;
+                  ? f.numberTypeAnnotation()
+                  : void 0;
               if ("===" === r) {
                 var a = void 0,
                   o = void 0;
@@ -35089,10 +35181,10 @@ webpackJsonp([10], {
                     ? t.identifier.typeAnnotation
                     : n(this, e.name)
                   : "undefined" === e.name
-                    ? f.voidTypeAnnotation()
-                    : "NaN" === e.name || "Infinity" === e.name
-                      ? f.numberTypeAnnotation()
-                      : void e.name;
+                  ? f.voidTypeAnnotation()
+                  : "NaN" === e.name || "Infinity" === e.name
+                  ? f.numberTypeAnnotation()
+                  : void e.name;
               }
             };
             var c = r(1),
@@ -35131,12 +35223,12 @@ webpackJsonp([10], {
               return "void" === t
                 ? k.voidTypeAnnotation()
                 : k.NUMBER_UNARY_OPERATORS.indexOf(t) >= 0
-                  ? k.numberTypeAnnotation()
-                  : k.STRING_UNARY_OPERATORS.indexOf(t) >= 0
-                    ? k.stringTypeAnnotation()
-                    : k.BOOLEAN_UNARY_OPERATORS.indexOf(t) >= 0
-                      ? k.booleanTypeAnnotation()
-                      : void 0;
+                ? k.numberTypeAnnotation()
+                : k.STRING_UNARY_OPERATORS.indexOf(t) >= 0
+                ? k.stringTypeAnnotation()
+                : k.BOOLEAN_UNARY_OPERATORS.indexOf(t) >= 0
+                ? k.booleanTypeAnnotation()
+                : void 0;
             }
             function l(e) {
               var t = e.operator;
@@ -35150,11 +35242,11 @@ webpackJsonp([10], {
                 return n.isBaseType("number") && r.isBaseType("number")
                   ? k.numberTypeAnnotation()
                   : n.isBaseType("string") || r.isBaseType("string")
-                    ? k.stringTypeAnnotation()
-                    : k.unionTypeAnnotation([
-                        k.stringTypeAnnotation(),
-                        k.numberTypeAnnotation()
-                      ]);
+                  ? k.stringTypeAnnotation()
+                  : k.unionTypeAnnotation([
+                      k.stringTypeAnnotation(),
+                      k.numberTypeAnnotation()
+                    ]);
               }
             }
             function c() {
@@ -35360,13 +35452,11 @@ webpackJsonp([10], {
                 i = n.parentPath;
               return (
                 !!i.isImportDeclaration() &&
-                (i.node.source.value === e &&
-                  (!t ||
-                    (!(!n.isImportDefaultSpecifier() || "default" !== t) ||
-                      (!(!n.isImportNamespaceSpecifier() || "*" !== t) ||
-                        !(
-                          !n.isImportSpecifier() || n.node.imported.name !== t
-                        )))))
+                i.node.source.value === e &&
+                (!t ||
+                  !(!n.isImportDefaultSpecifier() || "default" !== t) ||
+                  !(!n.isImportNamespaceSpecifier() || "*" !== t) ||
+                  !(!n.isImportSpecifier() || n.node.imported.name !== t))
               );
             }
             function m() {
@@ -35404,11 +35494,13 @@ webpackJsonp([10], {
                 f = s[u - 1];
               return c && f
                 ? c.listKey && c.container === f.container
-                  ? c.key > f.key ? "before" : "after"
-                  : C.VISITOR_KEYS[c.type].indexOf(c.key) >
-                    C.VISITOR_KEYS[f.type].indexOf(f.key)
+                  ? c.key > f.key
                     ? "before"
                     : "after"
+                  : C.VISITOR_KEYS[c.type].indexOf(c.key) >
+                    C.VISITOR_KEYS[f.type].indexOf(f.key)
+                  ? "before"
+                  : "after"
                 : "before";
             }
             function g(e) {
@@ -35977,15 +36069,17 @@ webpackJsonp([10], {
                       (void 0 === r ? "undefined" : (0, y.default)(r))
                       ? (n = "contains a non-object node")
                       : r.type
-                        ? r instanceof S.default &&
-                          (n = "has a NodePath when it expected a raw object")
-                        : (n = "without a type")
+                      ? r instanceof S.default &&
+                        (n = "has a NodePath when it expected a raw object")
+                      : (n = "without a type")
                     : (n = "has falsy node"),
                   n)
                 ) {
                   var i = Array.isArray(r)
                     ? "array"
-                    : void 0 === r ? "undefined" : (0, y.default)(r);
+                    : void 0 === r
+                    ? "undefined"
+                    : (0, y.default)(r);
                   throw new Error(
                     "Node list " +
                       n +
@@ -36258,11 +36352,9 @@ webpackJsonp([10], {
                               .pushContainer("body", E.returnStatement(p)),
                             c.setData("expressionReplacementReturnUid", p);
                         }
-                        l
-                          .get("expression")
-                          .replaceWith(
-                            E.assignmentExpression("=", p, l.node.expression)
-                          );
+                        l.get("expression").replaceWith(
+                          E.assignmentExpression("=", p, l.node.expression)
+                        );
                       } else
                         l.replaceWith(E.returnStatement(l.node.expression));
                     }
@@ -36690,10 +36782,12 @@ webpackJsonp([10], {
             function d(e) {
               return (
                 "_" === e[0] ||
-                ("enter" === e ||
-                  "exit" === e ||
-                  "shouldSkip" === e ||
-                  ("blacklist" === e || "noScope" === e || "skipKeys" === e))
+                "enter" === e ||
+                "exit" === e ||
+                "shouldSkip" === e ||
+                "blacklist" === e ||
+                "noScope" === e ||
+                "skipKeys" === e
               );
             }
             function h(e, t) {
@@ -36840,8 +36934,8 @@ webpackJsonp([10], {
                 : ((r = D.isIdentifier(t)
                     ? t.name
                     : D.isStringLiteral(t)
-                      ? (0, v.default)(t.value)
-                      : (0, v.default)(D.removePropertiesDeep(D.cloneDeep(t)))),
+                    ? (0, v.default)(t.value)
+                    : (0, v.default)(D.removePropertiesDeep(D.cloneDeep(t)))),
                   e.computed && (r = "[" + r + "]"),
                   e.static && (r = "static:" + r),
                   r);
@@ -38880,7 +38974,8 @@ webpackJsonp([10], {
               return (
                 "string" == typeof e &&
                 !A.default.keyword.isReservedWordES6(e, !0) &&
-                ("await" !== e && A.default.keyword.isIdentifierNameES6(e))
+                "await" !== e &&
+                A.default.keyword.isIdentifierNameES6(e)
               );
             }
             function o(e) {
@@ -39022,10 +39117,10 @@ webpackJsonp([10], {
                   c == u
                     ? (n.push(c), (u = r.indexOf(e, c + 1)))
                     : 1 == n.length
-                      ? (o = [n.pop(), l])
-                      : ((i = n.pop()),
-                        i < s && ((s = i), (a = l)),
-                        (l = r.indexOf(t, c + 1))),
+                    ? (o = [n.pop(), l])
+                    : ((i = n.pop()),
+                      i < s && ((s = i), (a = l)),
+                      (l = r.indexOf(t, c + 1))),
                     (c = u < l && u >= 0 ? u : l);
                 n.length && (o = [s, a]);
               }
@@ -39044,7 +39139,7 @@ webpackJsonp([10], {
               return "=" === e[t - 2] ? 2 : "=" === e[t - 1] ? 1 : 0;
             }
             function n(e) {
-              return 3 * e.length / 4 - r(e);
+              return (3 * e.length) / 4 - r(e);
             }
             function i(e) {
               var t,
@@ -39053,7 +39148,7 @@ webpackJsonp([10], {
                 s,
                 a,
                 o = e.length;
-              (s = r(e)), (a = new c(3 * o / 4 - s)), (n = s > 0 ? o - 4 : o);
+              (s = r(e)), (a = new c((3 * o) / 4 - s)), (n = s > 0 ? o - 4 : o);
               var u = 0;
               for (t = 0; t < n; t += 4)
                 (i =
@@ -39304,7 +39399,9 @@ webpackJsonp([10], {
                 return "undefined" != typeof ArrayBuffer &&
                   t instanceof ArrayBuffer
                   ? p(e, t, r, n)
-                  : "string" == typeof t ? c(e, t, r) : d(e, t);
+                  : "string" == typeof t
+                  ? c(e, t, r)
+                  : d(e, t);
               }
               function o(e) {
                 if ("number" != typeof e)
@@ -39318,10 +39415,10 @@ webpackJsonp([10], {
                   t <= 0
                     ? i(e, t)
                     : void 0 !== r
-                      ? "string" == typeof n
-                        ? i(e, t).fill(r, n)
-                        : i(e, t).fill(r)
-                      : i(e, t)
+                    ? "string" == typeof n
+                      ? i(e, t).fill(r, n)
+                      : i(e, t).fill(r)
+                    : i(e, t)
                 );
               }
               function l(e, t) {
@@ -39362,8 +39459,8 @@ webpackJsonp([10], {
                     void 0 === r && void 0 === n
                       ? new Uint8Array(t)
                       : void 0 === n
-                        ? new Uint8Array(t, r)
-                        : new Uint8Array(t, r, n)),
+                      ? new Uint8Array(t, r)
+                      : new Uint8Array(t, r, n)),
                   s.TYPED_ARRAY_SUPPORT
                     ? ((e = t), (e.__proto__ = s.prototype))
                     : (e = f(e, t)),
@@ -39483,8 +39580,8 @@ webpackJsonp([10], {
                   ("string" == typeof r
                     ? ((n = r), (r = 0))
                     : r > 2147483647
-                      ? (r = 2147483647)
-                      : r < -2147483648 && (r = -2147483648),
+                    ? (r = 2147483647)
+                    : r < -2147483648 && (r = -2147483648),
                   (r = +r),
                   isNaN(r) && (r = i ? 0 : e.length - 1),
                   r < 0 && (r = e.length + r),
@@ -39971,8 +40068,8 @@ webpackJsonp([10], {
                   return 0 === e
                     ? ""
                     : 0 === arguments.length
-                      ? P(this, 0, e)
-                      : v.apply(this, arguments);
+                    ? P(this, 0, e)
+                    : v.apply(this, arguments);
                 }),
                 (s.prototype.equals = function(e) {
                   if (!s.isBuffer(e))
@@ -40927,7 +41024,9 @@ webpackJsonp([10], {
                     return e._t && (e._l = r = r ? r.n : e._t._f)
                       ? "keys" == t
                         ? c(0, r.k)
-                        : "values" == t ? c(0, r.v) : c(0, [r.k, r.v])
+                        : "values" == t
+                        ? c(0, r.v)
+                        : c(0, [r.k, r.v])
                       : ((e._t = void 0), c(1));
                   },
                   r ? "entries" : "values",
@@ -41077,8 +41176,10 @@ webpackJsonp([10], {
                     ? e[s]
                     : "function" == typeof e.constructor &&
                       e instanceof e.constructor
-                      ? e.constructor.prototype
-                      : e instanceof Object ? a : null
+                    ? e.constructor.prototype
+                    : e instanceof Object
+                    ? a
+                    : null
                 );
               };
           },
@@ -41166,17 +41267,21 @@ webpackJsonp([10], {
                   u = n(r),
                   l = o.length;
                 return u < 0 || u >= l
-                  ? e ? "" : void 0
+                  ? e
+                    ? ""
+                    : void 0
                   : ((s = o.charCodeAt(u)),
                     s < 55296 ||
                     s > 56319 ||
                     u + 1 === l ||
                     (a = o.charCodeAt(u + 1)) < 56320 ||
                     a > 57343
-                      ? e ? o.charAt(u) : s
+                      ? e
+                        ? o.charAt(u)
+                        : s
                       : e
-                        ? o.slice(u, u + 2)
-                        : a - 56320 + ((s - 55296) << 10) + 65536);
+                      ? o.slice(u, u + 2)
+                      : a - 56320 + ((s - 55296) << 10) + 65536);
               };
             };
           },
@@ -41219,8 +41324,10 @@ webpackJsonp([10], {
                 return !e || r >= e.length
                   ? ((this._t = void 0), i(1))
                   : "keys" == t
-                    ? i(0, r)
-                    : "values" == t ? i(0, e[r]) : i(0, [r, e[r]]);
+                  ? i(0, r)
+                  : "values" == t
+                  ? i(0, e[r])
+                  : i(0, [r, e[r]]);
               },
               "values"
             )),
@@ -41309,7 +41416,9 @@ webpackJsonp([10], {
                     var t = p(e);
                     return !0 === t
                       ? h(f(this, "WeakMap")).get(e)
-                      : t ? t[this._i] : void 0;
+                      : t
+                      ? t[this._i]
+                      : void 0;
                   }
                 },
                 set: function(e, t) {
@@ -41811,7 +41920,7 @@ webpackJsonp([10], {
               );
               if (0 === s) s = 1 - l;
               else {
-                if (s === u) return a ? NaN : 1 / 0 * (d ? -1 : 1);
+                if (s === u) return a ? NaN : (1 / 0) * (d ? -1 : 1);
                 (a += Math.pow(2, n)), (s -= l);
               }
               return (d ? -1 : 1) * a * Math.pow(2, s - n);
@@ -41838,9 +41947,9 @@ webpackJsonp([10], {
                         a + f >= c
                           ? ((o = 0), (a = c))
                           : a + f >= 1
-                            ? ((o = (t * u - 1) * Math.pow(2, i)), (a += f))
-                            : ((o = t * Math.pow(2, f - 1) * Math.pow(2, i)),
-                              (a = 0)));
+                          ? ((o = (t * u - 1) * Math.pow(2, i)), (a += f))
+                          : ((o = t * Math.pow(2, f - 1) * Math.pow(2, i)),
+                            (a = 0)));
                   i >= 8;
                   e[r + d] = 255 & o, d += h, o /= 256, i -= 8
                 );
@@ -41900,18 +42009,18 @@ webpackJsonp([10], {
                   e[1]
                     ? ((t.type = "string"), (t.closed = !(!e[3] && !e[4])))
                     : e[5]
-                      ? (t.type = "comment")
-                      : e[6]
-                        ? ((t.type = "comment"), (t.closed = !!e[7]))
-                        : e[8]
-                          ? (t.type = "regex")
-                          : e[9]
-                            ? (t.type = "number")
-                            : e[10]
-                              ? (t.type = "name")
-                              : e[11]
-                                ? (t.type = "punctuator")
-                                : e[12] && (t.type = "whitespace"),
+                    ? (t.type = "comment")
+                    : e[6]
+                    ? ((t.type = "comment"), (t.closed = !!e[7]))
+                    : e[8]
+                    ? (t.type = "regex")
+                    : e[9]
+                    ? (t.type = "number")
+                    : e[10]
+                    ? (t.type = "name")
+                    : e[11]
+                    ? (t.type = "punctuator")
+                    : e[12] && (t.type = "whitespace"),
                   t
                 );
               });
@@ -42060,13 +42169,8 @@ webpackJsonp([10], {
                           P
                             ? "[]"
                             : m
-                              ? "[" + s.join(", ") + "]"
-                              : "[" +
-                                w +
-                                s.join("," + w) +
-                                w +
-                                (o ? "" : c) +
-                                "]"
+                            ? "[" + s.join(", ") + "]"
+                            : "[" + w + s.join("," + w) + w + (o ? "" : c) + "]"
                         );
                       if (!b(t))
                         return v(t)
@@ -42093,7 +42197,9 @@ webpackJsonp([10], {
                                 w +
                                 (o ? "" : c) +
                                 "}")
-                          : i ? JSON.stringify(t) || "null" : String(t);
+                          : i
+                          ? JSON.stringify(t) || "null"
+                          : String(t);
                       if (i) return JSON.stringify(t);
                       if (T) return String(t);
                       if (O) {
@@ -42169,8 +42275,10 @@ webpackJsonp([10], {
                           return w;
                         }.call(t, r, t, e)) && (e.exports = n)
                     : o && !o.nodeType
-                      ? u ? (u.exports = w) : (o.jsesc = w)
-                      : (a.jsesc = w);
+                    ? u
+                      ? (u.exports = w)
+                      : (o.jsesc = w)
+                    : (a.jsesc = w);
               })(void 0);
             }.call(
               t,
@@ -42286,13 +42394,15 @@ webpackJsonp([10], {
                     return (
                       (e = E()), isNaN(e) || c("expected word to be NaN"), e
                     );
-                  switch (("0" === i &&
-                    ((r += i),
-                    f(),
-                    "x" === i || "X" === i
-                      ? ((r += i), f(), (n = 16))
-                      : i >= "0" && i <= "9" && c("Octal literal")),
-                  n)) {
+                  switch (
+                    ("0" === i &&
+                      ((r += i),
+                      f(),
+                      "x" === i || "X" === i
+                        ? ((r += i), f(), (n = 16))
+                        : i >= "0" && i <= "9" && c("Octal literal")),
+                    n)
+                  ) {
                     case 10:
                       for (; i >= "0" && i <= "9"; ) (r += i), f();
                       if ("." === i)
@@ -42369,7 +42479,9 @@ webpackJsonp([10], {
                     f("/"),
                     "/" === i
                       ? y()
-                      : "*" === i ? v() : c("Unrecognized comment");
+                      : "*" === i
+                      ? v()
+                      : c("Unrecognized comment");
                 },
                 b = function() {
                   for (; i; )
@@ -42557,8 +42669,10 @@ webpackJsonp([10], {
                   var i,
                     s,
                     a = h(e, t, r);
-                  switch ((a && !l(a) && (a = a.valueOf()),
-                  void 0 === a ? "undefined" : n(a))) {
+                  switch (
+                    (a && !l(a) && (a = a.valueOf()),
+                    void 0 === a ? "undefined" : n(a))
+                  ) {
                     case "boolean":
                       return a.toString();
                     case "number":
@@ -42615,7 +42729,11 @@ webpackJsonp([10], {
                       (i = i.toJSON()),
                     "function" == typeof t
                       ? t.call(e, r, i)
-                      : t ? (n || u(e) || t.indexOf(r) >= 0 ? i : void 0) : i
+                      : t
+                      ? n || u(e) || t.indexOf(r) >= 0
+                        ? i
+                        : void 0
+                      : i
                   );
                 };
                 i.isWord = o;
@@ -42831,7 +42949,9 @@ webpackJsonp([10], {
               for (r || (r = s), o || (o = []); ++u < l; ) {
                 var c = e[u];
                 t > 0 && r(c)
-                  ? t > 1 ? n(c, t - 1, r, a, o) : i(o, c)
+                  ? t > 1
+                    ? n(c, t - 1, r, a, o)
+                    : i(o, c)
                   : a || (o[o.length] = c);
               }
               return o;
@@ -43147,16 +43267,16 @@ webpackJsonp([10], {
                     ? c(x)
                       ? (_ = x)
                       : f(x)
-                        ? (_ = o(x))
-                        : w
-                          ? ((D = !1), (_ = s(A, !0)))
-                          : P ? ((D = !1), (_ = a(A, !0))) : (_ = [])
+                      ? (_ = o(x))
+                      : w
+                      ? ((D = !1), (_ = s(A, !0)))
+                      : P
+                      ? ((D = !1), (_ = a(A, !0)))
+                      : (_ = [])
                     : m(A) || l(A)
-                      ? ((_ = x),
-                        l(x)
-                          ? (_ = v(x))
-                          : (!h(x) || (n && d(x))) && (_ = u(A)))
-                      : (D = !1);
+                    ? ((_ = x),
+                      l(x) ? (_ = v(x)) : (!h(x) || (n && d(x))) && (_ = u(A)))
+                    : (D = !1);
               }
               D && (E.set(A, _), g(_, A, n, b, E), E.delete(A)), i(e, r, _);
             }
@@ -44443,7 +44563,9 @@ webpackJsonp([10], {
               var r = l.test(e);
               return r || c.test(e)
                 ? f(e.slice(2), r ? 2 : 8)
-                : u.test(e) ? a : +e;
+                : u.test(e)
+                ? a
+                : +e;
             }
             var i = r(18),
               s = r(62),
@@ -44599,7 +44721,9 @@ webpackJsonp([10], {
                   m =
                     "." === e.charAt(0)
                       ? ""
-                      : n.dot ? "(?!(?:^|\\/)\\.{1,2}(?:$|\\/))" : "(?!\\.)",
+                      : n.dot
+                      ? "(?!(?:^|\\/)\\.{1,2}(?:$|\\/))"
+                      : "(?!\\.)",
                   v = this,
                   x = 0,
                   A = e.length;
@@ -44775,7 +44899,9 @@ webpackJsonp([10], {
                       .map(function(e) {
                         return e === y
                           ? r
-                          : "string" == typeof e ? h(e) : e._src;
+                          : "string" == typeof e
+                          ? h(e)
+                          : e._src;
                       })
                       .join("\\/");
                   })
@@ -45008,10 +45134,12 @@ webpackJsonp([10], {
               return e >= c
                 ? Math.round(e / c) + "d"
                 : e >= l
-                  ? Math.round(e / l) + "h"
-                  : e >= u
-                    ? Math.round(e / u) + "m"
-                    : e >= o ? Math.round(e / o) + "s" : e + "ms";
+                ? Math.round(e / l) + "h"
+                : e >= u
+                ? Math.round(e / u) + "m"
+                : e >= o
+                ? Math.round(e / o) + "s"
+                : e + "ms";
             }
             function i(e) {
               return (
@@ -45117,7 +45245,9 @@ webpackJsonp([10], {
                   }),
                   0 === n.length
                     ? null
-                    : 1 === n.length ? n[0] : o.sequenceExpression(n)
+                    : 1 === n.length
+                    ? n[0]
+                    : o.sequenceExpression(n)
                 );
               }
               o.assertFunction(e.node);
@@ -45334,8 +45464,10 @@ webpackJsonp([10], {
                 return l.call(i, e)
                   ? i[e]
                   : l.call(c, n.type)
-                    ? (i[e] = !1)
-                    : l.call(t, n.type) ? (i[e] = !0) : (i[e] = r(n));
+                  ? (i[e] = !1)
+                  : l.call(t, n.type)
+                  ? (i[e] = !0)
+                  : (i[e] = r(n));
               }
               return (n.onlyChildren = r), n;
             }
@@ -45507,7 +45639,9 @@ webpackJsonp([10], {
                       f.isExpressionStatement(t) &&
                       f.isStringLiteral(t.expression)
                         ? u.push(t)
-                        : t && null != t._blockHoist ? u.push(t) : l.push(t);
+                        : t && null != t._blockHoist
+                        ? u.push(t)
+                        : l.push(t);
                     }),
                       u.length > 0 && (a.node.body = l);
                     var c = s(e);
@@ -45692,7 +45826,9 @@ webpackJsonp([10], {
             "use strict";
             function n(e) {
               return S
-                ? A ? m.UNICODE_IGNORE_CASE[e] : m.UNICODE[e]
+                ? A
+                  ? m.UNICODE_IGNORE_CASE[e]
+                  : m.UNICODE[e]
                 : m.REGULAR[e];
             }
             function i(e, t) {
@@ -45855,7 +45991,7 @@ webpackJsonp([10], {
                       ? r.push(a)
                       : ((a -= 65536),
                         (e = 55296 + (a >> 10)),
-                        (t = a % 1024 + 56320),
+                        (t = (a % 1024) + 56320),
                         r.push(e, t)),
                       (n + 1 == i || r.length > 16384) &&
                         ((s += P.apply(null, r)), (r.length = 0));
@@ -46004,7 +46140,9 @@ webpackJsonp([10], {
                       t =
                         r == n
                           ? "{" + r + "}"
-                          : 0 == r && 1 == n ? "?" : "{" + r + "," + n + "}";
+                          : 0 == r && 1 == n
+                          ? "?"
+                          : "{" + r + "," + n + "}";
                   }
                   return e.greedy || (t += "?"), f(e.body[0]) + t;
                 }
@@ -46103,8 +46241,8 @@ webpackJsonp([10], {
                           return { generate: u };
                         }.call(t, r, t, e)) && (e.exports = n)
                     : D && C
-                      ? (D.generate = u)
-                      : (_.regjsgen = { generate: u });
+                    ? (D.generate = u)
+                    : (_.regjsgen = { generate: u });
               }.call(void 0));
             }.call(
               t,
@@ -46302,12 +46440,12 @@ webpackJsonp([10], {
                   return E("^")
                     ? i("start", 1)
                     : E("$")
-                      ? i("end", 1)
-                      : E("\\b")
-                        ? i("boundary", 2)
-                        : E("\\B")
-                          ? i("not-boundary", 2)
-                          : P("(?=", "lookahead", "(?!", "negativeLookahead");
+                    ? i("end", 1)
+                    : E("\\b")
+                    ? i("boundary", 2)
+                    : E("\\B")
+                    ? i("not-boundary", 2)
+                    : P("(?=", "lookahead", "(?!", "negativeLookahead");
                 }
                 function F() {
                   var e,
@@ -46319,26 +46457,21 @@ webpackJsonp([10], {
                     E("*")
                       ? (t = d(0))
                       : E("+")
-                        ? (t = d(1))
-                        : E("?")
-                          ? (t = d(0, 1))
-                          : (e = _(/^\{([0-9]+)\}/))
-                            ? ((r = parseInt(e[1], 10)),
-                              (t = d(r, r, e.range[0], e.range[1])))
-                            : (e = _(/^\{([0-9]+),\}/))
-                              ? ((r = parseInt(e[1], 10)),
-                                (t = d(r, void 0, e.range[0], e.range[1])))
-                              : (e = _(/^\{([0-9]+),([0-9]+)\}/)) &&
-                                ((r = parseInt(e[1], 10)),
-                                (n = parseInt(e[2], 10)),
-                                r > n &&
-                                  K(
-                                    "numbers out of order in {} quantifier",
-                                    "",
-                                    i,
-                                    $
-                                  ),
-                                (t = d(r, n, e.range[0], e.range[1]))),
+                      ? (t = d(1))
+                      : E("?")
+                      ? (t = d(0, 1))
+                      : (e = _(/^\{([0-9]+)\}/))
+                      ? ((r = parseInt(e[1], 10)),
+                        (t = d(r, r, e.range[0], e.range[1])))
+                      : (e = _(/^\{([0-9]+),\}/))
+                      ? ((r = parseInt(e[1], 10)),
+                        (t = d(r, void 0, e.range[0], e.range[1])))
+                      : (e = _(/^\{([0-9]+),([0-9]+)\}/)) &&
+                        ((r = parseInt(e[1], 10)),
+                        (n = parseInt(e[2], 10)),
+                        r > n &&
+                          K("numbers out of order in {} quantifier", "", i, $),
+                        (t = d(r, n, e.range[0], e.range[1]))),
                     t && E("?") && ((t.greedy = !1), (t.range[1] += 1)),
                     t
                   );
@@ -46348,10 +46481,12 @@ webpackJsonp([10], {
                   return (e = _(/^[^^$\\.*+?(){[|]/))
                     ? o(e)
                     : E(".")
-                      ? l()
-                      : E("\\")
-                        ? ((e = R()), e || K("atomEscape"), e)
-                        : (e = j()) ? e : P("(?:", "ignore", "(", "normal");
+                    ? l()
+                    : E("\\")
+                    ? ((e = R()), e || K("atomEscape"), e)
+                    : (e = j())
+                    ? e
+                    : P("(?:", "ignore", "(", "normal");
                 }
                 function O(e) {
                   if (z) {
@@ -46439,17 +46574,12 @@ webpackJsonp([10], {
                   return (e = _(/^c([a-zA-Z])/))
                     ? a("controlLetter", e[1].charCodeAt(0) % 32, e[1], 2)
                     : (e = _(/^x([0-9a-fA-F]{2})/))
-                      ? a("hexadecimalEscape", parseInt(e[1], 16), e[1], 2)
-                      : (e = _(/^u([0-9a-fA-F]{4})/))
-                        ? O(a("unicodeEscape", parseInt(e[1], 16), e[1], 2))
-                        : z && (e = _(/^u\{([0-9a-fA-F]+)\}/))
-                          ? a(
-                              "unicodeCodePointEscape",
-                              parseInt(e[1], 16),
-                              e[1],
-                              4
-                            )
-                          : L();
+                    ? a("hexadecimalEscape", parseInt(e[1], 16), e[1], 2)
+                    : (e = _(/^u([0-9a-fA-F]{4})/))
+                    ? O(a("unicodeEscape", parseInt(e[1], 16), e[1], 2))
+                    : z && (e = _(/^u\{([0-9a-fA-F]+)\}/))
+                    ? a("unicodeCodePointEscape", parseInt(e[1], 16), e[1], 4)
+                    : L();
                 }
                 function N(e) {
                   var t = new RegExp(
@@ -46470,7 +46600,9 @@ webpackJsonp([10], {
                   return N(x())
                     ? E("‌")
                       ? a("identifier", 8204, "‌")
-                      : E("‍") ? a("identifier", 8205, "‍") : null
+                      : E("‍")
+                      ? a("identifier", 8205, "‍")
+                      : null
                     : ((e = g()), a("identifier", e.charCodeAt(0), e, 1));
                 }
                 function j() {
@@ -46478,7 +46610,9 @@ webpackJsonp([10], {
                     t = $;
                   return (e = _(/^\[\^/))
                     ? ((e = U()), b("]"), m(e, !0, t, $))
-                    : E("[") ? ((e = U()), b("]"), m(e, !1, t, $)) : null;
+                    : E("[")
+                    ? ((e = U()), b("]"), m(e, !1, t, $))
+                    : null;
                 }
                 function U() {
                   var e;
@@ -46521,8 +46655,8 @@ webpackJsonp([10], {
                   return (e = _(/^[^\\\]-]/))
                     ? o(e[0])
                     : E("\\")
-                      ? ((e = B()), e || K("classEscape"), O(e))
-                      : void 0;
+                    ? ((e = B()), e || K("classEscape"), O(e))
+                    : void 0;
                 }
                 function K(t, r, n, i) {
                   (n = null == n ? $ : n), (i = null == i ? n : i);
@@ -46590,10 +46724,14 @@ webpackJsonp([10], {
                 return 65 <= e && e <= 90
                   ? e - 65
                   : 97 <= e && e <= 122
-                    ? e - 97 + 26
-                    : 48 <= e && e <= 57
-                      ? e - 48 + 52
-                      : 43 == e ? 62 : 47 == e ? 63 : -1;
+                  ? e - 97 + 26
+                  : 48 <= e && e <= 57
+                  ? e - 48 + 52
+                  : 43 == e
+                  ? 62
+                  : 47 == e
+                  ? 63
+                  : -1;
               });
           },
           function(e, t) {
@@ -46604,12 +46742,20 @@ webpackJsonp([10], {
               return 0 === l
                 ? u
                 : l > 0
-                  ? n - u > 1
-                    ? r(u, n, i, s, a, o)
-                    : o == t.LEAST_UPPER_BOUND ? (n < s.length ? n : -1) : u
-                  : u - e > 1
-                    ? r(e, u, i, s, a, o)
-                    : o == t.LEAST_UPPER_BOUND ? u : e < 0 ? -1 : e;
+                ? n - u > 1
+                  ? r(u, n, i, s, a, o)
+                  : o == t.LEAST_UPPER_BOUND
+                  ? n < s.length
+                    ? n
+                    : -1
+                  : u
+                : u - e > 1
+                ? r(e, u, i, s, a, o)
+                : o == t.LEAST_UPPER_BOUND
+                ? u
+                : e < 0
+                ? -1
+                : e;
             }
             (t.GREATEST_LOWER_BOUND = 1),
               (t.LEAST_UPPER_BOUND = 2),
@@ -46818,23 +46964,20 @@ webpackJsonp([10], {
                     throw new Error("Unknown order of iteration.");
                 }
                 var u = this.sourceRoot;
-                i
-                  .map(function(e) {
-                    var t =
-                      null === e.source ? null : this._sources.at(e.source);
-                    return (
-                      null != t && null != u && (t = o.join(u, t)),
-                      {
-                        source: t,
-                        generatedLine: e.generatedLine,
-                        generatedColumn: e.generatedColumn,
-                        originalLine: e.originalLine,
-                        originalColumn: e.originalColumn,
-                        name: null === e.name ? null : this._names.at(e.name)
-                      }
-                    );
-                  }, this)
-                  .forEach(e, s);
+                i.map(function(e) {
+                  var t = null === e.source ? null : this._sources.at(e.source);
+                  return (
+                    null != t && null != u && (t = o.join(u, t)),
+                    {
+                      source: t,
+                      generatedLine: e.generatedLine,
+                      generatedColumn: e.generatedColumn,
+                      originalLine: e.originalLine,
+                      originalColumn: e.originalColumn,
+                      name: null === e.name ? null : this._names.at(e.name)
+                    }
+                  );
+                }, this).forEach(e, s);
               }),
               (n.prototype.allGeneratedPositionsFor = function(e) {
                 var t = o.getArg(e, "line"),
@@ -47058,10 +47201,10 @@ webpackJsonp([10], {
               (i.prototype.hasContentsOfAllSources = function() {
                 return (
                   !!this.sourcesContent &&
-                  (this.sourcesContent.length >= this._sources.size() &&
-                    !this.sourcesContent.some(function(e) {
-                      return null == e;
-                    }))
+                  this.sourcesContent.length >= this._sources.size() &&
+                  !this.sourcesContent.some(function(e) {
+                    return null == e;
+                  })
                 );
               }),
               (i.prototype.sourceContentFor = function(e, t) {
@@ -47361,11 +47504,11 @@ webpackJsonp([10], {
                   r[o]
                     ? r.replaceRight(e, t)
                     : "string" == typeof r
-                      ? (this.children[this.children.length - 1] = r.replace(
-                          e,
-                          t
-                        ))
-                      : this.children.push("".replace(e, t)),
+                    ? (this.children[this.children.length - 1] = r.replace(
+                        e,
+                        t
+                      ))
+                    : this.children.push("".replace(e, t)),
                   this
                 );
               }),
@@ -47476,11 +47619,11 @@ webpackJsonp([10], {
                     ) ||
                       (!(t.stdout && !t.stdout.isTTY) &&
                         ("win32" === t.platform ||
-                          ("COLORTERM" in t.env ||
-                            ("dumb" !== t.env.TERM &&
-                              !!/^screen|^xterm|^vt100|color|ansi|cygwin|linux/i.test(
-                                t.env.TERM
-                              )))))))
+                          "COLORTERM" in t.env ||
+                          ("dumb" !== t.env.TERM &&
+                            !!/^screen|^xterm|^vt100|color|ansi|cygwin|linux/i.test(
+                              t.env.TERM
+                            ))))))
                 );
               })();
             }.call(t, r(8)));
@@ -47616,10 +47759,10 @@ webpackJsonp([10], {
               return "" === r
                 ? []
                 : r
-                  ? r.split(",").map(function(e) {
-                      return e.trim();
-                    })
-                  : null;
+                ? r.split(",").map(function(e) {
+                    return e.trim();
+                  })
+                : null;
             }
             function o(e, t) {
               function r() {

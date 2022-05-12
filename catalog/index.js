@@ -1,6 +1,9 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import { createRoot } from "react-dom/client";
 import { Catalog, pageLoader } from "catalog";
+import { Footer } from "../componentes/Footer/Footer.jsx";
+import ReactDOM from "react-dom";
+//import reportWebVitals from 'reportWebVitals';
 
 const config = {
   title: "Design System da Impulso",
@@ -113,6 +116,12 @@ const config = {
             import("../componentes/ValuePicker/README.md")
           ),
           imports: { ValuePicker: require("../componentes/ValuePicker") }
+        },
+        {
+          path: "componentes/footer",
+          title: "Footer",
+          imports: { Footer },
+          content: pageLoader(() => import("../componentes/Footer/README.md"))
         }
       ]
     },
