@@ -7,6 +7,7 @@ Render with `value` being a `key` from the `options` array.
 ```react
 showSource: true
 ---
+<Provider>
   <Dropdown
     options={[
       { key: "red", value: "Red" },
@@ -16,6 +17,7 @@ showSource: true
     value="blue"
     onChange={value => alert(`onChange: ${value}`)}
   />
+</Provider>
 ```
 
 ## Selected value is invalid option key
@@ -25,6 +27,7 @@ Render with `value` provided, but not a valid `key` from `options`.
 ```react
 showSource: true
 ---
+<Provider>
   <Dropdown
     options={[
       { key: "red", value: "Red" },
@@ -34,6 +37,7 @@ showSource: true
     value="black"
     onChange={value => alert(`onChange: ${value}`)}
   />
+</Provider>
 ```
 
 ## No value selected
@@ -43,6 +47,7 @@ Render without providing `value`.
 ```react
 showSource: true
 ---
+<Provider>
   <Dropdown
     options={[
       { key: "red", value: "Red" },
@@ -51,6 +56,7 @@ showSource: true
     ]}
     onChange={value => alert(`onChange: ${value}`)}
   />
+</Provider>
 ```
 
 ## No options
@@ -60,7 +66,9 @@ Render with empty `options` array. You cannot omit `options` because it is a req
 ```react
 showSource: true
 ---
+<Provider>
   <Dropdown options={[]} onChange={value => alert(`onChange: ${value}`)} />
+</Provider>
 ```
 
 ## Custom placeholder
@@ -70,6 +78,7 @@ You can provide a custom placeholder with the `placeholder` prop.
 ```react
 showSource: true
 ---
+<Provider>
   <Dropdown
     options={[
       { key: "red", value: "Red" },
@@ -80,6 +89,7 @@ showSource: true
     placeholder="Make your selection..."
     onChange={value => alert(`onChange: ${value}`)}
   />
+</Provider>
 ```
 
 ## Disabled
@@ -89,6 +99,7 @@ You can disable the component with the `disabled` flag.
 ```react
 showSource: true
 ---
+<Provider>
   <Dropdown
     options={[
       { key: "red", value: "Red" },
@@ -99,4 +110,5 @@ showSource: true
     onChange={value => alert(`onChange: ${value}`)}
     disabled
   />
+</Provider>
 ```
