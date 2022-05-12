@@ -43,13 +43,15 @@ const Footer = ({
               </li>
             );
           })}
-          <div className="realizacaoLabel">Realização:</div>
-          <div className="logoWrapper2">
-            <img
-              alt="impulso-gov-logo"
-              src= {ImpulsoLogo}
-            />
-          </div>
+          <div className="conteiner-logo-impulso-gov">
+            <div className="realizacaoLabel">Realização:</div>
+            <div className="logo-impulso">
+              <img 
+                  alt="impulso-gov-logo"
+                  src= {ImpulsoLogo}
+                />
+              </div>
+            </div>
         </ul>
         <div className="contactAddressSocialMedias">
           <div className="contactAddress">
