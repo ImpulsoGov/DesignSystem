@@ -1,3 +1,15 @@
+# Footer
+
+## Tabela de Propriedades
+
+|Prop            |Type              |Struct                                                                                              |
+|:---:           |:---:             |:---                                                                                                |
+|address         |object/json       | <code lang="json"> {"first": "str","second":"str"} </code>                                         |
+|contactCopyright|object/json       | <code lang="json"> {"copyright": "str","email":"str"} </code>                                      |
+|links           |object/json array | <code lang="json"> [{"label": "str","url":"str"}] </code>                                          |
+|socialMediaURLs |object/json       | <code lang="json"> {"facebook": "str","instagram":"str","linkedIn":"str","/twitter":"str"} </code> |
+
+
 ```react
 responsive: true
 
