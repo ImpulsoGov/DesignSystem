@@ -1,10 +1,10 @@
 import React from "react";
-import { createRoot } from "react-dom/client";
+import ReactDOM from "react-dom";
 import { Catalog, pageLoader } from "catalog";
 import { Footer } from "../componentes/Footer/Footer.jsx";
 import { NavBar } from "../componentes/NavBar/NavBar.jsx";
-import ReactDOM from "react-dom";
-//import reportWebVitals from 'reportWebVitals';
+import { Parcerias } from "../componentes/Parcerias/Parcerias.jsx"
+
 
 const config = {
   title: "Design System da Impulso",
@@ -129,7 +129,13 @@ const config = {
           title: "NavBar",
           imports: { NavBar },
           content: pageLoader(() => import("../componentes/NavBar/README.md"))
-        }
+        },
+        {
+          path: "componentes/parcerias",
+          title: "Parcerias",
+          imports: { Parcerias },
+          content: pageLoader(() => import("../componentes/Parcerias/README.md"))
+        },
       ]
     },
     {
