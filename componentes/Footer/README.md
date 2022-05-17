@@ -28,11 +28,3 @@ responsive: true
     />
 ```
 
-# Propriedades
-
-| Nome | Valor | Descrição |
-| --- | --- | ----------- |
-| address | json | Title |
-| contactCopyright | json | Title |
-| links | json | Title |
-| socialMediaURLs | json | Title |
