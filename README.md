@@ -4,4 +4,6 @@ Este repositório visa construir componentes para o pacote de design system da i
 
 ## Instalação
 
-## Desenvolvimento
+```
+npm install @impulsogov/designsystem@0.0.0
+```
