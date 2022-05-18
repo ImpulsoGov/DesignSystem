@@ -4,6 +4,7 @@ import { Catalog, pageLoader } from "catalog";
 import { Footer } from "../componentes/Footer/Footer.jsx";
 import { NavBar } from "../componentes/NavBar/NavBar.jsx";
 import { Parcerias } from "../componentes/Parcerias/Parcerias.jsx"
+import { Banner1 } from "../componentes/Banner1/Banner1.jsx";
 
 
 const pages = [
@@ -57,6 +58,12 @@ const pages = [
 			title: "Parcerias",
 			imports: { Parcerias },
 			content: pageLoader(() => import("../componentes/Parcerias/README.md"))
+		  },
+		  {
+			path: "componentes/banner1",
+			title: "Banner 1",
+			imports: { Banner1 },
+			content: pageLoader(() => import("../componentes/Banner1/README.md"))
 		  }
 		]
 	  },
