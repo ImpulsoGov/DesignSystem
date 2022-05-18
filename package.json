@@ -1,6 +1,15 @@
 {
-  "name": "elements-style-guide",
-  "description": "Style guide and brand identity for Elements",
+  "name": "@ImpulsoGov/designsystem",
+  "description": "Impulso Gov Design System",
+  "version": "0.0.2",
+  "author": "Gabrielle Arruda",
+  "bugs": {
+    "url": "https://github.com/ImpulsoGov/DesignSystem/issues"
+  },
+  "homepage": "https://github.com/ImpulsoGov/DesignSystem#readme",
+  "license": "UNLICENSED",
+  "main": "componentes/index.js",
+  "devDependencies": {},
   "dependencies": {
     "catalog": "^3.6.0",
     "react": "^17.0.1",
@@ -13,5 +22,11 @@
     "build": "yarn install && yarn run catalog-build",
     "start": "yarn run catalog-start"
   },
-  "license": "UNLICENSED"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ImpulsoGov/DesignSystem.git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  }
 }
