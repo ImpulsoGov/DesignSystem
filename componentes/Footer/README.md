@@ -1,9 +1,8 @@
 # Footer
 
-## Tabela de Propriedades
+<!-- ## Tabela de Propriedades
 
 ```html|span-3,no-source,plain,light
-
 <style>
     .container {
         background-color: #FFF;
@@ -58,7 +57,7 @@
 </tbody>
 </table>
 </div>
-```
+``` -->
 
 ```react
 responsive: true
