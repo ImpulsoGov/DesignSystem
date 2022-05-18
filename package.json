@@ -1,14 +1,14 @@
 {
   "name": "@ImpulsoGov/designsystem",
   "description": "Impulso Gov Design System",
-  "version": "0.0.0",
+  "version": "0.0.2",
   "author": "Gabrielle Arruda",
   "bugs": {
     "url": "https://github.com/ImpulsoGov/DesignSystem/issues"
   },
   "homepage": "https://github.com/ImpulsoGov/DesignSystem#readme",
   "license": "UNLICENSED",
-  "main": "index.js",
+  "main": "componentes/index.js",
   "devDependencies": {},
   "dependencies": {
     "catalog": "^3.6.0",
