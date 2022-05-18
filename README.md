@@ -1,9 +1,23 @@
 # Design System
 
-Este repositório visa construir componentes para o pacote de design system da impulso com elementos e componentes a serem utilizados em toda organização. Foi desenvolvido com [Catalog](https://docs.catalog.style/).
+O Design System da Impulso Gov apresenta os padrões de interface que devem ser seguidos por designers e desenvolvedores para garantir a experiência única na interação com os sistemas interativos da Impulso Gov.
+
+A iniciativa potencializa a eficiência e a eficácia dos usuários na utilização de interfaces para acesso aos serviços e aos sistemas da Impulso, possibilitando uma única curva de aprendizado e garantindo a previsibilidade na utilização dos diferentes sistemas.
+
+Sua documentação foi desenvolvida com [Catalog](https://docs.catalog.style/).
+
 
 ## Instalação
 
+Instale pela linha de comando:
 ```
 npm install @impulsogov/designsystem@0.0.0
 ```
+
+Ou via via package.json:
+
+```
+"@impulsogov/designsystem": "0.0.0"
+```
+
+
