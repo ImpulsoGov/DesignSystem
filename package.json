@@ -1,47 +1,17 @@
 {
-  "name": "designsystem",
-  "description": "Design System da Impulso Gov",
-  "author": "Gabrielle Arruda <gabriellearrudac@gmail.org>",
-  "version": "0.0.0",
-  "keywords": ["react", "components"],
-  "main": "dist/index.js",
-  "files": ["dist"],
-  "scripts": {
-    "start": "catalog start",
-    "build":
-      "cross-env NODE_ENV=production babel ./componentes -d ./dist --ignore test.js",
-    "postbuild": "yarn pack",
-    "build:catalog": "catalog build --public-url=/components/",
-    "deploy": "catalog/build"
-  },
+  "name": "elements-style-guide",
+  "description": "Style guide and brand identity for Elements",
   "dependencies": {
-    "catalog": "^3.6.2",
-    "classnames": "^2.3.1",
-    "react": "^18.1.0",
-    "react-dom": "^18.1.0",
-    "package.json": "^2.0.1",
-    "prop-types": "^15.5.10",
-    "rebass": "^1.0.4",
-    "styled-components": "^3.1.5"
+    "catalog": "^3.6.0",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "classnames": "^2.3.1"
   },
-  "peerDependencies": {
-    "react": "^16.0.0"
+  "scripts": {
+    "catalog-start": "catalog start",
+    "catalog-build": "catalog build",
+    "build": "yarn install && yarn run catalog-build",
+    "start": "yarn run catalog-start"
   },
-  "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-plugin-styled-components": "^1.4.0",
-    "catalog": "^3.0.0-rc.4",
-    "react": "^16.3.1",
-    "react-dom": "^16.3.1",
-    "react-scripts": "^1.1.4",
-    "react-testing-library": "^2.0.0",
-    "webpack": "^4.5.0"
-  },
-  "babel": {
-    "presets": ["react-app"],
-    "plugins": ["styled-components"]
-  },
-  "eslintConfig": {
-    "extends": "react-app"
-  }
+  "license": "UNLICENSED"
 }
