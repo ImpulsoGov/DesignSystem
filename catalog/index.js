@@ -3,7 +3,8 @@ import ReactDOM from "react-dom";
 import { Catalog, pageLoader } from "catalog";
 import { Footer } from "../componentes/Footer/Footer.jsx";
 import { NavBar } from "../componentes/NavBar/NavBar.jsx";
-import { Typography } from "../componentes/Typography/Typography.jsx";
+import { Parcerias } from "../componentes/Parcerias/Parcerias.jsx"
+
 
 const pages = [
 	{
@@ -50,6 +51,12 @@ const pages = [
 			title: "NavBar",
 			imports: { NavBar },
 			content: pageLoader(() => import("../componentes/NavBar/README.md"))
+		  },
+		  {
+			path: "componentes/parcerias",
+			title: "Parcerias",
+			imports: { Parcerias },
+			content: pageLoader(() => import("../componentes/Parcerias/README.md"))
 		  }
 		]
 	  },
