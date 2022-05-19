@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import { Catalog, pageLoader } from "catalog";
 import { Footer } from "../componentes/Footer/Footer.jsx";
 import { NavBar } from "../componentes/NavBar/NavBar.jsx";
-import { Typography } from "../componentes/Typography/Typography.jsx";
+import { Header } from "../componentes/Header/Header.jsx"
 
 const pages = [
 	{
@@ -50,7 +50,14 @@ const pages = [
 			title: "NavBar",
 			imports: { NavBar },
 			content: pageLoader(() => import("../componentes/NavBar/README.md"))
+		  },
+		  {
+			path: "componentes/header",
+			title: "Header",
+			imports: { Header },
+			content: pageLoader(() => import("../componentes/Header/README.md"))
 		  }
+
 		]
 	  },
 	  {
