@@ -4,6 +4,7 @@ import { Catalog, pageLoader } from "catalog";
 import { Footer } from "../componentes/Footer/Footer.jsx";
 import { NavBar } from "../componentes/NavBar/NavBar.jsx";
 import { Parcerias } from "../componentes/Parcerias/Parcerias.jsx"
+import { TituloTexto } from "../templates/TituloTexto/TituloTexto.jsx";
 
 
 const pages = [
@@ -66,9 +67,16 @@ const pages = [
 		]
 	  },
 	  {
-		path: "/templates",
 		title: "Templates",
-		content: pageLoader(() => import("../documentacoes/template_base.md"))
+		pages: [
+			{			
+				path: "/templates/titulo-texto",
+				title: "Titulo e Texto",
+				imports: { TituloTexto },
+				content: pageLoader(() => import("../templates/TituloTexto/README.md"))
+			},
+		
+		]
 	  }
 ];
 

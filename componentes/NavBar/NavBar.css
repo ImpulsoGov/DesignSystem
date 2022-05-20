@@ -9,9 +9,7 @@ html,body {
     display: flex;
     padding: 28px 40px;
     top: 0;
-    width: 98%;
     margin: 0;
-    position: fixed;
   }
   .logoWrapper_navbar {
     height: 24px;
