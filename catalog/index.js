@@ -5,7 +5,6 @@ import { Footer } from "../componentes/Footer/Footer.jsx";
 import { NavBar } from "../componentes/NavBar/NavBar.jsx";
 import { Parcerias } from "../componentes/Parcerias/Parcerias.jsx";
 import { ImageFull } from "../componentes/ImageFull/ImageFull.jsx";
-import Image1 from "../componentes/estatico/banner-1.png"
 
 
 const pages = [
@@ -68,7 +67,7 @@ const pages = [
 		  {
 			path: "componentes/imagefull",
 			title: "ImageFull",
-			imports: { ImageFull, Image1 },
+			imports: { ImageFull },
 			content: pageLoader(() => import("../componentes/ImageFull/README.md"))
 		  }
 		]
