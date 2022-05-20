@@ -1,18 +1,18 @@
 import React from "react";
 
-import "./Banner1.css";
-import BannerImage1 from "../estatico/banner-1.png"
+import "./ImageFull.css";
 
-const Banner1 = ({
+const ImageFull = ({
+  imagem
   }) => {
     return (
       <div className="containerBanner1 ">
         <img
             className="imageContainerBanner1"
             alt="BannerImage1"
-            src= {BannerImage1}
+            src= {String(imagem)}
           />
       </div>
   )};
   
-  export {Banner1};
+  export {ImageFull};

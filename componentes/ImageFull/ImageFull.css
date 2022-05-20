@@ -1,11 +1,9 @@
 .containerBanner1 {
-    background: #0b404a;
     border-radius: 0px 15px 15px 0px;
     display: flex;
-    width: 100%;
   }
 
 .imageContainerBanner1{
-  width: 100%;
+  width: 95%;
   border-radius: 0px 0px 15px 0px;
 }

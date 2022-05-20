@@ -3,8 +3,9 @@ import ReactDOM from "react-dom";
 import { Catalog, pageLoader } from "catalog";
 import { Footer } from "../componentes/Footer/Footer.jsx";
 import { NavBar } from "../componentes/NavBar/NavBar.jsx";
-import { Parcerias } from "../componentes/Parcerias/Parcerias.jsx"
-import { Banner1 } from "../componentes/Banner1/Banner1.jsx";
+import { Parcerias } from "../componentes/Parcerias/Parcerias.jsx";
+import { ImageFull } from "../componentes/ImageFull/ImageFull.jsx";
+import Image1 from "../componentes/estatico/banner-1.png"
 
 
 const pages = [
@@ -60,10 +61,10 @@ const pages = [
 			content: pageLoader(() => import("../componentes/Parcerias/README.md"))
 		  },
 		  {
-			path: "componentes/banner1",
-			title: "Banner 1",
-			imports: { Banner1 },
-			content: pageLoader(() => import("../componentes/Banner1/README.md"))
+			path: "componentes/imagefull",
+			title: "ImageFull",
+			imports: { ImageFull, Image1 },
+			content: pageLoader(() => import("../componentes/ImageFull/README.md"))
 		  }
 		]
 	  },
