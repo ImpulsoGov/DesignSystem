@@ -1,1 +1,1 @@
-export { default } from "./Banner1";
+export { default } from "./ImageFull";

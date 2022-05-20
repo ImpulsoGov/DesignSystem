@@ -33,6 +33,11 @@ const pages = [
 			content: pageLoader(() => import("../documentacoes/tipografia.md"))
 		  },
 		  {
+			path: "fundamentos/espacamento",
+			title: "Espaçamento",
+			content: pageLoader(() => import("../documentacoes/espacamento.md"))
+		  },
+		  {
 			path: "fundamentos/logos",
 			title: "Logos",
 			content: pageLoader(() => import("../documentacoes/logos.md"))
