@@ -4,6 +4,8 @@ import { Catalog, pageLoader } from "catalog";
 import { Footer } from "../componentes/Footer/Footer.jsx";
 import { NavBar } from "../componentes/NavBar/NavBar.jsx";
 import { Header } from "../componentes/Header/Header.jsx"
+import { Parcerias } from "../componentes/Parcerias/Parcerias.jsx"
+
 
 const pages = [
 	{
@@ -28,6 +30,11 @@ const pages = [
 			path: "fundamentos/tipografia",
 			title: "Tipografia",
 			content: pageLoader(() => import("../documentacoes/tipografia.md"))
+		  },
+		  {
+			path: "fundamentos/espacamento",
+			title: "Espaçamento",
+			content: pageLoader(() => import("../documentacoes/espacamento.md"))
 		  },
 		  {
 			path: "fundamentos/logos",
@@ -56,6 +63,12 @@ const pages = [
 			title: "Header",
 			imports: { Header },
 			content: pageLoader(() => import("../componentes/Header/README.md"))
+		  },
+		  {
+			path: "componentes/parcerias",
+			title: "Parcerias",
+			imports: { Parcerias },
+			content: pageLoader(() => import("../componentes/Parcerias/README.md"))
 		  }
 
 		]
