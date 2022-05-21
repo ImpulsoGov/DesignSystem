@@ -3,7 +3,8 @@ import ReactDOM from "react-dom";
 import { Catalog, pageLoader } from "catalog";
 import { Footer } from "../componentes/Footer/Footer.jsx";
 import { NavBar } from "../componentes/NavBar/NavBar.jsx";
-import { Parcerias } from "../componentes/Parcerias/Parcerias.jsx"
+import { Parcerias } from "../componentes/Parcerias/Parcerias.jsx";
+import { ImageFull } from "../componentes/ImageFull/ImageFull.jsx";
 
 
 const pages = [
@@ -62,6 +63,12 @@ const pages = [
 			title: "Parcerias",
 			imports: { Parcerias },
 			content: pageLoader(() => import("../componentes/Parcerias/README.md"))
+		  },
+		  {
+			path: "componentes/imagefull",
+			title: "ImageFull",
+			imports: { ImageFull },
+			content: pageLoader(() => import("../componentes/ImageFull/README.md"))
 		  }
 		]
 	  },
