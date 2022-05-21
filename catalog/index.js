@@ -74,7 +74,7 @@ const pages = [
 		  },
 		  {
 			path: "componentes/imagefull",
-			title: "ImageFull",
+			title: "Imagens",
 			imports: { ImageFull },
 			content: pageLoader(() => import("../componentes/ImageFull/README.md"))
 		  }
