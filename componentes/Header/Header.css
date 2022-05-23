@@ -43,10 +43,15 @@
     border: none;
     color: #FFF;
 }
-
+.buttonHeader:hover{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
 .consultoriaHeader{
     color: #2EB280;
     margin-left: 20px;
+}
+.consultoriaHeader:hover{
+    text-decoration: underline;
 }
 
 /* SMALL */
@@ -96,17 +101,23 @@
 
 /* XLARGE */
 @media screen and (min-width: 1920px) {
+    .conteinerHeader{
+        padding: 200px 72px 148px 90px;
+    }
     .tituloHeader{
         font-size: 148px;
         padding-right: 20%;
     }
     .textoHeader{
-        font-size: 38px;
-        padding-right: 33%;
-        margin-top: 90px;
-        margin-bottom: 90px;
+        font-size: 32px;
+        padding-right: 44%;
+        margin-top: 80px;
+        margin-bottom: 80px;
     }
     .conteinerChamadasHeader{
         font-size: 22px;
+    }
+    .buttonHeader{
+        padding: 20px 28px 20px 28px;
     }
 }
