@@ -4,5 +4,23 @@
 responsive: true
 
 ---
-    <TituloTexto/>
+    <TituloTexto
+        titulo = "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+        texto = 
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eu mi bibendum neque egestas congue quisque egestas diam. Bibendum neque egestas congue quisque egestas diam in. Vestibulum lorem sed risus ultricies tristique nulla aliquet enim tortor. Scelerisque in dictum non consectetur a erat nam at lectus. Ac auctor augue mauris augue neque. Id consectetur purus ut faucibus pulvinar elementum. Turpis egestas pretium aenean pharetra magna. Hac habitasse platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper. Vulputate dignissim suspendisse in est ante. Rutrum quisque non tellus orci ac auctor augue mauris. Eget nunc scelerisque viverra mauris in aliquam sem fringilla ut. Phasellus vestibulum lorem sed risus ultricies. Nunc aliquet bibendum enim facilisis. Magna eget est lorem ipsum dolor sit.
+
+            Feugiat nisl pretium fusce id velit ut tortor pretium. Viverra adipiscing at in tellus integer. Ultrices eros in cursus turpis. Sagittis vitae et leo duis. At tempor commodo ullamcorper a lacus. Etiam sit amet nisl purus in mollis nunc sed id. Nulla facilisi cras fermentum odio eu feugiat. Tempus imperdiet nulla malesuada pellentesque elit eget gravida cum. Pharetra vel turpis nunc eget lorem dolor sed viverra ipsum. Vulputate odio ut enim blandit volutpat maecenas volutpat blandit. Facilisis gravida neque convallis a cras semper auctor neque vitae.
+
+            Purus viverra accumsan in nisl nisi scelerisque eu ultrices vitae. Amet facilisis magna etiam tempor. Lorem ipsum dolor sit amet consectetur adipiscing. Placerat vestibulum lectus mauris ultrices. Consequat interdum varius sit amet mattis vulputate. Non consectetur a erat nam. Interdum consectetur libero id faucibus nisl. Ultrices eros in cursus turpis massa tincidunt. Tellus orci ac auctor augue mauris augue neque. Consectetur adipiscing elit duis tristique sollicitudin nibh sit amet. Mi quis hendrerit dolor magna eget est lorem. Sed elementum tempus egestas sed. Nam aliquam sem et tortor consequat id porta. Magna sit amet purus gravida quis. Nisl purus in mollis nunc sed id semper. Egestas sed tempus urna et. Eget gravida cum sociis natoque penatibus et. Nulla facilisi morbi tempus iaculis urna id volutpat lacus. Mauris in aliquam sem fringilla ut morbi tincidunt.
+
+            Dui sapien eget mi proin sed libero enim sed faucibus. Ultricies lacus sed turpis tincidunt id. Ut tristique et egestas quis ipsum suspendisse ultrices. Amet volutpat consequat mauris nunc congue nisi vitae. Tristique magna sit amet purus gravida quis blandit. Rhoncus dolor purus non enim praesent elementum facilisis. Quis lectus nulla at volutpat. Tellus rutrum tellus pellentesque eu tincidunt. Porttitor eget dolor morbi non arcu. Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim. Diam maecenas ultricies mi eget mauris pharetra. Quis imperdiet massa tincidunt nunc pulvinar sapien et ligula. Nibh tellus molestie nunc non blandit massa enim. Cras sed felis eget velit aliquet. Urna id volutpat lacus laoreet.
+
+            Proin fermentum leo vel orci porta non pulvinar. Massa tincidunt dui ut ornare lectus sit amet est. Quis eleifend quam adipiscing vitae proin sagittis. Scelerisque varius morbi enim nunc faucibus a pellentesque sit. Magnis dis parturient montes nascetur ridiculus. Venenatis a condimentum vitae sapien pellentesque habitant morbi. Consequat interdum varius sit amet. Consectetur adipiscing elit pellentesque habitant morbi tristique senectus. Elit pellentesque habitant morbi tristique. Nulla facilisi cras fermentum odio eu feugiat pretium nibh. Nisl tincidunt eget nullam non. Eget magna fermentum iaculis eu non diam phasellus vestibulum.
+
+            Semper viverra nam libero justo laoreet. Velit egestas dui id ornare. Amet luctus venenatis lectus magna fringilla. Imperdiet sed euismod nisi porta. Lectus vestibulum mattis ullamcorper velit. Quisque id diam vel quam elementum pulvinar. Feugiat scelerisque varius morbi enim nunc faucibus a pellentesque sit. Turpis in eu mi bibendum neque egestas congue. Duis ut diam quam nulla porttitor massa id neque. Turpis nunc eget lorem dolor sed. Lorem sed risus ultricies tristique nulla aliquet. Bibendum est ultricies integer quis auctor. Donec ultrices tincidunt arcu non sodales neque. Nisl vel pretium lectus quam id. Nulla aliquet enim tortor at auctor urna nunc id cursus."
+        imagem = {{
+            posicao: true,
+            url: "https://github.com/ImpulsoGov/DesignSystem/blob/main/componentes/estatico/banner-1.png?raw=true"
+        }}
+    />
 ```
