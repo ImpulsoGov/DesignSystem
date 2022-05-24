@@ -7,6 +7,7 @@ import { Parcerias } from "../componentes/Parcerias/Parcerias.jsx"
 import { TituloTexto } from "../templates/TituloTexto/TituloTexto.jsx";
 import { Header } from "../componentes/Header/Header.jsx"
 import { ImageFull } from "../componentes/ImageFull/ImageFull.jsx";
+import { ImageFull2 } from "../componentes/ImageFull2/ImageFull2.jsx";
 
 
 
@@ -73,12 +74,18 @@ const pages = [
 			imports: { Parcerias },
 			content: pageLoader(() => import("../componentes/Parcerias/README.md"))
 		  },
-		  {
+		{
 			path: "componentes/imagefull",
-			title: "Imagens",
+			title: "Imagem Um Arredondamento",
 			imports: { ImageFull },
 			content: pageLoader(() => import("../componentes/ImageFull/README.md"))
-		  }
+		},
+		{
+			path: "componentes/imagefull2",
+			title: "Imagem 2 Arredondamentos",
+			imports: { ImageFull2 },
+			content: pageLoader(() => import("../componentes/ImageFull2/README.md"))
+		}
 
 		]
 	  },
