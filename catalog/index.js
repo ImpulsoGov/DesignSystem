@@ -5,6 +5,10 @@ import { Footer } from "../componentes/Footer/Footer.jsx";
 import { NavBar } from "../componentes/NavBar/NavBar.jsx";
 import { Parcerias } from "../componentes/Parcerias/Parcerias.jsx"
 import { TituloTexto } from "../templates/TituloTexto/TituloTexto.jsx";
+import { Header } from "../componentes/Header/Header.jsx"
+import { Parcerias } from "../componentes/Parcerias/Parcerias.jsx";
+import { ImageFull } from "../componentes/ImageFull/ImageFull.jsx";
+
 
 
 const pages = [
@@ -59,11 +63,24 @@ const pages = [
 			content: pageLoader(() => import("../componentes/NavBar/README.md"))
 		  },
 		  {
+			path: "componentes/header",
+			title: "Header",
+			imports: { Header },
+			content: pageLoader(() => import("../componentes/Header/README.md"))
+		  },
+		  {
 			path: "componentes/parcerias",
 			title: "Parcerias",
 			imports: { Parcerias },
 			content: pageLoader(() => import("../componentes/Parcerias/README.md"))
+		  },
+		  {
+			path: "componentes/imagefull",
+			title: "Imagens",
+			imports: { ImageFull },
+			content: pageLoader(() => import("../componentes/ImageFull/README.md"))
 		  }
+
 		]
 	  },
 	  {
