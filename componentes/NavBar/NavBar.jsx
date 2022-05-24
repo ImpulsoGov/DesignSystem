@@ -55,3 +55,4 @@ const NavBar = ({
 )};
 
 export {NavBar};
+export default {NavBar};

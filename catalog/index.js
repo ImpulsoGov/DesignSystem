@@ -5,6 +5,8 @@ import { Footer } from "../componentes/Footer/Footer.jsx";
 import { NavBar } from "../componentes/NavBar/NavBar.jsx";
 import { Parcerias } from "../componentes/Parcerias/Parcerias.jsx";
 import { ImageFull } from "../componentes/ImageFull/ImageFull.jsx";
+import { PaginaBase } from "../templates/PaginaBase/PaginaBase.jsx";
+import { PaginaBaseIP } from "../templates/PaginaBaseIP/PaginaBaseIP.jsx";
 
 
 const pages = [
@@ -72,11 +74,23 @@ const pages = [
 		  }
 		]
 	  },
-	  {
-		path: "/templates",
+	{
 		title: "Templates",
-		content: pageLoader(() => import("../documentacoes/template_base.md"))
-	  }
+		pages: [
+			{
+				path: "componentes/paginabase",
+				title: "Pagina Base",
+				imports: { PaginaBase },
+				content: pageLoader(() => import("../templates/PaginaBase/README.md"))
+			},
+			{
+				path: "componentes/paginabaseip",
+				title: "Pagina Base IP",
+				imports: { PaginaBaseIP },
+				content: pageLoader(() => import("../templates/PaginaBaseIP/README.md"))
+			},
+		]
+	}
 ];
 
 // https://docs.catalog.style/configuration/theming
