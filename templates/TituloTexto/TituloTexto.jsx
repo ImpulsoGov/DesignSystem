@@ -1,6 +1,6 @@
 import React from "react";
 import "./TituloTexto.css"
-import { ImageFull2 } from "../../componentes/ImageFull2/ImageFull2"
+import { ImagensFull2 } from "../../componentes/Imagens/ImagensFull"
 
 const ImageTop = ({
   top,
@@ -10,7 +10,7 @@ const ImageTop = ({
   if (top==true) {
     return(
       <div>
-        <ImageFull2 imagem={link} />
+        <ImagensFull2 imagem={link} />
         <div className="tituloTexto">{titulo}</div>
       </div>
     )
@@ -18,7 +18,7 @@ const ImageTop = ({
     return(
       <div>
         <div className="tituloTexto">{titulo}</div>
-        <ImageFull2 imagem={link} />
+        <ImagensFull2 imagem={link} />
       </div>
     )
   }else{
