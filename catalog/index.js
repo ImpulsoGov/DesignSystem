@@ -3,10 +3,12 @@ import ReactDOM from "react-dom";
 import { Catalog, pageLoader } from "catalog";
 import { Footer } from "../componentes/Footer/Footer.jsx";
 import { NavBar } from "../componentes/NavBar/NavBar.jsx";
+import { Header } from "../componentes/Header/Header.jsx"
 import { Parcerias } from "../componentes/Parcerias/Parcerias.jsx";
 import { ImageFull } from "../componentes/ImageFull/ImageFull.jsx";
 import { PaginaBase } from "../templates/PaginaBase/PaginaBase.jsx";
 import { PaginaBaseIP } from "../templates/PaginaBaseIP/PaginaBaseIP.jsx";
+
 
 
 const pages = [
@@ -61,6 +63,12 @@ const pages = [
 			content: pageLoader(() => import("../componentes/NavBar/README.md"))
 		  },
 		  {
+			path: "componentes/header",
+			title: "Header",
+			imports: { Header },
+			content: pageLoader(() => import("../componentes/Header/README.md"))
+		  },
+		  {
 			path: "componentes/parcerias",
 			title: "Parcerias",
 			imports: { Parcerias },
@@ -68,10 +76,11 @@ const pages = [
 		  },
 		  {
 			path: "componentes/imagefull",
-			title: "ImageFull",
+			title: "Imagens",
 			imports: { ImageFull },
 			content: pageLoader(() => import("../componentes/ImageFull/README.md"))
 		  }
+
 		]
 	  },
 	{
