@@ -1,4 +1,4 @@
-# Image Full
+# Imagem Full Arredondada
 
 ```react
 responsive: true
