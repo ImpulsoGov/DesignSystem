@@ -1,4 +1,4 @@
-export { Parcerias } from "./parcerias";
+export { Parcerias } from "./Parcerias";
 export { Footer } from "./Footer";
-export { NavBar } from "./NavBar";
-export { Header } from "./Header";
+export { NavBar } from "./NavBar.jsx";
+export { Header } from "./Header.jsx";
