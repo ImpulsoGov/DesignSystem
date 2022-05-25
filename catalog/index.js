@@ -6,7 +6,10 @@ import { NavBar } from "../componentes/NavBar/NavBar.jsx";
 import { Parcerias } from "../componentes/Parcerias/Parcerias.jsx"
 import { TituloTexto } from "../templates/TituloTexto/TituloTexto.jsx";
 import { Header } from "../componentes/Header/Header.jsx"
+import { Parcerias } from "../componentes/Parcerias/Parcerias.jsx";
 import { ImagensFull, ImagensFull2 } from "../componentes/Imagens/ImagensFull.jsx";
+import { Content3Col } from "../componentes/Content3Col/Content3Col.jsx";
+import { TextCol } from "../componentes/TextCol/TextCol.jsx";
 
 
 const pages = [
@@ -77,7 +80,19 @@ const pages = [
 			title: "Imagens",
 			imports: { ImagensFull, ImagensFull2 },
 			content: pageLoader(() => import("../componentes/Imagens/README.md"))
-		}
+		  },
+		  {
+			path: "componentes/textcol",
+			title: "Coluna de Texto",
+			imports: { TextCol },
+			content: pageLoader(() => import("../componentes/TextCol/README.md"))
+		  },
+		  {
+			path: "componentes/content3col",
+			title: "Conteiner de 3 Colunas",
+			imports: { Content3Col, TextCol },
+			content: pageLoader(() => import("../componentes/Content3Col/README.md"))
+		  }
 		]
 	  },
 	  {
@@ -94,15 +109,19 @@ const pages = [
 	  }
 ];
 
+const logoSrc = "https://raw.githubusercontent.com/ImpulsoGov/design-system/main/estatico/Color%3DBlack%2C%20Size%3DMedium.png"
+
 // https://docs.catalog.style/configuration/theming
 // https://github.com/interactivethings/catalog/blob/master/src/DefaultTheme.js
+
 ReactDOM.render(
 	<Catalog
 		title="Design System da Impulso"
 		pages={pages}
-		logoSrc={"https://raw.githubusercontent.com/ImpulsoGov/design-system/main/estatico/Color%3DBlack%2C%20Size%3DMedium.png"}
+		logoSrc={logoSrc}
 		theme={
       {
+		  		logoSrc: "https://raw.githubusercontent.com/ImpulsoGov/design-system/main/estatico/Color%3DBlack%2C%20Size%3DMedium.png",
 				// Colors
 				background: "#F9F9F9",
 				textColor: "#333333",
