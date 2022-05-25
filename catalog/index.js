@@ -6,7 +6,8 @@ import { NavBar } from "../componentes/NavBar/NavBar.jsx";
 import { Header } from "../componentes/Header/Header.jsx"
 import { Parcerias } from "../componentes/Parcerias/Parcerias.jsx";
 import { ImageFull } from "../componentes/ImageFull/ImageFull.jsx";
-
+import { Content3Col } from "../componentes/Content3Col/Content3Col.jsx";
+import { TextCol } from "../componentes/TextCol/TextCol.jsx";
 
 
 const pages = [
@@ -77,7 +78,21 @@ const pages = [
 			title: "Imagens",
 			imports: { ImageFull },
 			content: pageLoader(() => import("../componentes/ImageFull/README.md"))
+		  },
+		  {
+			path: "componentes/textcol",
+			title: "Coluna de Texto",
+			imports: { TextCol },
+			content: pageLoader(() => import("../componentes/TextCol/README.md"))
+		  },
+		  {
+			path: "componentes/content3col",
+			title: "Conteiner de 3 Colunas",
+			imports: { Content3Col, TextCol },
+			content: pageLoader(() => import("../componentes/Content3Col/README.md"))
 		  }
+
+
 
 		]
 	  },
