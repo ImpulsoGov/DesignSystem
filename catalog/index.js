@@ -103,15 +103,19 @@ const pages = [
 	  }
 ];
 
+const logoSrc = "https://raw.githubusercontent.com/ImpulsoGov/design-system/main/estatico/Color%3DBlack%2C%20Size%3DMedium.png"
+
 // https://docs.catalog.style/configuration/theming
 // https://github.com/interactivethings/catalog/blob/master/src/DefaultTheme.js
+
 ReactDOM.render(
 	<Catalog
 		title="Design System da Impulso"
 		pages={pages}
-		logoSrc={"https://raw.githubusercontent.com/ImpulsoGov/design-system/main/estatico/Color%3DBlack%2C%20Size%3DMedium.png"}
+		logoSrc={logoSrc}
 		theme={
       {
+		  		logoSrc: "https://raw.githubusercontent.com/ImpulsoGov/design-system/main/estatico/Color%3DBlack%2C%20Size%3DMedium.png",
 				// Colors
 				background: "#F9F9F9",
 				textColor: "#333333",
