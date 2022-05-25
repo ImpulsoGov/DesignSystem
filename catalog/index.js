@@ -6,7 +6,6 @@ import { NavBar } from "../componentes/NavBar/NavBar.jsx";
 import { Parcerias } from "../componentes/Parcerias/Parcerias.jsx"
 import { TituloTexto } from "../templates/TituloTexto/TituloTexto.jsx";
 import { Header } from "../componentes/Header/Header.jsx"
-import { Parcerias } from "../componentes/Parcerias/Parcerias.jsx";
 import { ImagensFull, ImagensFull2 } from "../componentes/Imagens/ImagensFull.jsx";
 import { Content3Col } from "../componentes/Content3Col/Content3Col.jsx";
 import { TextCol } from "../componentes/TextCol/TextCol.jsx";
