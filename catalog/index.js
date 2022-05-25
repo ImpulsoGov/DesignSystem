@@ -3,9 +3,11 @@ import ReactDOM from "react-dom";
 import { Catalog, pageLoader } from "catalog";
 import { Footer } from "../componentes/Footer/Footer.jsx";
 import { NavBar } from "../componentes/NavBar/NavBar.jsx";
+import { Parcerias } from "../componentes/Parcerias/Parcerias.jsx"
+import { TituloTexto } from "../templates/TituloTexto/TituloTexto.jsx";
 import { Header } from "../componentes/Header/Header.jsx"
 import { Parcerias } from "../componentes/Parcerias/Parcerias.jsx";
-import { ImageFull } from "../componentes/ImageFull/ImageFull.jsx";
+import { ImagensFull, ImagensFull2 } from "../componentes/Imagens/ImagensFull.jsx";
 import { Content3Col } from "../componentes/Content3Col/Content3Col.jsx";
 import { TextCol } from "../componentes/TextCol/TextCol.jsx";
 
@@ -73,11 +75,11 @@ const pages = [
 			imports: { Parcerias },
 			content: pageLoader(() => import("../componentes/Parcerias/README.md"))
 		  },
-		  {
-			path: "componentes/imagefull",
+		{
+			path: "componentes/imagensfull",
 			title: "Imagens",
-			imports: { ImageFull },
-			content: pageLoader(() => import("../componentes/ImageFull/README.md"))
+			imports: { ImagensFull, ImagensFull2 },
+			content: pageLoader(() => import("../componentes/Imagens/README.md"))
 		  },
 		  {
 			path: "componentes/textcol",
@@ -91,15 +93,19 @@ const pages = [
 			imports: { Content3Col, TextCol },
 			content: pageLoader(() => import("../componentes/Content3Col/README.md"))
 		  }
-
-
-
 		]
 	  },
 	  {
-		path: "/templates",
 		title: "Templates",
-		content: pageLoader(() => import("../documentacoes/template_base.md"))
+		pages: [
+			{			
+				path: "/templates/titulo-texto",
+				title: "Titulo e Texto",
+				imports: { TituloTexto },
+				content: pageLoader(() => import("../templates/TituloTexto/README.md"))
+			},
+		
+		]
 	  }
 ];
 
