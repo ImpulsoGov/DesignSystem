@@ -3,12 +3,15 @@ import ReactDOM from "react-dom";
 import { Catalog, pageLoader } from "catalog";
 import { Footer } from "../componentes/Footer/Footer.jsx";
 import { NavBar } from "../componentes/NavBar/NavBar.jsx";
+import { Parcerias } from "../componentes/Parcerias/Parcerias.jsx"
+import { TituloTexto } from "../templates/TituloTexto/TituloTexto.jsx";
 import { Header } from "../componentes/Header/Header.jsx"
 import { Parcerias } from "../componentes/Parcerias/Parcerias.jsx";
-import { ImageFull } from "../componentes/ImageFull/ImageFull.jsx";
 import { PaginaBase } from "../templates/PaginaBase/PaginaBase.jsx";
 import { PaginaBaseIP } from "../templates/PaginaBaseIP/PaginaBaseIP.jsx";
-
+import { ImagensFull, ImagensFull2 } from "../componentes/Imagens/ImagensFull.jsx";
+import { Content3Col } from "../componentes/Content3Col/Content3Col.jsx";
+import { TextCol } from "../componentes/TextCol/TextCol.jsx";
 
 
 const pages = [
@@ -74,13 +77,24 @@ const pages = [
 			imports: { Parcerias },
 			content: pageLoader(() => import("../componentes/Parcerias/README.md"))
 		  },
-		  {
-			path: "componentes/imagefull",
+		{
+			path: "componentes/imagensfull",
 			title: "Imagens",
-			imports: { ImageFull },
-			content: pageLoader(() => import("../componentes/ImageFull/README.md"))
+			imports: { ImagensFull, ImagensFull2 },
+			content: pageLoader(() => import("../componentes/Imagens/README.md"))
+		  },
+		  {
+			path: "componentes/textcol",
+			title: "Coluna de Texto",
+			imports: { TextCol },
+			content: pageLoader(() => import("../componentes/TextCol/README.md"))
+		  },
+		  {
+			path: "componentes/content3col",
+			title: "Conteiner de 3 Colunas",
+			imports: { Content3Col, TextCol },
+			content: pageLoader(() => import("../componentes/Content3Col/README.md"))
 		  }
-
 		]
 	  },
 	{
@@ -99,18 +113,34 @@ const pages = [
 				content: pageLoader(() => import("../templates/PaginaBaseIP/README.md"))
 			},
 		]
-	}
+	},
+	  {
+		title: "Templates",
+		pages: [
+			{			
+				path: "/templates/titulo-texto",
+				title: "Titulo e Texto",
+				imports: { TituloTexto },
+				content: pageLoader(() => import("../templates/TituloTexto/README.md"))
+			},
+		
+		]
+	  }
 ];
+
+const logoSrc = "https://raw.githubusercontent.com/ImpulsoGov/design-system/main/estatico/Color%3DBlack%2C%20Size%3DMedium.png"
 
 // https://docs.catalog.style/configuration/theming
 // https://github.com/interactivethings/catalog/blob/master/src/DefaultTheme.js
+
 ReactDOM.render(
 	<Catalog
 		title="Design System da Impulso"
 		pages={pages}
-		logoSrc={"https://raw.githubusercontent.com/ImpulsoGov/design-system/main/estatico/Color%3DBlack%2C%20Size%3DMedium.png"}
+		logoSrc={logoSrc}
 		theme={
       {
+		  		logoSrc: "https://raw.githubusercontent.com/ImpulsoGov/design-system/main/estatico/Color%3DBlack%2C%20Size%3DMedium.png",
 				// Colors
 				background: "#F9F9F9",
 				textColor: "#333333",
