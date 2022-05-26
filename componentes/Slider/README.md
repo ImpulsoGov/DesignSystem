@@ -23,7 +23,7 @@ responsive: true
             corpo : "Você preenche um formulário, nós entramos em contato em até três dias úteis e já marcamos a primeira conversa. Não precisa assinar nada, é sem burocracia. úteis e já marcamos a primeira conversa. Não precisa assinar nada, é sem burocracia.Ajudou muito os diademenses"
         },
         {
-            titulo : "João Fulano",
+            titulo : "Maria Fulana",
             subtitulo : "Coordenador de AP  |  São Bernardo do Campo - SP",
             corpo : "Você preenche um formulário, nós entramos em contato em até três dias úteis e já marcamos a primeira conversa. Não precisa assinar nada, é sem burocracia. úteis e já marcamos a primeira conversa. Não precisa assinar nada, é sem burocracia.Ajudou muito os são-bernardenses"
         }
