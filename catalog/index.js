@@ -3,9 +3,10 @@ import ReactDOM from "react-dom";
 import { Catalog, pageLoader } from "catalog";
 import { Footer } from "../componentes/Footer/Footer.jsx";
 import { NavBar } from "../componentes/NavBar/NavBar.jsx";
+import { Parcerias } from "../componentes/Parcerias/Parcerias.jsx"
+import { TituloTexto } from "../templates/TituloTexto/TituloTexto.jsx";
 import { Header } from "../componentes/Header/Header.jsx"
-import { Parcerias } from "../componentes/Parcerias/Parcerias.jsx";
-import { ImageFull } from "../componentes/ImageFull/ImageFull.jsx";
+import { ImagensFull, ImagensFull2 } from "../componentes/Imagens/ImagensFull.jsx";
 import { Content3Col } from "../componentes/Content3Col/Content3Col.jsx";
 import { TextCol } from "../componentes/TextCol/TextCol.jsx";
 import { Slider } from "../componentes/Slider/Slider.jsx";
@@ -74,11 +75,11 @@ const pages = [
 			imports: { Parcerias },
 			content: pageLoader(() => import("../componentes/Parcerias/README.md"))
 		  },
-		  {
-			path: "componentes/imagefull",
+		{
+			path: "componentes/imagensfull",
 			title: "Imagens",
-			imports: { ImageFull },
-			content: pageLoader(() => import("../componentes/ImageFull/README.md"))
+			imports: { ImagensFull, ImagensFull2 },
+			content: pageLoader(() => import("../componentes/Imagens/README.md"))
 		  },
 		  {
 			path: "componentes/textcol",
@@ -99,27 +100,35 @@ const pages = [
 			content: pageLoader(() => import("../componentes/Slider/README.md"))
 		  }
 
-
-
-
 		]
 	  },
 	  {
-		path: "/templates",
 		title: "Templates",
-		content: pageLoader(() => import("../documentacoes/template_base.md"))
+		pages: [
+			{			
+				path: "/templates/titulo-texto",
+				title: "Titulo e Texto",
+				imports: { TituloTexto },
+				content: pageLoader(() => import("../templates/TituloTexto/README.md"))
+			},
+		
+		]
 	  }
 ];
 
+const logoSrc = "https://raw.githubusercontent.com/ImpulsoGov/design-system/main/estatico/Color%3DBlack%2C%20Size%3DMedium.png"
+
 // https://docs.catalog.style/configuration/theming
 // https://github.com/interactivethings/catalog/blob/master/src/DefaultTheme.js
+
 ReactDOM.render(
 	<Catalog
 		title="Design System da Impulso"
 		pages={pages}
-		logoSrc={"https://raw.githubusercontent.com/ImpulsoGov/design-system/main/estatico/Color%3DBlack%2C%20Size%3DMedium.png"}
+		logoSrc={logoSrc}
 		theme={
       {
+		  		logoSrc: "https://raw.githubusercontent.com/ImpulsoGov/design-system/main/estatico/Color%3DBlack%2C%20Size%3DMedium.png",
 				// Colors
 				background: "#F9F9F9",
 				textColor: "#333333",
