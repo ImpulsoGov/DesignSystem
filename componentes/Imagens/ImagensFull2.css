@@ -6,6 +6,7 @@
 .imageContainerBanner1-2{
   width: 95%;
   border-radius: 0px 25px 25px 0px;
+  object-fit: cover;
 }
 
 /* SMALL */
@@ -15,11 +16,15 @@
   }
   .imageContainerBanner1-2{
     border-radius: 0px 15px 15px 0px;
+    margin-bottom: 25px;
   }  
 }
 
 /* MEDIUM */
 @media screen and (min-width: 1024px)and (max-width: 1400px) {
+  .containerBanner1-2 {
+    height: 70%;
+  }
   .imageContainerBanner1-2{
     border-radius: 0px 20px 20px 0px;
   }

@@ -1,53 +1,55 @@
-.container {
+.containerFooter {
   display: flex;
   padding: 70px 40px;
-  background-color: #1F1F1F;
   font-family: 'Inter';
   font-style: normal;
   font-weight: 400;
   margin: 0;
 }
+.ipColorthemeFooter{
+  background-color: #1F1F1F;
 
+}
 a, u {
   color: #FFFFFF;
   text-decoration: none;
 }
 
-.realizacaoLabel {
+.realizacaoLabelFooter {
   color:#FFFFFF;
   margin-right: 15px;
 }
 
-.logoWrapper {
+.logoWrapperFooter {
   height: 24px;
   min-width: 140px;
   max-width: 140px;
 }
 
-.logo-impulso {
+.logo-impulsoFooter {
   height: 24px;
   min-width: 140px;
   max-width: 140px;
 }
 
 
-.conteiner-logo-impulso-gov{
+.conteiner-logo-impulso-govFooter{
   margin-left: auto;
   display: flex;
   justify-content: center;
 }
 
-.logoFrame {
+.logoFrameFooter {
   width: 20%;
   display: flex;
   justify-content: center;
 }
 
-.infoLinksWrapper {
+.infoLinksWrapperFooter {
   width: 100%;
 }
 
-.list {
+.listFooter {
   border-bottom: 0.1px solid #FFFFFF;
   display: flex;
   list-style: none;
@@ -56,11 +58,11 @@ a, u {
   padding-bottom: 32px;
 }
 
-.item {
+.itemFooter {
   padding-right: 24px;
 }
 
-.contactAddressSocialMedias {
+.contactAddressSocialMediasFooter {
   align-items: center;
   display: flex;
   justify-content: space-between;
@@ -68,27 +70,27 @@ a, u {
   width: 100%;
 }
 
-.contactAddress {
+.contactAddressFooter {
   display: flex;
   margin-right: 94px;
 }
 
-.address {
+.addressFooter {
   color:#FFFFFF;
 }
 
-.contact {
+.contactFooter {
   margin-left: 94px;
   width: 30%;
   color:#FFFFFF;
 }
 
-.socialMedias {
+.socialMediasFooter {
   align-items: center;
   display: flex;
 }
 
-.socialMedia {
+.socialMediaFooter {
   height: 20px;
 }
 
@@ -97,23 +99,23 @@ a, u {
 }
 
 @media screen and (max-width: 1024px) {
-  .container {
+  .containerFooter {
     display: block;
     padding: 48px 40px 58px 40px;
   }
-  .realizacaoLabel {
+  .realizacaoLabelFooter {
     margin-top: 15px;
     margin-bottom: 15px;
     margin-left: 0px;
     margin-right: 0;
     left: 0;
   }
-  .conteiner-logo-impulso-gov{
+  .conteiner-logo-impulso-govFooter{
     flex-direction: column;
     margin-left: 0;
     justify-content: center;
   }
-  .logo-impulso {
+  .logo-impulsoFooter {
     width: 100%;
     min-width: 100%;
     max-width: 100%;
@@ -121,41 +123,41 @@ a, u {
     margin-left: 0;
   }
   
-  .logoFrame {
+  .logoFrameFooter {
     width: 100%;
   }
   
-    .infoLinksWrapper {
+    .infoLinksWrapperFooter {
     margin-left: 0;
   }
 
-  .list {
+  .listFooter {
     display: block;
     margin-top: 26px;
     text-align: center;
   }
 
-  .item {
+  .itemFooter {
     margin-top: 16px;
   }
 
-  .contactAddressSocialMedias {
+  .contactAddressSocialMediasFooter {
     flex-direction: column;
     text-align: center;
   }
 
-  .contactAddress {
+  .contactAddressFooter {
     display: block;
     margin-right: 0;
   }
 
-  .contact {
+  .contactFooter {
     margin-left: 0;
     margin-top: 10px;
     width: 100%;
   }
 
-  .socialMedias {
+  .socialMediasFooter {
     margin-top: 20px;
   }
 }
