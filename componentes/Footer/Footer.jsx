@@ -17,24 +17,24 @@ const Footer = ({
   socialMediaURLs
 }) => {
   return (
-    <div className="container">
-      <div className="logoFrame">
-        <div className="logoWrapper">
+    <div className="containerFooter ipColorthemeFooter">
+      <div className="logoFrameFooter">
+        <div className="logoWrapperFooter">
           <img
-            alt="impulso-previne-logo"
+            alt="impulso-previne-logoFooter"
             src= {ImpulsoPrevineLogo}
           />
         </div>
       </div>
-      <div className="infoLinksWrapper">
-        <ul className="list">
+      <div className="infoLinksWrapperFooter">
+        <ul className="listFooter">
           {links.map((item) => {
             return (
-              <li key={item.label} className="item">
+              <li key={item.label} className="itemFooter">
                 <a href={item.url}>
                   <Typography
                     as="span"
-                    className="moreInfoLink"
+                    className="moreInfoLinkFooter"
                     variant={ETYPOGRAPHY_VARIANTS.BODY_M}
                   >
                     {item.label}
@@ -43,19 +43,19 @@ const Footer = ({
               </li>
             );
           })}
-          <div className="conteiner-logo-impulso-gov">
-            <div className="realizacaoLabel">Realização:</div>
-            <div className="logo-impulso">
+          <div className="conteiner-logo-impulso-govFooter">
+            <div className="realizacaoLabelFooter">Realização:</div>
+            <div className="logo-impulsoFooter">
               <img 
-                  alt="impulso-gov-logo"
+                  alt="impulso-gov-logoFooter"
                   src= {ImpulsoLogo}
                 />
               </div>
             </div>
         </ul>
-        <div className="contactAddressSocialMedias">
-          <div className="contactAddress">
-            <div className="address">
+        <div className="contactAddressSocialMediasFooter">
+          <div className="contactAddressFooter">
+            <div className="addressFooter">
               <Typography variant={ETYPOGRAPHY_VARIANTS.BODY_S} as="p">
                 {address.first},
               </Typography>
@@ -63,7 +63,7 @@ const Footer = ({
                 {address.second}
               </Typography>
             </div>
-            <div className="contact">
+            <div className="contactFooter">
               <Typography variant={ETYPOGRAPHY_VARIANTS.BODY_S} as="p">
                 {contactCopyright.email}
               </Typography>
@@ -72,9 +72,9 @@ const Footer = ({
               </Typography>
             </div>
           </div>
-          <div className="socialMedias">
+          <div className="socialMediasFooter">
             <a
-              className="socialMedia"
+              className="socialMediaFooter"
               href={socialMediaURLs.facebook}
             >
               <img
@@ -82,14 +82,14 @@ const Footer = ({
                 src= {FacebookSVG}
               />
             </a>
-            <a className="socialMedia" href={socialMediaURLs.twitter}>
+            <a className="socialMediaFooter" href={socialMediaURLs.twitter}>
               <img
                 alt="twitter"
                 src= {TwitterSVG}
               />
             </a>
             <a
-              className="socialMedia"
+              className="socialMediaFooter"
               href={socialMediaURLs.instagram}
             >
               <img
@@ -98,7 +98,7 @@ const Footer = ({
               />
             </a>
             <a
-              className="socialMedia"
+              className="socialMediaFooter"
               href={socialMediaURLs.linkedIn}
             >
               <img
