@@ -1,26 +1,41 @@
-.container {
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap");
+.containerFooter {
   display: flex;
   padding: 70px 40px;
-  background-color: #1F1F1F;
   font-family: 'Inter';
   font-style: normal;
   font-weight: 400;
   margin: 0;
 }
-
-a, u {
+.theme{ 
+  color:#606E78;
+}
+.themeBlack{
+  background-color: #1F1F1F;
   color: #FFFFFF;
-  text-decoration: none;
+}
+.themeWhite{ 
+  background-color: #FFFFFF;
+  color:#606E78;
 }
 
+.containerFooter a {
+  text-decoration: none;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+}
+.conteinerLogoProjeto{
+  width: 100%;
+  background-color: aqua;
+}
 .realizacaoLabel {
-  color:#FFFFFF;
   margin-right: 15px;
 }
 
 .logoWrapper {
   height: 24px;
-  min-width: 140px;
+  min-width: 100px;
   max-width: 140px;
 }
 
@@ -34,13 +49,12 @@ a, u {
 .conteiner-logo-impulso-gov{
   margin-left: auto;
   display: flex;
-  justify-content: center;
 }
 
 .logoFrame {
   width: 20%;
   display: flex;
-  justify-content: center;
+  justify-content: left;
 }
 
 .infoLinksWrapper {
@@ -48,7 +62,7 @@ a, u {
 }
 
 .list {
-  border-bottom: 0.1px solid #FFFFFF;
+  border-bottom: 1px solid #ffffff25;
   display: flex;
   list-style: none;
   margin: 0;
@@ -58,6 +72,8 @@ a, u {
 
 .item {
   padding-right: 24px;
+  font-size: 16px;
+  line-height: 150%;
 }
 
 .contactAddressSocialMedias {
@@ -71,16 +87,12 @@ a, u {
 .contactAddress {
   display: flex;
   margin-right: 94px;
-}
-
-.address {
-  color:#FFFFFF;
+  font-size: 14px;
 }
 
 .contact {
   margin-left: 94px;
   width: 30%;
-  color:#FFFFFF;
 }
 
 .socialMedias {
@@ -97,28 +109,30 @@ a, u {
 }
 
 @media screen and (max-width: 1024px) {
-  .container {
+  .containerFooter {
     display: block;
-    padding: 48px 40px 58px 40px;
+    padding: 48px 40px 50px 40px;
   }
+  .logoWrapper {
+    height: 24px;
+    min-width: none;
+    margin-bottom: 40px;
+  }
+  
   .realizacaoLabel {
-    margin-top: 15px;
-    margin-bottom: 15px;
-    margin-left: 0px;
-    margin-right: 0;
+    margin: 0;
     left: 0;
   }
   .conteiner-logo-impulso-gov{
-    flex-direction: column;
+    margin-top: 40px;
+    flex-direction: row;
     margin-left: 0;
-    justify-content: center;
+    font-size: 14px;
+    justify-content: flex-start;
   }
   .logo-impulso {
-    width: 100%;
-    min-width: 100%;
-    max-width: 100%;
-    margin: 0;
-    margin-left: 0;
+    margin: 1px 0 0 0;
+    height: 14px;
   }
   
   .logoFrame {
@@ -137,25 +151,35 @@ a, u {
 
   .item {
     margin-top: 16px;
+    text-align: left;
+    font-size: 16px;
   }
 
   .contactAddressSocialMedias {
     flex-direction: column;
     text-align: center;
+    text-align: left;
   }
 
   .contactAddress {
     display: block;
     margin-right: 0;
+    text-align: left;
+    width: 100%;
   }
 
   .contact {
     margin-left: 0;
-    margin-top: 10px;
+    margin-top: 25px;
     width: 100%;
   }
 
   .socialMedias {
-    margin-top: 20px;
+    margin-top: 25px;
+    width: 100%;
   }
+  .socialMedia {
+    height: 13px;
+  }
+
 }

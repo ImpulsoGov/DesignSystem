@@ -1,75 +1,56 @@
 import React from "react";
 
 import "./Footer.css";
-import Typography, { ETYPOGRAPHY_VARIANTS } from "../Typography/Typography.jsx";
 import FacebookSVG from "../estatico/facebook.svg";
 import InstagramSVG from "../estatico/instagram.svg";
 import LinkedInSVG from "../estatico/linked-in.svg";
 import TwitterSVG from "../estatico/twitter.svg";
-import ImpulsoPrevineLogo from "../estatico/impulso-previne-logo.svg"
-import ImpulsoLogo from "../estatico/impulso-gov-logo-branco.svg"
-
+import ImpulsoLogo from "../estatico/impulso-gov-logo-color.svg"
 
 const Footer = ({
+  theme,
   address,
   contactCopyright,
   links,
   socialMediaURLs
 }) => {
   return (
-    <div className="container">
-      <div className="logoFrame">
-        <div className="logoWrapper">
+    <div className={"containerFooter theme"+theme.cor}>
           <img
+            className="logoWrapper"
             alt="impulso-previne-logo"
-            src= {ImpulsoPrevineLogo}
+            src= {String(theme.logoProjeto)}
           />
-        </div>
-      </div>
       <div className="infoLinksWrapper">
-        <ul className="list">
+        <div className="list">
           {links.map((item) => {
             return (
-              <li key={item.label} className="item">
-                <a href={item.url}>
-                  <Typography
-                    as="span"
-                    className="moreInfoLink"
-                    variant={ETYPOGRAPHY_VARIANTS.BODY_M}
-                  >
+              <div key={item.label} className="item">
+                <a href={item.url} className={"theme"+theme.cor}>
                     {item.label}
-                  </Typography>
                 </a>
-              </li>
+              </div>
             );
           })}
           <div className="conteiner-logo-impulso-gov">
-            <div className="realizacaoLabel">Realização:</div>
+            <p className="realizacaoLabel">Realização:</p>
             <div className="logo-impulso">
               <img 
                   alt="impulso-gov-logo"
-                  src= {ImpulsoLogo}
+                  src= {String(theme.logoImpulso)}
                 />
               </div>
             </div>
-        </ul>
+        </div>
         <div className="contactAddressSocialMedias">
           <div className="contactAddress">
-            <div className="address">
-              <Typography variant={ETYPOGRAPHY_VARIANTS.BODY_S} as="p">
-                {address.first},
-              </Typography>
-              <Typography variant={ETYPOGRAPHY_VARIANTS.BODY_S} as="p">
-                {address.second}
-              </Typography>
+            <div>
+                <div>{address.first}</div>
+                <div>{address.second}</div>
             </div>
             <div className="contact">
-              <Typography variant={ETYPOGRAPHY_VARIANTS.BODY_S} as="p">
-                {contactCopyright.email}
-              </Typography>
-              <Typography variant={ETYPOGRAPHY_VARIANTS.BODY_S} as="p">
-                {contactCopyright.copyright}
-              </Typography>
+                <div>{contactCopyright.email}</div>
+                <div>{contactCopyright.copyright}</div>
             </div>
           </div>
           <div className="socialMedias">
@@ -78,12 +59,14 @@ const Footer = ({
               href={socialMediaURLs.facebook}
             >
               <img
+                className="socialMedia"
                 alt="facebook"
                 src= {FacebookSVG}
               />
             </a>
             <a className="socialMedia" href={socialMediaURLs.twitter}>
               <img
+                className="socialMedia"
                 alt="twitter"
                 src= {TwitterSVG}
               />
@@ -93,6 +76,7 @@ const Footer = ({
               href={socialMediaURLs.instagram}
             >
               <img
+                className="socialMedia"
                 alt="instagram"
                 src= {InstagramSVG}
               />
@@ -102,6 +86,7 @@ const Footer = ({
               href={socialMediaURLs.linkedIn}
             >
               <img
+                className="socialMedia"
                 alt="linkedin"
                 src= {LinkedInSVG}
               />
