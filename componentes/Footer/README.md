@@ -82,7 +82,7 @@ responsive: true
     theme={{
         logoProjeto : "https://github.com/ImpulsoGov/DesignSystem/raw/dev-componente-footer/componentes/estatico/impulso-previne-logo-preto.svg",
         logoImpulso: "https://github.com/ImpulsoGov/DesignSystem/raw/dev-componente-footer/componentes/estatico/impulso-gov-log-preto-color.svg",
-        cor : "null"
+        cor : "Null"
     }}
     address={{
         first: "Rua Aracaju 100 - Vila Madalena,",
