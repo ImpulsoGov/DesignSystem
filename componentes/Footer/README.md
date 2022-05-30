@@ -8,8 +8,8 @@ responsive: true
 ---
 <Footer
     theme={{
-        logoProjeto : "https://raw.githubusercontent.com/ImpulsoGov/DesignSystem/producao/componentes/estatico/impulso-previne-logo.svg",
-        logoImpulso: "https://github.com/ImpulsoGov/DesignSystem/raw/producao/estatico/Color%3DBlack%2C%20Size%3DMedium.jpg",
+        logoProjeto : "https://github.com/ImpulsoGov/DesignSystem/raw/dev-componente-footer/componentes/estatico/impulso-previne-logo-branco.svg",
+        logoImpulso: "https://github.com/ImpulsoGov/DesignSystem/raw/dev-componente-footer/componentes/estatico/impulso-gov-logo-branco-color.svg",
         cor : "Black"
     }}
     address={{
@@ -44,8 +44,8 @@ responsive: true
 ---
 <Footer
     theme={{
-        logoProjeto : "https://raw.githubusercontent.com/ImpulsoGov/DesignSystem/producao/estatico/Previne.svg",
-        logoImpulso: "https://github.com/ImpulsoGov/DesignSystem/raw/producao/estatico/Color%3DBlack%2C%20Size%3DMedium.jpg",
+        logoProjeto : "https://github.com/ImpulsoGov/DesignSystem/raw/dev-componente-footer/componentes/estatico/impulso-previne-logo-preto.svg",
+        logoImpulso: "https://github.com/ImpulsoGov/DesignSystem/raw/dev-componente-footer/componentes/estatico/impulso-gov-log-preto-color.svg",
         cor : "White"
     }}
     address={{

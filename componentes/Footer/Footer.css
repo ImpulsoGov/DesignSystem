@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap");
 .containerFooter {
   display: flex;
-  padding: 70px 40px;
+  padding: 70px 82px 75px 82px;
   font-family: 'Inter';
   font-style: normal;
   font-weight: 400;
@@ -30,25 +30,27 @@
   background-color: aqua;
 }
 .realizacaoLabel {
-  margin-right: 15px;
+  margin: 0 15px 0 0;
+  height: fit-content;
 }
 
 .logoWrapper {
   height: 24px;
   min-width: 100px;
   max-width: 140px;
+  margin-right: 204px;
 }
 
 .logo-impulso {
   height: 24px;
-  min-width: 140px;
-  max-width: 140px;
+  margin: 2px;
 }
 
 
 .conteiner-logo-impulso-gov{
   margin-left: auto;
   display: flex;
+  align-items: flex-end;
 }
 
 .logoFrame {
@@ -64,6 +66,7 @@
 .list {
   border-bottom: 1px solid #ffffff25;
   display: flex;
+  flex-direction: row;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -74,8 +77,13 @@
   padding-right: 24px;
   font-size: 16px;
   line-height: 150%;
+  display: flex;
+  white-space: nowrap;
 }
-
+.item:last-child{
+  margin-left: auto;
+  flex-direction: row;
+}
 .contactAddressSocialMedias {
   align-items: center;
   display: flex;
@@ -108,7 +116,7 @@
   margin-right: 28px;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1023px) {
   .containerFooter {
     display: block;
     padding: 48px 40px 50px 40px;
@@ -120,7 +128,7 @@
   }
   
   .realizacaoLabel {
-    margin: 0;
+    margin: 0 15px 0 0;
     left: 0;
   }
   .conteiner-logo-impulso-gov{
@@ -131,8 +139,10 @@
     justify-content: flex-start;
   }
   .logo-impulso {
-    margin: 1px 0 0 0;
+    margin: 0;
     height: 14px;
+    position: relative;
+    top: 2px
   }
   
   .logoFrame {
@@ -154,6 +164,10 @@
     text-align: left;
     font-size: 16px;
   }
+  .item:last-child {
+    align-items: baseline;
+  }
+
 
   .contactAddressSocialMedias {
     flex-direction: column;
@@ -182,4 +196,25 @@
     height: 13px;
   }
 
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  .containerFooter{
+    flex-direction: column;
+  }
+  .infoLinksWrapper{
+    display:flex;
+    flex-wrap: wrap;
+  }
+  .logoWrapper{
+    margin-bottom: 32px;
+    position: relative;
+    left: -5px;
+  }
+  .item:last-child{
+    position: relative;
+    left: -605px;
+    top: 55px;
+    margin: 0 0 40px 0;
+  }
 }

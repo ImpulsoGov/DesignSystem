@@ -5,7 +5,6 @@ import FacebookSVG from "../estatico/facebook.svg";
 import InstagramSVG from "../estatico/instagram.svg";
 import LinkedInSVG from "../estatico/linked-in.svg";
 import TwitterSVG from "../estatico/twitter.svg";
-import ImpulsoLogo from "../estatico/impulso-gov-logo-color.svg"
 
 const Footer = ({
   theme,
@@ -32,16 +31,18 @@ const Footer = ({
               </div>
             );
           })}
-          <div className="conteiner-logo-impulso-gov">
-            <p className="realizacaoLabel">Realização:</p>
+          <div className="item">
+            <div className="item">Realização:</div>
             <div className="logo-impulso">
-              <img 
+              <img className="logo-impulso"
                   alt="impulso-gov-logo"
                   src= {String(theme.logoImpulso)}
-                />
-              </div>
+              />
             </div>
+          </div>
+
         </div>
+        
         <div className="contactAddressSocialMedias">
           <div className="contactAddress">
             <div>
