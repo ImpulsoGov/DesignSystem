@@ -54,9 +54,9 @@ const Footer = ({
                 <div>{contactCopyright.copyright}</div>
             </div>
           </div>
-          <div className="socialMedias">
+          <div className="socialMediasFooter">
             <a
-              className="socialMedia"
+              className="socialMediaFooter"
               href={socialMediaURLs.facebook}
             >
               <img
@@ -65,7 +65,7 @@ const Footer = ({
                 src= {FacebookSVG}
               />
             </a>
-            <a className="socialMedia" href={socialMediaURLs.twitter}>
+            <a className="socialMediaFooter" href={socialMediaURLs.twitter}>
               <img
                 className="socialMedia"
                 alt="twitter"
@@ -73,7 +73,7 @@ const Footer = ({
               />
             </a>
             <a
-              className="socialMedia"
+              className="socialMediaFooter"
               href={socialMediaURLs.instagram}
             >
               <img
@@ -83,7 +83,7 @@ const Footer = ({
               />
             </a>
             <a
-              className="socialMedia"
+              className="socialMediaFooter"
               href={socialMediaURLs.linkedIn}
             >
               <img

@@ -34,32 +34,32 @@
   height: fit-content;
 }
 
-.logoWrapper {
+.logoWrapperFooter {
   height: 24px;
   min-width: 100px;
   max-width: 140px;
   margin-right: 204px;
 }
 
-.logo-impulso {
+.logo-impulsoFooter {
   height: 24px;
   margin: 2px;
 }
 
 
-.conteiner-logo-impulso-gov{
+.conteiner-logo-impulso-govFooter{
   margin-left: auto;
   display: flex;
   align-items: flex-end;
 }
 
-.logoFrame {
+.logoFrameFooter {
   width: 20%;
   display: flex;
   justify-content: left;
 }
 
-.infoLinksWrapper {
+.infoLinksWrapperFooter {
   width: 100%;
 }
 
@@ -73,7 +73,7 @@
   padding-bottom: 32px;
 }
 
-.item {
+.itemFooter {
   padding-right: 24px;
   font-size: 16px;
   line-height: 150%;
@@ -92,23 +92,23 @@
   width: 100%;
 }
 
-.contactAddress {
+.contactAddressFooter {
   display: flex;
   margin-right: 94px;
   font-size: 14px;
 }
 
-.contact {
+.contactFooter {
   margin-left: 94px;
   width: 30%;
 }
 
-.socialMedias {
+.socialMediasFooter {
   align-items: center;
   display: flex;
 }
 
-.socialMedia {
+.socialMediaFooter {
   height: 20px;
 }
 
@@ -145,21 +145,21 @@
     top: 2px
   }
   
-  .logoFrame {
+  .logoFrameFooter {
     width: 100%;
   }
   
-    .infoLinksWrapper {
+    .infoLinksWrapperFooter {
     margin-left: 0;
   }
 
-  .list {
+  .listFooter {
     display: block;
     margin-top: 26px;
     text-align: center;
   }
 
-  .item {
+  .itemFooter {
     margin-top: 16px;
     text-align: left;
     font-size: 16px;
@@ -169,20 +169,20 @@
   }
 
 
-  .contactAddressSocialMedias {
+  .contactAddressSocialMediasFooter {
     flex-direction: column;
     text-align: center;
     text-align: left;
   }
 
-  .contactAddress {
+  .contactAddressFooter {
     display: block;
     margin-right: 0;
     text-align: left;
     width: 100%;
   }
 
-  .contact {
+  .contactFooter {
     margin-left: 0;
     margin-top: 25px;
     width: 100%;

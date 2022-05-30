@@ -9,6 +9,7 @@ import { Header } from "../componentes/Header/Header.jsx"
 import { ImagensFull, ImagensFull2 } from "../componentes/Imagens/ImagensFull.jsx";
 import { Content3Col } from "../componentes/Content3Col/Content3Col.jsx";
 import { TextCol } from "../componentes/TextCol/TextCol.jsx";
+import { Slider } from "../componentes/Slider/Slider.jsx";
 
 
 const pages = [
@@ -91,7 +92,14 @@ const pages = [
 			title: "Conteiner de 3 Colunas",
 			imports: { Content3Col, TextCol },
 			content: pageLoader(() => import("../componentes/Content3Col/README.md"))
+		  },
+		  {
+			path: "componentes/slider",
+			title: "Slider",
+			imports: { Slider },
+			content: pageLoader(() => import("../componentes/Slider/README.md"))
 		  }
+
 		]
 	  },
 	  {
