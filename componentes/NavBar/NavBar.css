@@ -1,15 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@40;500&display=swap");
 html,body {
   height:100%;
   margin:0;
   padding:0;
 }
+.themeColorIP{
+  background-color: #145C56;
+  color: #FFFFFF;
+}
+.themeWhite{
+  background-color: #FFFFFF;
+  color: #1F1F1F;
+}
 .container_navbar {
-    background-color: #145C56;
-    color: #FFFFFF;
     display: flex;
     padding: 28px 40px;
     top: 0;
     margin: 0;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 40;
+  }
+  .container_navbar a{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 40;
   }
   .logoWrapper_navbar {
     height: 24px;
@@ -19,7 +34,6 @@ html,body {
   .logo_navbar {
     height: 24px;
     width: 140px;
-    position: relative;
   }
     
   .links_navbar {
@@ -50,39 +64,92 @@ html,body {
     margin-left: 10px;
   }
 
-  .citySelect_navbar{
+  .citySelect_navbarColorIP{
     background-color: #145C56;
     color: #FFFFFF;
     border: none;
     text-align: center;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 40;
   }
+  .citySelect_navbarWhite{
+    background-color: #FFF;
+    color: #1F1F1F;
+    border: none;
+    text-align: center;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 40;
+  }
+
 
   .citySelect_navbar select {
     display: none; /*hide original SELECT element:*/
   }
+
+  .buttonMoblieColorIP {
+    display: none;
+  }
+  .buttonMoblieWhite{
+    display: none;
+  }
   
   @media screen and (max-width: 1280px) {
     .container_navbar {
-      padding: 15px;
-      padding-top: 25px;
-      flex-direction: column;
+      padding: 16px 24px 16px 24px;
       align-items: center;
     }
-    .links_navbar{
-      flex-direction: column;
-      justify-content: center;
+    .container_navbar a {
+      color: #1F1F1F;
     }
-    .link_navbar{
-      margin-top: 15px;
-      text-align: center;
+    .logoWrapper_navbar {
+      height: 21px;
+      width: 135px;
+      margin-right: auto;
     }
-    .containerCidadeLogin_navbar {
-      display: flex;
-      flex-direction: column;
-      height: fit-content;
+    .navBarIcon{
+      background-color: #FFFFFF;
+    }
+    .buttonMoblieColorIP{
+      display: block;
+      margin-left: auto;
+      border: 1px solid #FFF;
+      border-radius: 50%;
+      padding: 8px;
+    }
+    .buttonMoblieWhite{
+      display: block;
+      margin-left: auto;
+      border: 1px solid #1F1F1F;
+      border-radius: 50%;
+      padding: 8px;
+    }
+
+    .linksNavBarMoblie{
+      background-color: #FFF;
       width: 100%;
-      margin-top: 10px;
-      justify-content: center;
+      padding-top: 25px;
+      padding-bottom: 25px;
+      text-align: left;
+      display: none;
+    }
+    .linksNavBarMoblie a{
+      color: #1F1F1F;
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 40;
+      font-size: 16px;
+      }
+    .links_navbar{
+      display: none;
+    }
+    .link_navbar {
+      text-align: right;
+      margin-bottom: 10px;
+    }
+      .containerCidadeLogin_navbar {
+      display: none;
     }
 
     .ButtonLoginBox_navbar {
