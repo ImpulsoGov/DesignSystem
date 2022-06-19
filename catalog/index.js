@@ -6,6 +6,9 @@ import { NavBar } from "../componentes/NavBar/NavBar.jsx";
 import { Parcerias } from "../componentes/Parcerias/Parcerias.jsx"
 import { TituloTexto } from "../templates/TituloTexto/TituloTexto.jsx";
 import { Header } from "../componentes/Header/Header.jsx"
+import { Parcerias } from "../componentes/Parcerias/Parcerias.jsx";
+import { PaginaBase } from "../templates/PaginaBase/PaginaBase.jsx";
+import { PaginaBaseIP } from "../templates/PaginaBaseIP/PaginaBaseIP.jsx";
 import { ImagensFull, ImagensFull2 } from "../componentes/Imagens/ImagensFull.jsx";
 import { Content3Col } from "../componentes/Content3Col/Content3Col.jsx";
 import { TextCol } from "../componentes/TextCol/TextCol.jsx";
@@ -102,6 +105,23 @@ const pages = [
 
 		]
 	  },
+	{
+		title: "Templates",
+		pages: [
+			{
+				path: "componentes/paginabase",
+				title: "Pagina Base",
+				imports: { PaginaBase },
+				content: pageLoader(() => import("../templates/PaginaBase/README.md"))
+			},
+			{
+				path: "componentes/paginabaseip",
+				title: "Pagina Base IP",
+				imports: { PaginaBaseIP },
+				content: pageLoader(() => import("../templates/PaginaBaseIP/README.md"))
+			},
+		]
+	},
 	  {
 		title: "Templates",
 		pages: [

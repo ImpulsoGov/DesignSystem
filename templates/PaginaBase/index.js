@@ -1,0 +1,1 @@
+export {PaginaBase} from "./PaginaBase";
