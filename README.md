@@ -23,4 +23,4 @@ Ou via via package.json:
 
 
 Substitua 0.0.0 pela versão desejada.
-Acompanhe o histórico de versões por [aqui](https://github.com/ImpulsoGov/DesignSystem/packages/1427969);
+Acompanhe o histórico de versões por [aqui](https://www.npmjs.com/package/@impulsogov/designsystem);
