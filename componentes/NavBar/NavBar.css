@@ -35,7 +35,37 @@ html,body {
     height: 24px;
     width: 140px;
   }
-    
+  .dropdownContentNavBar{
+    display: none;
+    position: absolute;
+  } 
+  .iconDropdownNavBar{
+    position: relative;
+    height: 10px;
+  }
+  .iconDropdownContainerNavBar{
+    width: 0; 
+    height: 0; 
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    border-bottom: 25px solid #2EB380;
+  }
+  .dropdownNavBar:hover .dropdownContentNavBar{
+    display: block;
+  }
+  .dropdownItemNavBar{
+    font-size: inherit;
+    padding: 10px 15px 10px 15px;
+  }
+  .dropdownItemNavBar:hover {
+    background-color: #145C56;
+  }
+
+  .itensDropdownNavBar{
+    background-color: #2EB380;
+    padding-bottom: 15px;
+    padding-top: 18px;
+  }
   .links_navbar {
     display: flex;
     list-style: none;
@@ -44,7 +74,9 @@ html,body {
     align-items: center;
     width: 100%;
   }
-  
+  .linksNavBarMoblie{
+    display: none;
+  }
   .link_navbar {
     padding-right: 24px;
     white-space: nowrap;
@@ -95,7 +127,7 @@ html,body {
     display: none;
   }
   
-  @media screen and (max-width: 1280px) {
+  @media screen and (max-width: 640px) {
     .container_navbar {
       padding: 16px 24px 16px 24px;
       align-items: center;
@@ -125,21 +157,31 @@ html,body {
       border-radius: 50%;
       padding: 8px;
     }
+    .buttonMoblieWhite:hover{
+      cursor: pointer;
+    }
+    .buttonMoblieColorIP:hover{
+      cursor: pointer;
+    }
 
     .linksNavBarMoblie{
-      background-color: #FFF;
+      background-color: #2EB380;
       width: 100%;
       padding-top: 25px;
       padding-bottom: 25px;
       text-align: left;
       display: none;
     }
+    .linksNavBarMoblieVisible{
+      display: block;
+    }
     .linksNavBarMoblie a{
-      color: #1F1F1F;
+      color: #fff;
       font-family: 'Inter';
       font-style: normal;
       font-weight: 40;
-      font-size: 16px;
+      font-size: 18px;
+      margin-right: 18px;
       }
     .links_navbar{
       display: none;
@@ -147,8 +189,19 @@ html,body {
     .link_navbar {
       text-align: right;
       margin-bottom: 10px;
+      padding: 0;
     }
-      .containerCidadeLogin_navbar {
+    .linkNavBarMoblie {
+      margin-bottom: 10px;
+    }
+
+    .subMenuMoblie{
+      display: flex;
+      flex-direction: column;
+      margin-top: 10px;
+      padding-top: 10px;
+    }
+    .containerCidadeLogin_navbar {
       display: none;
     }
 
@@ -162,3 +215,8 @@ html,body {
   
   }
 
+  @media screen and (max-width: 1024px) {
+    .logoWrapper_navbar{
+      margin-right: 15px;
+    }
+  }
