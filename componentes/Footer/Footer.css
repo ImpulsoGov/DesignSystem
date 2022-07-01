@@ -1,68 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap");
 .containerFooter {
   display: flex;
-  padding: 70px 40px;
+  padding: 70px 82px 75px 82px;
   font-family: 'Inter';
   font-style: normal;
   font-weight: 400;
   margin: 0;
 }
-.ipColorthemeFooter{
+.themeNull{ 
+  color:#606E78;
+}
+.themeBlack{
   background-color: #1F1F1F;
-
-}
-a, u {
   color: #FFFFFF;
+}
+.themeWhite{ 
+  background-color: #FFFFFF;
+  color:#606E78;
+}
+
+.containerFooter a {
   text-decoration: none;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+}
+.conteinerLogoProjeto{
+  width: 100%;
+  background-color: aqua;
+}
+.realizacaoLabel {
+  margin: 0 15px 0 0;
+  height: fit-content;
 }
 
-.realizacaoLabelFooter {
-  color:#FFFFFF;
-  margin-right: 15px;
-}
-
-.logoWrapperFooter {
+.logoWrapper {
   height: 24px;
-  min-width: 140px;
+  min-width: 100px;
   max-width: 140px;
+  margin-right: 204px;
 }
 
-.logo-impulsoFooter {
+.logo-impulso {
   height: 24px;
-  min-width: 140px;
-  max-width: 140px;
+  margin: 2px;
 }
 
 
-.conteiner-logo-impulso-govFooter{
+.conteiner-logo-impulso-gov{
   margin-left: auto;
   display: flex;
-  justify-content: center;
+  align-items: flex-end;
 }
 
-.logoFrameFooter {
+.logoFrame {
   width: 20%;
   display: flex;
-  justify-content: center;
+  justify-content: left;
 }
 
-.infoLinksWrapperFooter {
+.infoLinksWrapper {
   width: 100%;
 }
 
-.listFooter {
-  border-bottom: 0.1px solid #FFFFFF;
+.list {
+  border-bottom: 1px solid #ffffff25;
   display: flex;
+  flex-direction: row;
   list-style: none;
   margin: 0;
   padding: 0;
   padding-bottom: 32px;
 }
 
-.itemFooter {
+.item {
   padding-right: 24px;
+  font-size: 16px;
+  line-height: 150%;
+  display: flex;
+  white-space: nowrap;
 }
-
-.contactAddressSocialMediasFooter {
+.item:last-child{
+  margin-left: auto;
+  flex-direction: row;
+}
+.contactAddressSocialMedias {
   align-items: center;
   display: flex;
   justify-content: space-between;
@@ -70,27 +92,23 @@ a, u {
   width: 100%;
 }
 
-.contactAddressFooter {
+.contactAddress {
   display: flex;
   margin-right: 94px;
+  font-size: 14px;
 }
 
-.addressFooter {
-  color:#FFFFFF;
-}
-
-.contactFooter {
+.contact {
   margin-left: 94px;
   width: 30%;
-  color:#FFFFFF;
 }
 
-.socialMediasFooter {
+.socialMedias {
   align-items: center;
   display: flex;
 }
 
-.socialMediaFooter {
+.socialMedia {
   height: 20px;
 }
 
@@ -98,66 +116,105 @@ a, u {
   margin-right: 28px;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1023px) {
   .containerFooter {
     display: block;
-    padding: 48px 40px 58px 40px;
+    padding: 48px 40px 50px 40px;
   }
-  .realizacaoLabelFooter {
-    margin-top: 15px;
-    margin-bottom: 15px;
-    margin-left: 0px;
-    margin-right: 0;
+  .logoWrapper {
+    height: 24px;
+    min-width: none;
+    margin-bottom: 40px;
+  }
+  
+  .realizacaoLabel {
+    margin: 0 15px 0 0;
     left: 0;
   }
-  .conteiner-logo-impulso-govFooter{
-    flex-direction: column;
+  .conteiner-logo-impulso-gov{
+    margin-top: 40px;
+    flex-direction: row;
     margin-left: 0;
-    justify-content: center;
+    font-size: 14px;
+    justify-content: flex-start;
   }
-  .logo-impulsoFooter {
-    width: 100%;
-    min-width: 100%;
-    max-width: 100%;
+  .logo-impulso {
     margin: 0;
-    margin-left: 0;
+    height: 14px;
+    position: relative;
+    top: 2px
   }
   
-  .logoFrameFooter {
+  .logoFrame {
     width: 100%;
   }
   
-    .infoLinksWrapperFooter {
+    .infoLinksWrapper {
     margin-left: 0;
   }
 
-  .listFooter {
+  .list {
     display: block;
     margin-top: 26px;
     text-align: center;
   }
 
-  .itemFooter {
+  .item {
     margin-top: 16px;
+    text-align: left;
+    font-size: 16px;
+  }
+  .item:last-child {
+    align-items: baseline;
   }
 
-  .contactAddressSocialMediasFooter {
+
+  .contactAddressSocialMedias {
     flex-direction: column;
     text-align: center;
+    text-align: left;
   }
 
-  .contactAddressFooter {
+  .contactAddress {
     display: block;
     margin-right: 0;
-  }
-
-  .contactFooter {
-    margin-left: 0;
-    margin-top: 10px;
+    text-align: left;
     width: 100%;
   }
 
-  .socialMediasFooter {
-    margin-top: 20px;
+  .contact {
+    margin-left: 0;
+    margin-top: 25px;
+    width: 100%;
+  }
+
+  .socialMedias {
+    margin-top: 25px;
+    width: 100%;
+  }
+  .socialMedia {
+    height: 13px;
+  }
+
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  .containerFooter{
+    flex-direction: column;
+  }
+  .infoLinksWrapper{
+    display:flex;
+    flex-wrap: wrap;
+  }
+  .logoWrapper{
+    margin-bottom: 32px;
+    position: relative;
+    left: -5px;
+  }
+  .item:last-child{
+    position: relative;
+    left: -605px;
+    top: 55px;
+    margin: 0 0 40px 0;
   }
 }
