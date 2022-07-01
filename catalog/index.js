@@ -10,7 +10,7 @@ import { ImagensFull, ImagensFull2 } from "../componentes/Imagens/ImagensFull.js
 import { Content3Col } from "../componentes/Content3Col/Content3Col.jsx";
 import { TextCol } from "../componentes/TextCol/TextCol.jsx";
 import { Slider } from "../componentes/Slider/Slider.jsx";
-
+import { ParceriasTexto } from "../componentes/ParceriasTexto/ParceriasTexto.jsx";
 
 const pages = [
 	{
@@ -75,6 +75,13 @@ const pages = [
 			imports: { Parcerias },
 			content: pageLoader(() => import("../componentes/Parcerias/README.md"))
 		  },
+		  {
+			path: "componentes/parceriastexto",
+			title: "Parcerias Texto",
+			imports: { ParceriasTexto },
+			content: pageLoader(() => import("../componentes/ParceriasTexto/README.md"))
+		  },
+
 		{
 			path: "componentes/imagensfull",
 			title: "Imagens",
