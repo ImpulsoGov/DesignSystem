@@ -1,15 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@40;500&display=swap");
 html,body {
   height:100%;
   margin:0;
   padding:0;
 }
+.themeColorIP{
+  background-color: #145C56;
+  color: #FFFFFF;
+}
+.themeWhite{
+  background-color: #FFFFFF;
+  color: #1F1F1F;
+}
 .container_navbar {
-    background-color: #145C56;
-    color: #FFFFFF;
     display: flex;
     padding: 28px 40px;
     top: 0;
     margin: 0;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 40;
+  }
+  .container_navbar a{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 40;
   }
   .logoWrapper_navbar {
     height: 24px;
@@ -19,9 +34,38 @@ html,body {
   .logo_navbar {
     height: 24px;
     width: 140px;
-    position: relative;
   }
-    
+  .dropdownContentNavBar{
+    display: none;
+    position: absolute;
+  } 
+  .iconDropdownNavBar{
+    position: relative;
+    height: 10px;
+  }
+  .iconDropdownContainerNavBar{
+    width: 0; 
+    height: 0; 
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    border-bottom: 25px solid #2EB380;
+  }
+  .dropdownNavBar:hover .dropdownContentNavBar{
+    display: block;
+  }
+  .dropdownItemNavBar{
+    font-size: inherit;
+    padding: 10px 15px 10px 15px;
+  }
+  .dropdownItemNavBar:hover {
+    background-color: #145C56;
+  }
+
+  .itensDropdownNavBar{
+    background-color: #2EB380;
+    padding-bottom: 15px;
+    padding-top: 18px;
+  }
   .links_navbar {
     display: flex;
     list-style: none;
@@ -30,7 +74,9 @@ html,body {
     align-items: center;
     width: 100%;
   }
-  
+  .linksNavBarMoblie{
+    display: none;
+  }
   .link_navbar {
     padding-right: 24px;
     white-space: nowrap;
@@ -50,39 +96,113 @@ html,body {
     margin-left: 10px;
   }
 
-  .citySelect_navbar{
+  .citySelect_navbarColorIP{
     background-color: #145C56;
     color: #FFFFFF;
     border: none;
     text-align: center;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 40;
   }
+  .citySelect_navbarWhite{
+    background-color: #FFF;
+    color: #1F1F1F;
+    border: none;
+    text-align: center;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 40;
+  }
+
 
   .citySelect_navbar select {
     display: none; /*hide original SELECT element:*/
   }
+
+  .buttonMoblieColorIP {
+    display: none;
+  }
+  .buttonMoblieWhite{
+    display: none;
+  }
   
-  @media screen and (max-width: 1280px) {
+  @media screen and (max-width: 640px) {
     .container_navbar {
-      padding: 15px;
-      padding-top: 25px;
-      flex-direction: column;
+      padding: 16px 24px 16px 24px;
       align-items: center;
     }
+    .container_navbar a {
+      color: #1F1F1F;
+    }
+    .logoWrapper_navbar {
+      height: 21px;
+      width: 135px;
+      margin-right: auto;
+    }
+    .navBarIcon{
+      background-color: #FFFFFF;
+    }
+    .buttonMoblieColorIP{
+      display: block;
+      margin-left: auto;
+      border: 1px solid #FFF;
+      border-radius: 50%;
+      padding: 8px;
+    }
+    .buttonMoblieWhite{
+      display: block;
+      margin-left: auto;
+      border: 1px solid #1F1F1F;
+      border-radius: 50%;
+      padding: 8px;
+    }
+    .buttonMoblieWhite:hover{
+      cursor: pointer;
+    }
+    .buttonMoblieColorIP:hover{
+      cursor: pointer;
+    }
+
+    .linksNavBarMoblie{
+      background-color: #2EB380;
+      width: 100%;
+      padding-top: 25px;
+      padding-bottom: 25px;
+      text-align: left;
+      display: none;
+    }
+    .linksNavBarMoblieVisible{
+      display: block;
+    }
+    .linksNavBarMoblie a{
+      color: #fff;
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 40;
+      font-size: 18px;
+      margin-right: 18px;
+      }
     .links_navbar{
-      flex-direction: column;
-      justify-content: center;
+      display: none;
     }
-    .link_navbar{
-      margin-top: 15px;
-      text-align: center;
+    .link_navbar {
+      text-align: right;
+      margin-bottom: 10px;
+      padding: 0;
     }
-    .containerCidadeLogin_navbar {
+    .linkNavBarMoblie {
+      margin-bottom: 10px;
+    }
+
+    .subMenuMoblie{
       display: flex;
       flex-direction: column;
-      height: fit-content;
-      width: 100%;
       margin-top: 10px;
-      justify-content: center;
+      padding-top: 10px;
+    }
+    .containerCidadeLogin_navbar {
+      display: none;
     }
 
     .ButtonLoginBox_navbar {
@@ -95,3 +215,8 @@ html,body {
   
   }
 
+  @media screen and (max-width: 1024px) {
+    .logoWrapper_navbar{
+      margin-right: 15px;
+    }
+  }

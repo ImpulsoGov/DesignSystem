@@ -11,6 +11,8 @@ import { Content3Col } from "../componentes/Content3Col/Content3Col.jsx";
 import { TextCol } from "../componentes/TextCol/TextCol.jsx";
 import { Slider } from "../componentes/Slider/Slider.jsx";
 import { ParceriasTexto } from "../componentes/ParceriasTexto/ParceriasTexto.jsx";
+import { ImagemFundo } from "../componentes/ImagemFundo/ImagemFundo.jsx";
+
 
 const pages = [
 	{
@@ -105,8 +107,13 @@ const pages = [
 			title: "Slider",
 			imports: { Slider },
 			content: pageLoader(() => import("../componentes/Slider/README.md"))
+		  },
+		  {
+			path: "componentes/imagemfundo",
+			title: "Imagem Fundo",
+			imports: { ImagemFundo },
+			content: pageLoader(() => import("../componentes/ImagemFundo/README.md"))
 		  }
-
 		]
 	  },
 	  {
