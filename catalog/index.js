@@ -11,6 +11,7 @@ import { Content3Col } from "../componentes/Content3Col/Content3Col.jsx";
 import { TextCol } from "../componentes/TextCol/TextCol.jsx";
 import { Slider } from "../componentes/Slider/Slider.jsx";
 import { ImagemFundo } from "../componentes/ImagemFundo/ImagemFundo.jsx";
+import { FormConsultoria } from "../componentes/FormConsultoria/FormConsultoria.jsx";
 
 
 const pages = [
@@ -105,7 +106,14 @@ const pages = [
 			title: "Imagem Fundo",
 			imports: { ImagemFundo },
 			content: pageLoader(() => import("../componentes/ImagemFundo/README.md"))
+		  },
+		  {
+			path: "componentes/formconsultoria",
+			title: "Formulario Consultoria",
+			imports: { FormConsultoria },
+			content: pageLoader(() => import("../componentes/FormConsultoria/README.md"))
 		  }
+
 		]
 	  },
 	  {
