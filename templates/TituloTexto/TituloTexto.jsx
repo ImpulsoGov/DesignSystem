@@ -33,7 +33,7 @@ const ImageTop = ({
 const TituloTexto = ({
   titulo,
   texto,
-  imagem
+  imagem,
 }) => {
   return (
       <div className="containerTexto">
