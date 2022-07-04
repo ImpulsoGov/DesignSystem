@@ -9,14 +9,12 @@
     margin: 45px 0px 75px 45px;
     padding-left: 125px;
     font-size: 64px;  
-    white-space: pre-line;
 }
 .corpoTexto{
     margin: 45px 180px 45px 180px;
     text-align: justify;
     font-size: 24px;  
     width: 80%;
-    white-space: pre-line;
 }
 /* SMALL */
 @media screen and (max-width: 1023px) {
