@@ -12,6 +12,7 @@ import { TextCol } from "../componentes/TextCol/TextCol.jsx";
 import { Slider } from "../componentes/Slider/Slider.jsx";
 import { ImagemFundo } from "../componentes/ImagemFundo/ImagemFundo.jsx";
 import { FormConsultoria } from "../componentes/FormConsultoria/FormConsultoria.jsx";
+import style from "../componentes/FormConsultoria/FormConsultoria.module.css"
 
 
 const pages = [

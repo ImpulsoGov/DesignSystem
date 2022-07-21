@@ -1,6 +1,7 @@
 import React from "react";
 
-import "./FormConsultoria.css"
+import style from "./FormConsultoria.module.css"
+
 
 const FormConsultoria = ({
     title,
@@ -8,7 +9,7 @@ const FormConsultoria = ({
     link
 })=>{
     return(
-        <div className="containerFormConsultoria">
+        <div className={style['containerFormConsultoria']}>
             <div className="titleFormConsultoria">{title}<span className="mailFormConsultoria">{mail}</span></div>
             <a 
                 className="buttonFormConsultoria"
