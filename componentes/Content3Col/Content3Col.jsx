@@ -1,7 +1,5 @@
 import React from "react";
-
-import "./Content3Col.css";
-
+import style from "./Content3Col.module.css"
 const Content3Col = ({
     titulo,
     child1,
@@ -9,14 +7,13 @@ const Content3Col = ({
     child3
 }) => {
   return (
-      <div className="Content3Col">
-          <div className="Content3ColTitulo">{titulo}</div>
-          <div className="Content3ColGrid">
+      <div className={style.Content3Col}>
+          <div className={style.Content3ColTitulo}>{titulo}</div>
+          <div className={style.Content3ColGrid}>
             {child1}
             {child2}
             {child3}
           </div>
-
       </div>
 )};
 

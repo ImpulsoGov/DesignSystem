@@ -1,9 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@40;500&display=swap");
-html,body {
-  height:100%;
-  margin:0;
-  padding:0;
-}
 .themeColorIP{
   background-color: #145C56;
   color: #FFFFFF;
@@ -20,11 +15,18 @@ html,body {
     font-family: 'Inter';
     font-style: normal;
     font-weight: 40;
+    position: fixed;
+    z-index: 100;
+    width: 100%;
   }
+  
   .container_navbar a{
     font-family: 'Inter';
     font-style: normal;
     font-weight: 40;
+  }
+  .container_navbar a:hover{
+    color: #1D856C;
   }
   .logoWrapper_navbar {
     height: 24px;
@@ -54,11 +56,15 @@ html,body {
     display: block;
   }
   .dropdownItemNavBar{
+    color: #fff;
     font-size: inherit;
     padding: 10px 15px 10px 15px;
   }
   .dropdownItemNavBar:hover {
     background-color: #145C56;
+  }
+  .dropdownItemNavBar a:hover {
+    color: #fff;
   }
 
   .itensDropdownNavBar{

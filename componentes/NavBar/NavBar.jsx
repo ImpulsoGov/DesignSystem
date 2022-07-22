@@ -1,11 +1,8 @@
-import React, {useState,useEffect} from "react";
-
-import "./NavBar.css";
-import {ButtonLogin} from "../ButtonLogin/ButtonLogin.jsx";
-import NavBarIconBranco  from "../estatico/hamburgerIconBranco.svg"
-import NavBarIconDark  from "../estatico/hamburgerIconDark.svg"
-
-
+import React, {useState} from "react";
+import cx from "classnames";
+import style from"./NavBar.module.css";
+const NavBarIconBranco  = "/hamburgerIconBranco.svg"
+const NavBarIconDark  = "/hamburgerIconDark.svg"
 
 const NavBarMenu = (tema) => {
   let theme = (tema=="ColorIP") ?  NavBarIconBranco : NavBarIconDark
@@ -13,17 +10,17 @@ const NavBarMenu = (tema) => {
 }
 const Dropdown = (props) => {
   return (
-    <div className="DropdownNavBar">
+    <div className={style["dropdownNavBar"]}>
       <div>{props.link}</div>
-      <div className="dropdownContentNavBar">
-        <div className="iconDropdownNavBar">
-          <div className="iconDropdownContainerNavBar"></div>
+      <div className={style.dropdownContentNavBar}>
+        <div className={style.iconDropdownNavBar}>
+          <div className={style.iconDropdownContainerNavBar}></div>
         </div>
-        <div className="itensDropdownNavBar">
-          {props.subtitles.map((subtitle)=>{
+        <div className={style.itensDropdownNavBar}>
+          {props.subtitles.map((subtitle,index)=>{
             return(
-              <div>
-                <div className="dropdownItemNavBar"><a href="subtitle.link">{subtitle.label}</a></div>
+              <div key={index}>
+                <div className={style.dropdownItemNavBar}><a href={subtitle.url}>{subtitle.label}</a></div>
               </div>
             )
           })}
@@ -33,7 +30,7 @@ const Dropdown = (props) => {
   )
 }
 const DropdownMenu = (attr) => {  
-  if (attr.index==0){
+  if (attr.index==2){
     return(
       <Dropdown 
         link={attr.link.label}
@@ -42,7 +39,7 @@ const DropdownMenu = (attr) => {
     )
   }else{
     return(
-      <a href={attr.link.url} className={"theme"+attr.props.theme.cor}>
+      <a href={attr.link.url} className={style["theme"+attr.props.theme.cor]}>
         {attr.link.label}
       </a>
     )
@@ -57,7 +54,6 @@ const DropdownMenuMoblie = (attr) => {
   }
 
   if (attr.index==0){
-    console.log(attr)
     return(
       <div>
         <a
@@ -65,12 +61,12 @@ const DropdownMenuMoblie = (attr) => {
         >{attr.link.label}
         </a>
         { active &&
-          <div className="subMenuMoblie themeColorIP">
+          <div className={cx(style.subMenuMoblie, style.themeColorIP)}>
             {attr.props.subtitles.map((subtitle)=>{
               return(
                 <a 
                   href={subtitle.url}
-                  className="linkNavBarMoblie">{subtitle.label}</a>
+                  className={style.linkNavBarMoblie}>{subtitle.label}</a>
               )
             })}
           </div>
@@ -94,41 +90,29 @@ const NavBar = (props) => {
   }
   return (
     <div>
-      <div></div>
-      <div className={"container_navbar theme"+props.theme.cor}>
-        <div className="logoWrapper_navbar">
-          <div className="logo_navbar">
-          <img
-              alt="impulso-previne-logo_navbar"
-              src= {String(props.theme.logoProjeto)}
-            />
+      <div className={cx(style.container_navbar,style["theme"+props.theme.cor])}>
+        <div className={style.logoWrapper_navbar}>
+          <div className={style.logo_navbar}>
+            <a href="/">
+              <img
+                  alt="impulso-previne-logo_navbar"
+                  src= {String(props.theme.logoProjeto)}
+                />
+              </a>
           </div>
         </div>
 
-            <div className="links_navbar">
+            <div className={style.links_navbar}>
               {props.menu.map((link, index) => {
                   return (
-                    <div key={index} className="link_navbar">
+                    <div key={index} className={style.link_navbar}>
                       {DropdownMenu({index,link,props})}
                     </div>
                   );
                 })}
             </div>
 
-          <div className="containerCidadeLogin_navbar">
-            <div>
-              <select className={"citySelect_navbar"+props.theme.cor}>
-                <option>Selecione Seu Municipio</option>
-                {props.municipios.map((option) => (
-                  <option value={option.municipio}>{option.municipio}</option>
-                ))}
-              </select>
-            </div>
-            <div className="ButtonLoginBox_navbar">
-              <ButtonLogin theme={props.theme.cor}/>
-            </div>
-          </div>
-          <div className={"buttonMoblie"+props.theme.cor}
+          <div className={style["buttonMoblie"+props.theme.cor]}
             onClick = {menuVisible} 
           >
             <img
@@ -138,10 +122,10 @@ const NavBar = (props) => {
               />
           </div>
       </div>
-      <div className={active ?  "linksNavBarMoblie" : "linksNavBarMoblie linksNavBarMoblieVisible"}>
+      <div className={active ?  style["linksNavBarMoblie"] : cx(style["linksNavBarMoblie"], style["linksNavBarMoblieVisible"])}>
         {props.menu.map((link, index) => {
               return (
-                <div key={index} className="link_navbar">
+                <div key={index} className={style.link_navbar}>
                   {DropdownMenuMoblie({index,link,props})}
                 </div>
               );

@@ -1,107 +1,86 @@
 import React from "react";
-
-import "./Footer.css";
-import Typography, { ETYPOGRAPHY_VARIANTS } from "../Typography/Typography.jsx";
-import FacebookSVG from "../estatico/facebook.svg";
-import InstagramSVG from "../estatico/instagram.svg";
-import LinkedInSVG from "../estatico/linked-in.svg";
-import TwitterSVG from "../estatico/twitter.svg";
-import ImpulsoPrevineLogo from "../estatico/impulso-previne-logo.svg"
-import ImpulsoLogo from "../estatico/impulso-gov-logo-branco.svg"
-
+import cx from "classnames";
+import style from "./Footer.module.css";
+const InstagramSVG = "/instagram.svg";
+const LinkedInSVG ="/linked-in.svg";
+const TwitterSVG = "/twitter.svg";
 
 const Footer = ({
+  theme,
   address,
   contactCopyright,
   links,
   socialMediaURLs
 }) => {
   return (
-    <div className="containerFooter ipColorthemeFooter">
-      <div className="logoFrameFooter">
-        <div className="logoWrapperFooter">
-          <img
-            alt="impulso-previne-logoFooter"
-            src= {ImpulsoPrevineLogo}
-          />
-        </div>
+    <div className={cx(style["containerFooter"], style["theme"+theme.cor+"Footer"])}>
+      <div>
+        <img
+          className={style.logoWrapperFooter}
+          alt="impulso-previne-logo"
+          src= {String(theme.logoProjeto)}
+        />
       </div>
-      <div className="infoLinksWrapperFooter">
-        <ul className="listFooter">
-          {links.map((item) => {
-            return (
-              <li key={item.label} className="itemFooter">
-                <a href={item.url}>
-                  <Typography
-                    as="span"
-                    className="moreInfoLinkFooter"
-                    variant={ETYPOGRAPHY_VARIANTS.BODY_M}
-                  >
-                    {item.label}
-                  </Typography>
-                </a>
-              </li>
-            );
-          })}
-          <div className="conteiner-logo-impulso-govFooter">
-            <div className="realizacaoLabelFooter">Realização:</div>
-            <div className="logo-impulsoFooter">
-              <img 
-                  alt="impulso-gov-logoFooter"
-                  src= {ImpulsoLogo}
-                />
-              </div>
-            </div>
-        </ul>
-        <div className="contactAddressSocialMediasFooter">
-          <div className="contactAddressFooter">
-            <div className="addressFooter">
-              <Typography variant={ETYPOGRAPHY_VARIANTS.BODY_S} as="p">
-                {address.first},
-              </Typography>
-              <Typography variant={ETYPOGRAPHY_VARIANTS.BODY_S} as="p">
-                {address.second}
-              </Typography>
-            </div>
-            <div className="contactFooter">
-              <Typography variant={ETYPOGRAPHY_VARIANTS.BODY_S} as="p">
-                {contactCopyright.email}
-              </Typography>
-              <Typography variant={ETYPOGRAPHY_VARIANTS.BODY_S} as="p">
-                {contactCopyright.copyright}
-              </Typography>
+      <div className={style.infoLinksWrapperFooter}>
+        <div className={style.conteinerUpperFooter}>
+          <div className={style.listFooter}>
+            {links.map((item) => {
+              return (
+                <div key={item.label} className={style.itemFooter}>
+                  <a href={item.url} className={style["theme"+theme.cor+"Footer"]}>
+                      {item.label}
+                  </a>
+                </div>
+              );
+            })}
+          </div>
+          <div className={style.realizacaoFooter}>
+            <div>Realização:</div>
+            <div >
+              <img className={style.logoImpulso}
+                  alt="impulso-gov-logo"
+                  src= {String(theme.logoImpulso)}
+              />
             </div>
           </div>
-          <div className="socialMediasFooter">
-            <a
-              className="socialMediaFooter"
-              href={socialMediaURLs.facebook}
-            >
+
+        </div>
+        
+        <div className={style.contactAddressSocialMediasFooter}>
+          <div className={style.contactAddressFooter}>
+            <div>
+                <div>{address.first}</div>
+                <div>{address.second}</div>
+            </div>
+            <div className={style.contactFooter}>
+                <div>{contactCopyright.email}</div>
+                <div>{contactCopyright.copyright}</div>
+            </div>
+          </div>
+          <div className={style.socialMediasFooter}>
+            <a className={style.socialMediaFooter} href={socialMediaURLs.twitter}>
               <img
-                alt="facebook"
-                src= {FacebookSVG}
-              />
-            </a>
-            <a className="socialMediaFooter" href={socialMediaURLs.twitter}>
-              <img
+                className={style.socialMediaFooter}
                 alt="twitter"
                 src= {TwitterSVG}
               />
             </a>
             <a
-              className="socialMediaFooter"
+              className={style.socialMediaFooter}
               href={socialMediaURLs.instagram}
             >
               <img
+                className={style.socialMediaFooter}
                 alt="instagram"
                 src= {InstagramSVG}
               />
             </a>
             <a
-              className="socialMediaFooter"
+              className={style.socialMediaFooter}
               href={socialMediaURLs.linkedIn}
             >
               <img
+                className={style.socialMediaFooter}
                 alt="linkedin"
                 src= {LinkedInSVG}
               />

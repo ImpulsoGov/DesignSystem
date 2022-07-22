@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 
-import "./Slider.css"
-import Left from "../estatico/left-icon.svg"
-import Right from "../estatico/right-icon.svg"
+import style from "./Slider.module.css"
+const Right = "/right-icon.svg";
+const Left = "/left-icon.svg";
 
 const CoreSlider = ({
     titulo,
@@ -10,10 +10,10 @@ const CoreSlider = ({
     corpo
 }) => {
     return(
-        <div className="cardSlider">
-            <div className="coreTitulo">{titulo}</div>
-            <div className="coreSubTitulo">{subtitulo}</div>
-            <div className="coreCorpo">{corpo}</div>
+        <div className={style.cardSlider}>
+            <div className={style.coreTitulo}>{titulo}</div>
+            <div className={style.coreSubTitulo}>{subtitulo}</div>
+            <div className={style.coreCorpo}>{corpo}</div>
         </div>
     )
 }
@@ -78,10 +78,10 @@ class Slider extends Component{
     
     render() {
         return(
-            <div className="Slider">
-                <div className="tituloSlider">{this.props.titulo}</div>
-                <div className="coreSlider">
-                        <button className="btnSlider" onClick={() => this.prevText()}>
+            <div className={style.Slider}>
+                <div className={style.tituloSlider}>{this.props.titulo}</div>
+                <div className={style.coreSlider}>
+                        <button className={style.btnSlider} onClick={() => this.prevText()}>
                             <IconLeft />
                         </button>
                     <CoreSlider
@@ -89,13 +89,15 @@ class Slider extends Component{
                         subtitulo = {this.props.core[this.state.index].subtitulo}
                         corpo = {this.props.core[this.state.index].corpo}
                     />
-                    <button className="btnSlider" onClick={() => this.nextText()}>
+                    <button className={style.btnSlider} onClick={() => this.nextText()}>
                         <Iconright />
                     </button>
                 </div>
-                <div className="conteinerChamadaSlider">
-                    <a className="chamadaSlider">
-                        {this.props.chamada}
+                <div className={style.conteinerChamadaSlider}>
+                    <a 
+                        href={this.props.link}
+                        className={style.chamadaSlider}>
+                        {this.props.chamada.toUpperCase()}
                     </a>
                 </div>
             </div>

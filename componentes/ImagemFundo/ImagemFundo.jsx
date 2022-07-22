@@ -1,7 +1,7 @@
 import React from "react";
 
-import "./ImagemFundo.css"
-import ImagemFundoPNG from "../estatico/imagem-fundo.png"
+import style from "./ImagemFundo.module.css"
+const ImagemFundoPNG = "/imagem-fundo.png"
 
 const ImagemFundo = ({
     chamada,
@@ -10,25 +10,25 @@ const ImagemFundo = ({
     botao
 }) =>{
     return(
-        <div className="containerImagemFundo">
-            <div className="containerImagemGradiente">
+        <div className={style.containerImagemFundo}>
+            <div className={style.containerImagemGradiente}>
                 <img
-                    className="imagemFundo"
+                    className={style.imagemFundo}
                     src={ImagemFundoPNG}
                 />
-                <div className="gradienteImagemFundo">
-                    <div className="chamadaImagemFundo">{chamada}<span className="chamadaColor">{chamadacolor}</span></div>
-                    <div className="cardsImagemFundo">
-                        {cards.map((card)=>{
+                <div className={style.gradienteImagemFundo}>
+                    <div className={style.chamadaImagemFundo}>{chamada}<span className={style.chamadaColor}>{chamadacolor}</span></div>
+                    <div className={style.cardsImagemFundo}>
+                        {cards.map((card,index)=>{
                             return(
-                                <div className="cardImagemFundo">
-                                    <div className="cardTitleImagemFundo">{card.title}</div>
-                                    <div className="cardBodyImagemFundo">{card.body}</div>
+                                <div className={style.cardImagemFundo} key={index}>
+                                    <div className={style.cardTitleImagemFundo}>{card.title}</div>
+                                    <div className={style.cardBodyImagemFundo}>{card.body}</div>
                                 </div>
                             )
                     })}
                     </div>
-                    <a href={botao.url} className="botaoImagemFundo">{botao.label.toUpperCase()}</a>
+                    <a href={botao.url} className={style.botaoImagemFundo}>{botao.label.toUpperCase()}</a>
                 </div>
             </div>
         </div>

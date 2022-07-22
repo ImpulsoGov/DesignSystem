@@ -1,15 +1,13 @@
 import React from "react";
-
-import "./TextCol.css";
-
+import style from "./TextCol.module.css"
 const TextCol = ({
     titulo,
     corpo
 }) => {
   return (
-      <div className="TextCol">
-          <div className="TextColTitle">{titulo}</div>
-          <div className="TextColBody">{corpo}</div>
+      <div className={style.TextCol}>
+          <div className={style.TextColTitle}>{titulo}</div>
+          <div className={style.TextColBody}>{corpo}</div>
       </div>
 )};
 
