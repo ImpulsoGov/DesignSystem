@@ -1,7 +1,5 @@
 import React from "react";
-
-import "./TextCol.css";
-
+import "./TextCol.module.css"
 const TextCol = ({
     titulo,
     corpo

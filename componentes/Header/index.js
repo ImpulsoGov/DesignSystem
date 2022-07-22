@@ -1,1 +1,1 @@
-export { Header } from "./Header.jsx";
+export { Header } from "./Header";

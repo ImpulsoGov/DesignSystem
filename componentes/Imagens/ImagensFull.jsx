@@ -1,13 +1,14 @@
 import React from "react";
 
-import "./ImagensFull.css";
-import "./ImagensFull2.css";
+import "./ImagensFull.module.css";
+import "./ImagensFull2.module.css";
+import "./ImagensFull3.module.css";
 
 const ImagensFull = ({
   imagem
   }) => {
     return (
-      <div className="containerBanner1 ">
+      <div className="containerBanner1">
         <img
             className="imageContainerBanner1"
             alt="BannerImage1"
@@ -20,13 +21,25 @@ const ImagensFull = ({
     imagem
     }) => {
       return (
-        <div className="containerBanner1-2 ">
+        <div className="containerBanner2">
           <img
-              className="imageContainerBanner1-2"
+              className="imageContainerBanner2"
               alt="BannerImage1"
               src= {String(imagem)}
             />
         </div>
     )};
-  
-  export {ImagensFull, ImagensFull2};
+    const ImagensFull3 = ({
+      imagem
+      }) => {
+        return (
+          <div className="containerBanner3">
+            <img
+                className="imageContainerBanner3"
+                alt="BannerImage1"
+                src= {String(imagem)}
+              />
+          </div>
+      )};
+    
+  export {ImagensFull, ImagensFull2,ImagensFull3};

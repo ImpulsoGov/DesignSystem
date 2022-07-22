@@ -1,1 +1,1 @@
-export { FormConsultoria } from "./Footer.jsx";
+export { FormConsultoria } from "./FormConsultoria";

@@ -1,7 +1,7 @@
 import React from "react";
 
-import "./ImagemFundo.css"
-import ImagemFundoPNG from "../estatico/imagem-fundo.png"
+import "./ImagemFundo.module.css"
+const ImagemFundoPNG = "/imagem-fundo.png"
 
 const ImagemFundo = ({
     chamada,
@@ -19,9 +19,9 @@ const ImagemFundo = ({
                 <div className="gradienteImagemFundo">
                     <div className="chamadaImagemFundo">{chamada}<span className="chamadaColor">{chamadacolor}</span></div>
                     <div className="cardsImagemFundo">
-                        {cards.map((card)=>{
+                        {cards.map((card,index)=>{
                             return(
-                                <div className="cardImagemFundo">
+                                <div className="cardImagemFundo" key={index}>
                                     <div className="cardTitleImagemFundo">{card.title}</div>
                                     <div className="cardBodyImagemFundo">{card.body}</div>
                                 </div>

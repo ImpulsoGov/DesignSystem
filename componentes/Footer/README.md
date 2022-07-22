@@ -5,27 +5,32 @@ responsive: true
 
 ---
 <Footer
+    theme={{
+        logoProjeto : "https://github.com/ImpulsoGov/DesignSystem/raw/dev-componente-footer/componentes/estatico/impulso-previne-logo-branco.svg",
+        logoImpulso: "https://github.com/ImpulsoGov/DesignSystem/raw/dev-componente-footer/componentes/estatico/impulso-gov-logo-branco-color.svg",
+        cor : "Black"
+    }}
     address={{
-        first: "Rua Aracaju 100 - Vila Madalena",
-        second: "São Paulo - SP, 01010-100",
+        first: "",
+        second: "",
     }}
     contactCopyright={{
-        copyright: "© 2021 Impulso",
+        copyright: "© 2022 Impulso",
         email: "contato@impulsogov.org",
     }}
     links={[
-        { label: "Quem somos", url: "/quem-somos" },
-        { label: "Nossa atuação", url: "/nossa-atuacao" },
-        { label: "Notícias", url: "/noticias" },
-        { label: "Trabalhe conosco", url: "/trabalhe-conosco" },
-        { label: "Quero doar", url: "/quero-doar" },
-        { label: "Contato", url: "/contato" }
+        { label: "A Impulso Gov", url: "/impulsogov" },
+        { label: "O Previne Brasil", url: "/previnebrasil" },
+        { label: "Indicadores", url: "/indicadores" },
+        { label: "Capitação", url: "/capitacao" },
+        { label: "Ações Estratégicas", url: "/acoes-estrategicas" },
+        { label: "Consultoria", url: "/consultoria" }
     ]}
     socialMediaURLs={{
         facebook: "/facebook",
         instagram: "/instagram",
         linkedIn: "/linkedin",
         twitter: "/twitter",
-    }}
-    />
+    }} 
+/>
 ```

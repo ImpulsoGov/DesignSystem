@@ -24,14 +24,6 @@ responsive: true
       { label: "Captação Ponderada", url:"/captacao-ponderada" },
       { label: "Ações Estratégicas", url:"/acoes-estrategicas" }
     ]}
-
-      municipios={[
-        { municipio: "Santo André,SP"},
-        { municipio: "São Bernardo do Campo,SP"},
-        { municipio: "São Caetano,SP"},
-        { municipio: "Mauá,SP"},
-        { municipio: "Diadema,SP"}
-      ]}
     />
 ```
 

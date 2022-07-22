@@ -1,19 +1,23 @@
 import React from "react";
 
-import "./FormConsultoria.css"
+import "./FormConsultoria.module.css"
 
 const FormConsultoria = ({
     title,
     mail,
-    link
+    link,
+    button
 })=>{
     return(
-        <div className="containerFormConsultoria">
-            <div className="titleFormConsultoria">{title}<span className="mailFormConsultoria">{mail}</span></div>
-            <a 
-                className="buttonFormConsultoria"
-                href={link}
-                >ENVIAR</a>
+        <div id="formulario">
+            <div className="containerFormConsultoria">
+                <div className="titleFormConsultoria">{title}<span className="mailFormConsultoria">{mail}</span></div>
+                {button != "" && 
+                <a 
+                    className="buttonFormConsultoria"
+                    href={link}
+                >{button.toUpperCase()}</a>}
+            </div>
         </div>
     )
 }

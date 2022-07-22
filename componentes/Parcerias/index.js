@@ -1,1 +1,1 @@
-export { Parcerias } from "./Parcerias.jsx";
+export { Parcerias } from "./Parcerias";

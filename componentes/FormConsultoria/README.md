@@ -5,8 +5,9 @@ responsive: true
 
 ---
 <FormConsultoria
-    title="Preencha o formulário abaixo para receber nossa consultoria ou, se quiser conversar sobre outro assunto, envie um e-mail para "
-    mail="contato@impulsogov.org."
-    link="/formulario"
-    />
+    title="Se interessou pela nossa consultoria? Preencha o formulário abaixo para fazer sua inscrição.Em caso de dúvidas, escreva para "
+    mail="previne@impulsogov.org"
+    link="https://docs.google.com/forms/d/e/1FAIpQLSce3dYZO3tdRmNq-Oy8Z_0IFu5RXtwDDsSw6BXLaWx7BBfv_Q/viewform?embedded=true"
+    button="enviar"
+/>
 ```

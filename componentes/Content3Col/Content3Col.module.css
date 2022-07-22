@@ -1,10 +1,11 @@
 .Content3Col{
     background-color: #2EB280;
-    border-radius: 0px 64px 64px 0px;
+    border-radius: 0px 0px 64px 0px;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
     padding: 82px;
+    width: 98%;
 }
 .Content3ColTitulo{
     font-size: 64px;
@@ -20,7 +21,7 @@
 /* SMALL */
 @media screen and (max-width: 1023px) {
     .Content3Col{
-        border-radius: 0px 48px 48px 0px;
+        border-radius: 0px 0px 48px 0px;
         padding: 64px;
     }
     .Content3ColTitulo{
@@ -47,11 +48,11 @@
 /* XLARGE */
 @media screen and (min-width: 1920px) {
     .Content3Col{
-        padding: 120px 90px 80px 120px;
-        border-radius: 0px 82px 82px 0px;
+        padding: 120px 60px 80px 120px;
+        border-radius: 0px 0px 82px 0px;
     }
     .Content3ColTitulo{
-        font-size: 96px;
+        font-size: 64px;
         margin-top: 120px;
         margin-bottom: 120px;
     }

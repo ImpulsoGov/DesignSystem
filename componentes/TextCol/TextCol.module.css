@@ -2,9 +2,9 @@
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
-    padding: 35px 70px 100px 0px;
+    padding: 35px 70px 10px 0px;
     text-align: left;
-    margin-right: 60px;
+    margin-right: 30px;
 }
 .TextColTitle{
     font-size: 32px;
@@ -42,13 +42,13 @@
 @media screen and (min-width: 1920px) {
     .TextCol{
         margin: 0 0 40px 0;
-        padding: 60px 220px 120px 0px;
+        padding: 60px 45px 120px 0px;
     }
     .TextColTitle{
-        font-size: 46px;
+        font-size: 32px;
         margin-bottom: 60px;
     }
     .TextColBody{
-        font-size: 28px;
+        font-size: 20px;
     }
-}
+}        

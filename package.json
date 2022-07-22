@@ -1,17 +1,24 @@
 {
-  "name": "@ImpulsoGov/designsystem",
+  "name": "@impulsogov/designsystem",
   "description": "Impulso Gov Design System",
   "version": "0.0.2",
+  "private": false,
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "files": [
+    "dist",
+    "README.md"
+  ],
   "author": "Gabrielle Arruda",
   "bugs": {
     "url": "https://github.com/ImpulsoGov/DesignSystem/issues"
   },
   "homepage": "https://github.com/ImpulsoGov/DesignSystem#readme",
   "license": "UNLICENSED",
-  "main": "componentes/index.js",
-  "devDependencies": {},
+  "devDependencies": {
+    "catalog": "^3.6.0"
+  },
   "dependencies": {
-    "catalog": "^3.6.0",
     "classnames": "^2.3.1",
     "dompurify": "^2.3.8",
     "react": "^17.0.1",
@@ -20,7 +27,7 @@
   "scripts": {
     "catalog-start": "catalog start",
     "catalog-build": "catalog build",
-    "build": "yarn install && yarn run catalog-build",
+    "build": "rm -rf dist && NODE_ENV=production babel componentes/ --out-dir dist --copy-files",
     "start": "yarn run catalog-start"
   },
   "repository": {
@@ -28,6 +35,6 @@
     "url": "git+https://github.com/ImpulsoGov/DesignSystem.git"
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
+    "access": "public"
   }
 }

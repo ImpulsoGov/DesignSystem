@@ -1,7 +1,5 @@
 import React from "react";
-
-import "./Content3Col.css";
-
+import "./Content3Col.module.css"
 const Content3Col = ({
     titulo,
     child1,
@@ -16,7 +14,6 @@ const Content3Col = ({
             {child2}
             {child3}
           </div>
-
       </div>
 )};
 

@@ -21,6 +21,9 @@
     margin-bottom: 200px;
 }
 .btnSlider{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border-radius: 50%;
     background: #1D856C;
     padding: 15px;
@@ -67,6 +70,7 @@
 .chamadaSlider:hover {
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
     background-color: #ef8264;
+    color: #FFFFFF;
 }
 
 /* SMALL */
@@ -141,6 +145,7 @@
     .coreSubTitulo{
         font-size: 24px;
         margin-bottom: 15px;
+        width: 600px;
     }
     .coreCorpo{
         font-size: 16px;
@@ -155,12 +160,12 @@
         padding: 100px 80px 100px 80px;
     }
     .coreSlider{
-        margin-bottom: 240px;
+        margin-bottom: 180px;
         padding: 0;
     }
     .tituloSlider{
-        font-size: 85px;
-        margin-bottom: 260px;
+        font-size: 64px;
+        margin-bottom: 160px;
     }
     .btnSlider{
         width: 90px;
@@ -180,10 +185,10 @@
         margin-bottom: 15px;
     }
     .coreCorpo{
-        font-size: 32px;
+        font-size: 24px;
     }
     .chamadaSlider{
-        font-size: 20px;
+        font-size: 15px;
         padding: 18px;
     }
 }

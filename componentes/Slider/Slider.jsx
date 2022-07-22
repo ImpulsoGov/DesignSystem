@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 
-import "./Slider.css"
-import Left from "../estatico/left-icon.svg"
-import Right from "../estatico/right-icon.svg"
+import "./Slider.module.css"
+const Right = "/right-icon.svg";
+const Left = "/left-icon.svg";
 
 const CoreSlider = ({
     titulo,
@@ -94,8 +94,10 @@ class Slider extends Component{
                     </button>
                 </div>
                 <div className="conteinerChamadaSlider">
-                    <a className="chamadaSlider">
-                        {this.props.chamada}
+                    <a 
+                        href={this.props.link}
+                        className="chamadaSlider">
+                        {this.props.chamada.toUpperCase()}
                     </a>
                 </div>
             </div>
